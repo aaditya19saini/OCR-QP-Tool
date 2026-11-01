@@ -77,10 +77,10 @@ papers:
     source: "MS2023.pdf section headers p1, p7, p22, p30, p34"
   2024:
     file: MS2024.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2024.pdf p1 instructions"
+    total_marks: 100   # sum of per-question marks in the printed master answer key
+    expected_questions: 60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # printed in the answer key's Question Type column
+    source: "MS2024.pdf master answer key p42-43; section headers p2, p8, p26, p34, p37"
   2025:
     file: MS2025.pdf
     total_marks: null
