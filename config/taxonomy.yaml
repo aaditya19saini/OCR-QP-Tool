@@ -1,10 +1,100 @@
-# Official JAM MS syllabus taxonomy. Blocked until the syllabus PDF is in docs/.
-# Shape:
-#   version: "jam-ms-<syllabus-year>-v1"   # bump on any edit; classifications record it
-#   subjects:
-#     Mathematics:
-#       <Topic>: [<subtopic>, ...]
-#     Statistics:
-#       <Topic>: [<subtopic>, ...]
-version: null
-subjects: {}
+# Official JAM MS syllabus taxonomy, built from docs/syllabus/syllabus_MS_JAM2026.pdf
+# (https://jam2026.iitb.ac.in/files/syllabus_MS.pdf, fetched 2026-11-01 with user approval).
+# Topic = syllabus Section, subtopic = the syllabus's own sub-heading or topic group.
+# Caveat: this is the 2026 syllabus. Older papers (2012-2025) were set against earlier versions;
+# Sections 11-12 (and parts of 4) may be new, so zero past questions there can mean "newly added", not "low priority".
+version: jam-ms-2026-v1
+subjects:
+  Mathematics:
+    Sequences and Series:
+      - Sequences and limits
+      - Cauchy and monotonic sequences
+      - Limit superior and inferior
+      - Convergence tests for series
+      - Absolute and conditional convergence
+      - Power series and radius of convergence
+    Differential Calculus of One Variable:
+      - Limits and continuity
+      - Differentiability
+      - Rolle's and mean value theorems
+      - Taylor and Maclaurin series
+      - Indeterminate forms and L'Hospital's rule
+      - Maxima and minima (one variable)
+    Differential Calculus of Two Variables:
+      - Limits and continuity (two variables)
+      - Partial and total differentiation
+      - Maxima, minima and saddle points
+      - Constrained optimization (Lagrange multipliers)
+    Integral Calculus:
+      - Fundamental theorems and Leibniz rule
+      - Improper integrals
+      - Beta and Gamma integrals
+      - Double integrals and change of order
+      - Transformation of variables
+      - Areas, volumes and arc lengths
+    Matrices and Determinants:
+      - Vector spaces, span, basis and dimension
+      - Special matrices
+      - Determinants
+      - Rank, inverse and adjoint
+      - Systems of linear equations
+      - Eigenvalues and eigenvectors (Cayley-Hamilton)
+      - Quadratic forms and definiteness
+  Statistics:
+    Descriptive Statistics:
+      - Measures of central tendency and dispersion
+      - Moments, skewness and kurtosis
+      - Correlation and bivariate data
+    Probability:
+      - Sample space and algebra of events
+      - Axioms and properties of probability
+      - Geometric probability
+      - Conditional probability and Bayes' theorem
+      - Independence of events
+    Univariate Distributions:
+      - CDF, PMF and PDF
+      - Functions of a random variable
+      - Expectation, moments and quantiles
+      - Moment generating functions
+      - Markov and Chebyshev inequalities
+      - Standard discrete distributions
+      - Standard continuous distributions
+    Multivariate Distributions:
+      - Joint, marginal and conditional distributions
+      - Independence of random variables
+      - Functions of random vectors
+      - Covariance, correlation and joint moments
+      - Conditional expectation and variance
+      - Multinomial distribution
+      - Bivariate normal distribution
+    Limit Theorems:
+      - Modes of convergence
+      - Laws of large numbers
+      - Central limit theorem
+    Sampling Distributions:
+      - Order statistics
+      - Chi-square distribution
+      - t distribution
+      - F distribution
+    Estimation:
+      - Unbiasedness and consistency
+      - Sufficiency and completeness
+      - UMVUE, Rao-Blackwell and Lehmann-Scheffe
+      - Cramer-Rao inequality
+      - Method of moments
+      - Maximum likelihood estimation
+      - Least squares and simple linear regression
+      - Confidence intervals
+    Testing of Hypotheses:
+      - Errors, size, power and p-value
+      - Neyman-Pearson lemma and MP tests
+      - UMP tests
+      - Likelihood ratio tests
+    Nonparametric Methods:
+      - Runs test
+      - Empirical distribution function and Kolmogorov-Smirnov test
+      - Sign tests
+      - Mann-Whitney test
+    Stochastic Processes:
+      - Markov chains
+      - Poisson process
