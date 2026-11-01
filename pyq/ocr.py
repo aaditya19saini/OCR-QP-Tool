@@ -57,7 +57,8 @@ def ocr_page(png: Path) -> str:
             {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img}"}},
             {"type": "text", "text": "OCR:"},
         ]}],
-        "temperature": 0, "max_tokens": 4096,
+        # densest page so far ~2.5k chars (~1k tokens); the cap mostly bounds whitespace loops after the footer
+        "temperature": 0, "max_tokens": 2048,
     }).encode()
     req = urllib.request.Request(f"{URL}/v1/chat/completions", body, {"Content-Type": "application/json"})
     r = json.load(urllib.request.urlopen(req, timeout=600))
