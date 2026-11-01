@@ -61,7 +61,7 @@ Always use the project venv (Python 3.12):
 .venv/bin/python -m pytest -q              # run before every commit
 ```
 Recreate the env: `uv venv -p 3.12 .venv && uv pip install -p .venv -r requirements.txt`
-OCR tools (not in git, ~1.8 GB): `~/.cache/pyq-ocr/` = llama.cpp Vulkan build b12032 (`llama/`) + `PaddlePaddle/PaddleOCR-VL-1.6-GGUF` files (model, mmproj, chat_template.jinja) from Hugging Face.
+OCR tools (not in git, ~2 GB): `~/.cache/pyq-ocr/` = llama.cpp b12032 CUDA 13.4 build (`llama-cuda/`, uses the RTX 3050, ~6 s/page) with Vulkan build fallback (`llama/`, iGPU only, ~45 s/page) + `PaddlePaddle/PaddleOCR-VL-1.6-GGUF` files (model, mmproj, chat_template.jinja) from Hugging Face.
 
 ## Skills and agents
 | When | Use |

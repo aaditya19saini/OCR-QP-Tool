@@ -24,14 +24,19 @@ URL = f"http://127.0.0.1:{PORT}"
 
 
 def start_server() -> subprocess.Popen:
+    # CUDA build uses the NVIDIA GPU (~10 s/page); the Vulkan build only sees the iGPU here (~45 s/page).
+    cuda = HOME / "llama-cuda" / "llama-server"
+    binary = cuda if cuda.exists() else HOME / "llama" / "llama-server"
+    env = {**os.environ, "LD_LIBRARY_PATH": f"/opt/cuda/lib64:{os.environ.get('LD_LIBRARY_PATH', '')}"}
     cmd = [
-        str(HOME / "llama" / "llama-server"),
+        str(binary),
         "-m", str(HOME / "PaddleOCR-VL-1.6-GGUF.gguf"),
         "--mmproj", str(HOME / "PaddleOCR-VL-1.6-GGUF-mmproj.gguf"),
         "--jinja", "--chat-template-file", str(HOME / "chat_template.jinja"),
-        "-ngl", "99", "--port", str(PORT), "--temp", "0",
+        "-ngl", "99", "-c", "8192",  # default 131k context does not fit a 4 GB GPU
+        "--port", str(PORT), "--temp", "0",
     ]
-    proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, env=env)
     for _ in range(120):
         try:
             if json.load(urllib.request.urlopen(f"{URL}/health", timeout=2)).get("status") == "ok":
