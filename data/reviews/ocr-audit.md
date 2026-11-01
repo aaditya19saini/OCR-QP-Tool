@@ -121,5 +121,48 @@ Method per year (dropped-display check added during 2025: a line announcing a fo
   - p030: Q.(C) "non-singular" -> "nonsingular" (as printed; cosmetic).
   - p022: closed the display `\[ … \]` (cosmetic).
 
+## 2023 (37 pages; native text layer, very good; OCR output was the weakest of all years)
+- Done-check: 34 pNNN.md + 3 pNNN.FAILED.md (pipeline flagged as truncated / not a clean loop).
+- Because the layer is native and OCR quality was poor, I compared every page against the text layer, and checked the image wherever the layer's stacked fractions/limits were ambiguous (twice the layer was wrong and the OCR right: p028 Q.38(D) limits and Q.39(A) 4/√15).
+- After fixes: Q.1–Q.60 contiguous, all 5 marks headers present, cases/dropped/word checks clean.
+- Fixes:
+  - p005: OCR failed (invented options (E)–(W) after the real four, truncated) -> written from image + text layer (Q.8, options (A)–(D) only).
+  - p012: OCR failed (truncated; condition −1 ≤ x ≤ 1 had also drifted outside the cases block) -> written from image + text layer (Q.17).
+  - p017: OCR failed (truncated after (C)) -> written from image + text layer (Q.22).
+  - p001: Q.1 option (B) `x \cup z = 0` -> `x + z = 0`.
+  - p003: Q.5 label missing and "Then, Var(Y) equals" dropped -> added both.
+  - p004: Q.7 label, f(x,y) = 2x² − xy − 3y² − 3x + 7y and "the point (1, 1) is" all dropped -> added.
+  - p006: Q.10 pdf `f(x;θ) = (3−θ)x^{2−θ} if 0<x<1; 0 otherwise` dropped -> added.
+  - p007: Q.11(B) `χ²` -> `χ²_2`.
+  - p008: Q.13 "will be less than 2, equals" dropped -> added.
+  - p009: watermark text ("Joint Admission test for Masters / Organizing Institute / …", 7 lines) transcribed as content -> removed.
+  - p010: Q.15 "i, j, d" -> "i.i.d."; the α₂ = lim P(|S_n − 1/3| < 1) line dropped -> added.
+  - p015: Q.20(D) `≠` -> `=`.
+  - p016: Q.21(D) `Var(Y | X) = 1/2 = 1/12` -> `Var(Y | X = 1/2) = 1/12`.
+  - p019: Q.26 option (A) `16π` (duplicate of B) -> `16π − 16`; "is" added before options.
+  - p020: Q.28 label missing -> added.
+  - p021: Q.29 `\Gamma \Gamma \Gamma \Gamma (2, 1/2)` -> `Gamma(2, 1/2)`.
+  - p025: Q.34(C) `Cov = 5/3` -> `−5/3` (image).
+  - p027: Q.37 `U = x/Y` -> `X/Y`, `E(e^{tz})` -> `E(e^{tZ})`.
+  - p030: Q.42 "i, i. d." -> "i.i.d.".
+  - p031: Q.44 estimator `X = c/10 Σ|X_i|` -> `Y = …`; Q.45 `ln(2/x)` -> `ln(2/X)`.
+  - p032: Q.47 `n ≥ 2, 3, …` -> `n = 2, 3, …`; Q.48 `(1+k)/4^{k−1}` -> `(1 + k 2^k)/4^{k−1}` (image).
+  - p034: Q.51 `· x ∈ R` -> `, x ∈ R`; Q.53 integrand dropped `∫_{-∞}^{∞} dx` -> `∫_0^∞ 2^{−x²} dx` (image).
+  - p035: Q.54 pdf `&` misplaced / support lost -> `x/θ² e^{−x/θ}, & if x > 0`; "then" -> "Then"; Q.55 pmf `θ(1, θ)^x, & otherwise` -> `θ(1−θ)^x, & if x = 0,1,2,…`; `\hat{t}` -> `\hat{\tau}`.
+  - p036: Q.58 set R written as `cases` -> `\left\{ … \right\}`.
+- Spot-check: n/a (all 37 pages compared).
+
+## Cross-year checks added at the end (run on all 14 years)
+- Option labels beyond (D) / questions with >4 options (invented-content check requested by the main session): only hit was 2021 p004 (a stray repeated option) and 2023 p003/p004/p020 (missing Q labels merged two questions). No (E)+ labels anywhere after the 2023 FAILED rewrites.
+- Duplicate option text inside one question: 2016 p005, 2017 p010, 2023 p019 real; 2021 p014, 2022 p004, 2024 p027, 2025 p015 false positives (shared prefixes).
+- Word check extended to count "equal(s)/then/where/limit" (a dropped "is equal to" now shows).
+- Fixes:
+  - 2021 p004: Q.4 limit dropped -> `\lim_{n→∞} \sum_{k=0}^{n} \binom{2n}{k} \frac{1}{4^n}` (image); Q.5 a stray "(D) Φ(2)" in place of "is equal to" -> replaced with "is equal to".
+  - 2017 p010: Q.37 option (B) `(X_1²+X_2²)/2` (duplicate of C) -> `(X_1²+X_2)/2` (image).
+  - 2016 p005: Q.14 option (D) `e^{−e^{−2}}` (duplicate of C) -> `e^{−e^{2}}` (image).
+
 ## Running silent-error tally
-Random spot checks so far: 10 pages (2014, 2017, 2024, 2025, 2012), 3 had a meaning-changing math error (wrong subscript/variable/limits) that no automated check catches (2012 extra page p004 also wrong).
+Random spot checks (2 per year, 13 years; 2023 compared in full instead): 26 pages, 6 had a meaning-changing error that no automated check caught (2014 p011, 2024 p032, 2012 p003, 2016 p013, 2019 p003, 2021 p012) = ~23% of pages. The 3 extra math-heavy pages I looked at (2012 p004, 2013 p004, and the 2023 full pass) agree. Most errors are a single wrong subscript, sign, limit or fraction inside otherwise-correct text, often where a watermark crosses the formula. Expect similar residual errors on the pages nobody has looked at by eye, mostly in years without a usable text layer (2014, 2017, 2024, 2025) and 2013 (garbage layer).
+
+## OPEN
+- None illegible. Residual risk: unchecked pages in no-layer years (2014, 2017, 2024, 2025) and 2013 likely still hold ~1 subtle math error per 4–5 pages. Question numbers, option counts, marks headers and answer keys are verified for all years.
