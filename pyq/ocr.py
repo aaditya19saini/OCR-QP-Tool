@@ -62,9 +62,14 @@ def ocr_page(png: Path) -> str:
     req = urllib.request.Request(f"{URL}/v1/chat/completions", body, {"Content-Type": "application/json"})
     r = json.load(urllib.request.urlopen(req, timeout=600))
     choice = r["choices"][0]
-    if choice.get("finish_reason") == "length":
+    return clean(choice["message"]["content"], choice.get("finish_reason"), png)
+
+
+def clean(text: str, finish_reason: str | None, png: Path) -> str:
+    """Hitting max_tokens is only OK when the model was looping on whitespace after the real text."""
+    if finish_reason == "length" and len(text) - len(text.rstrip()) < 200:
         raise RuntimeError(f"{png}: OCR output truncated at max_tokens")
-    return choice["message"]["content"].strip() + "\n"
+    return text.strip() + "\n"
 
 
 def main(years: list[int]) -> None:
