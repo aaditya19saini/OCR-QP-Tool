@@ -50,5 +50,13 @@ Method per year (dropped-display check added during 2025: a line announcing a fo
   - p004: Q.4 piecewise first row lost its condition (exponential factor pushed into the condition column) -> `\frac{\sin(2(x^2+y^2))}{x^2+y^2} e^{3x\sin(4/y)}, & \text{if } (x,y) \neq (0,0)`.
 - New check (run on all done years 2012–2014, 2017, 2024, 2025): every `\begin{cases}` row must have a condition after `&`. No further hits.
 
+## 2015 (18 pages; good text layer)
+- Numbering restarts per section: A Q.1–30, B Q.1–10, C Q.1–20 (60 total); sequence otherwise contiguous, options complete, no loops, no short pages.
+- Text-layer number diffs p005, p007, p008, p010, p014: all layer artefacts (footer "x/18", section header "Q.11 – Q.30", subscripts like χ²₁₀ read as "102"). OCR right.
+- cases check: p005 (notation table) wrote the binomial coefficient as a `cases` block.
+- Spot-check (from 2015 on, sampled from pages containing a question, since seed 2015 picked the two instruction pages): p006, p015 both match the image.
+- Fixes:
+  - p005: binomial coefficient `\begin{cases} n \\ x \end{cases}` -> `\binom{n}{x}` (row is labelled "Binomial coefficient, equal to n!/(x!(n-x)!)").
+
 ## Running silent-error tally
 Random spot checks so far: 10 pages (2014, 2017, 2024, 2025, 2012), 3 had a meaning-changing math error (wrong subscript/variable/limits) that no automated check catches (2012 extra page p004 also wrong).
