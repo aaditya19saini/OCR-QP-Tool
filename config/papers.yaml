@@ -5,16 +5,16 @@ missing_years: []  # all 2012-2025 present (2013, 2016, 2019 added from jam2026.
 papers:
   2012:
     file: MS2012.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2012.pdf p1 instructions"
+    total_marks: 300   # printed p1 "Maximum Marks: 300"
+    expected_questions: 25   # printed p1 "25 questions"
+    sections: {objective: "Q1-15 MCQ, 6 marks each", subjective: "Q16-25, 21 marks each, parts (a)=9 (b)=12"}   # no section labels printed
+    source: "MS2012.pdf p1 and p3 instructions"
   2013:
     file: MS2013.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null
+    total_marks: 100   # printed p1 "Maximum Marks: 100"
+    expected_questions: 30   # printed p1 "30 questions"
+    sections: {"Objective Questions": "Q1-10 MCQ, 2 marks", "Fill in the blank questions": "Q11-20, 3 marks (stored as NAT, flagged)", "Descriptive questions": "Q21-30 subjective, 5 marks"}
+    source: "MS2013.pdf p1 and p3 instructions; headers p3, p7, p10"
   2014:
     file: MS2014.pdf
     total_marks: null
