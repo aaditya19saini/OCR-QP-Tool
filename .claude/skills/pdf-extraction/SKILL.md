@@ -6,7 +6,7 @@ description: Record every question from one JAM MS paper (PDF) into data/extract
 # PDF question extraction (one year per run)
 
 We record **facts and a one-line summary**, not verbatim text. Topic and marks statistics don't need full transcription, and skipping it halves the cost and the error surface.
-PDF text layers are unreliable (2014, 2017, 2024, 2025 are scans; Word PDFs mangle math). **Primary input is the local OCR text** `data/ocr/<year>/pNNN.md` (PaddleOCR-VL, LaTeX math; tested exact on 3 pages incl. the 2014 scan). Open the page image only when the OCR looks wrong: garbled math, missing question numbers, a summary you can't write confidently. Record that in flags (`checked-image`).
+PDF text layers are unreliable (2014, 2017, 2024, 2025 are scans; Word PDFs mangle math). **Primary input is the local OCR text** `data/ocr/<year>/pNNN.md` (PaddleOCR-VL, LaTeX math; tested exact on 3 pages incl. the 2014 scan). Open the page image only when the OCR looks wrong: garbled math, missing question numbers, a summary you can't write confidently. Record that in flags (`checked-image`). A `pNNN.FAILED.md` means the OCR hit its cap without a clean loop (it can invent content, e.g. extra options (E)-(W)): never use it, always read that page from the image. JAM objective questions have exactly 4 options; more is an OCR fabrication.
 
 ## Steps
 1. Make sure `data/ocr/<year>/` exists for every page; if not run `.venv/bin/python -m pyq.ocr <year>` (renders pages if needed; ~40 s/page on the local GPU, resumable).
