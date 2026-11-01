@@ -1,0 +1,91 @@
+"""Local OCR of page images with PaddleOCR-VL 1.6 (llama.cpp server, runs on this machine's GPU).
+
+Usage: python -m pyq.ocr [year ...]      (default: every year in papers.yaml)
+Output: data/ocr/<year>/pNNN.md          (committed; resumable: existing pages are skipped)
+Needs: ~/.cache/pyq-ocr/ with llama/llama-server, the PaddleOCR-VL GGUF, its mmproj and chat_template.jinja
+       (override the folder with PYQ_OCR_HOME).
+"""
+import base64
+import json
+import os
+import subprocess
+import sys
+import time
+import urllib.request
+from pathlib import Path
+
+from .common import PAGES, ROOT, load_yaml, setup_logging, verify_manifest
+from .render import render
+
+OCR = ROOT / "data" / "ocr"
+HOME = Path(os.environ.get("PYQ_OCR_HOME", Path.home() / ".cache" / "pyq-ocr"))
+PORT = 8931
+URL = f"http://127.0.0.1:{PORT}"
+
+
+def start_server() -> subprocess.Popen:
+    cmd = [
+        str(HOME / "llama" / "llama-server"),
+        "-m", str(HOME / "PaddleOCR-VL-1.6-GGUF.gguf"),
+        "--mmproj", str(HOME / "PaddleOCR-VL-1.6-GGUF-mmproj.gguf"),
+        "--jinja", "--chat-template-file", str(HOME / "chat_template.jinja"),
+        "-ngl", "99", "--port", str(PORT), "--temp", "0",
+    ]
+    proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    for _ in range(120):
+        try:
+            if json.load(urllib.request.urlopen(f"{URL}/health", timeout=2)).get("status") == "ok":
+                return proc
+        except OSError:
+            pass
+        if proc.poll() is not None:
+            raise RuntimeError(f"llama-server exited with {proc.returncode}")
+        time.sleep(1)
+    proc.kill()
+    raise RuntimeError("llama-server did not become healthy in 120 s")
+
+
+def ocr_page(png: Path) -> str:
+    img = base64.b64encode(png.read_bytes()).decode()
+    body = json.dumps({
+        "messages": [{"role": "user", "content": [
+            {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{img}"}},
+            {"type": "text", "text": "OCR:"},
+        ]}],
+        "temperature": 0, "max_tokens": 4096,
+    }).encode()
+    req = urllib.request.Request(f"{URL}/v1/chat/completions", body, {"Content-Type": "application/json"})
+    r = json.load(urllib.request.urlopen(req, timeout=600))
+    choice = r["choices"][0]
+    if choice.get("finish_reason") == "length":
+        raise RuntimeError(f"{png}: OCR output truncated at max_tokens")
+    return choice["message"]["content"].strip() + "\n"
+
+
+def main(years: list[int]) -> None:
+    years = years or sorted(load_yaml("papers.yaml")["papers"])
+    for y in years:  # render first: render() starts its own log file
+        if not (PAGES / str(y)).exists():
+            render(y)
+    log = setup_logging("ocr")
+    verify_manifest()
+    log.info("model dir %s", HOME)
+    proc = start_server()
+    try:
+        for y in years:
+            out = OCR / str(y)
+            out.mkdir(parents=True, exist_ok=True)
+            todo = [p for p in sorted((PAGES / str(y)).glob("p*.png")) if not (out / f"{p.stem}.md").exists()]
+            log.info("%d: %d pages to OCR", y, len(todo))
+            for png in todo:
+                t = time.time()
+                text = ocr_page(png)
+                (out / f"{png.stem}.md").write_text(text)
+                log.info("%d %s %.0fs %d chars", y, png.stem, time.time() - t, len(text))
+    finally:
+        proc.terminate()
+        proc.wait(timeout=30)
+
+
+if __name__ == "__main__":
+    main([int(a) for a in sys.argv[1:]])

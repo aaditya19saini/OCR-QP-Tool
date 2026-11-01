@@ -1,0 +1,89 @@
+# Human-verified paper metadata. total_marks / expected_questions come from each paper's own
+# instructions page, filled during extraction with the page cited in *_source. null = not yet read.
+# Never guess these: validate.py only checks totals once they are set.
+missing_years: []  # all 2012-2025 present (2013, 2016, 2019 added from jam2026.iitb.ac.in/oldQP.html on 2026-11-01)
+papers:
+  2012:
+    file: MS2012.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2012.pdf p1 instructions"
+  2013:
+    file: MS2013.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null
+  2014:
+    file: MS2014.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2014.pdf p1 instructions"
+  2015:
+    file: MS2015.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2015.pdf p1 instructions"
+  2016:
+    file: MS2016.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null
+  2017:
+    file: MS2017.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2017.pdf p1 instructions"
+  2018:
+    file: MS2018.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2018.pdf p1 instructions"
+  2019:
+    file: MS2019.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null
+  2020:
+    file: MS2020.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2020.pdf p1 instructions"
+  2021:
+    file: MS2021.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2021.pdf p1 instructions"
+  2022:
+    file: MS2022.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2022.pdf p1 instructions"
+  2023:
+    file: MS2023.pdf
+    total_marks: 100   # inferred: sum of printed section headers (10x1+20x2 | 10x2 | 10x1+10x2); no instructions page in this PDF
+    expected_questions: 60   # from printed section ranges Q.1-Q.60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # format inferred from layout: A 4 options, B "is/are" multi-select, C answer blank
+    source: "MS2023.pdf section headers p1, p7, p22, p30, p34"
+  2024:
+    file: MS2024.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2024.pdf p1 instructions"
+  2025:
+    file: MS2025.pdf
+    total_marks: null
+    expected_questions: null
+    sections: null
+    source: null   # e.g. "MS2025.pdf p1 instructions"

@@ -1,0 +1,10 @@
+# Official JAM MS syllabus taxonomy. Blocked until the syllabus PDF is in docs/.
+# Shape:
+#   version: "jam-ms-<syllabus-year>-v1"   # bump on any edit; classifications record it
+#   subjects:
+#     Mathematics:
+#       <Topic>: [<subtopic>, ...]
+#     Statistics:
+#       <Topic>: [<subtopic>, ...]
+version: null
+subjects: {}
