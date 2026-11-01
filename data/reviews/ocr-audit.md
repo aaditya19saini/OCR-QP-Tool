@@ -111,5 +111,15 @@ Method per year (dropped-display check added during 2025: a line announcing a fo
   - p005: Q.9 "is equal to" after P(Urn 1 is selected | …) missing -> added (text layer).
   - p012: Q.30 option (B) `P(E_2 ∩ E_3) ≤ 2/5` -> `≤ 1/2` (text layer; the watermark crosses this fraction in the image).
 
+## 2022 (44 pages, footers x/52; good text layer; one question per page in tables)
+- Automated: Q.1–Q.60 contiguous, all 5 marks headers present, no loops. Number diffs = footers and σ²/x² subscript artefacts (p033, p042 checked: OCR right). p038 option flag = NAT false positive.
+- cases check: p006. Word check: p001 (notation table), p030 ("nonsingular"), p038 (layer artefact "limsupn", OCR right).
+- Spot-check p022, p032: both match the image (p022 had an unclosed `\[`, closed).
+- Fixes:
+  - p006: Q.7 joint pdf first row lost its support (`&` inside the density) -> `\dfrac{\sqrt2}{\sqrt\pi} e^{-2x} e^{-(y-x)^2/2}, & 0<x<∞, -∞<y<∞` (text layer).
+  - p001: notation rows shifted: χ²_n symbol glued to the Φ row, F_{m,n} given the chi-square description, Snedecor F row lost -> rebuilt the Φ, χ²_n, F_{m,n}, t_{n,α} rows from the text layer.
+  - p030: Q.(C) "non-singular" -> "nonsingular" (as printed; cosmetic).
+  - p022: closed the display `\[ … \]` (cosmetic).
+
 ## Running silent-error tally
 Random spot checks so far: 10 pages (2014, 2017, 2024, 2025, 2012), 3 had a meaning-changing math error (wrong subscript/variable/limits) that no automated check catches (2012 extra page p004 also wrong).

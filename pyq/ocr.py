@@ -63,7 +63,7 @@ def ocr_page(png: Path) -> str:
     req = urllib.request.Request(f"{URL}/v1/chat/completions", body, {"Content-Type": "application/json"})
     r = json.load(urllib.request.urlopen(req, timeout=600))
     choice = r["choices"][0]
-    return clean(choice["message"]["content"], choice.get("finish_reason"), png)
+    return choice["message"]["content"], choice.get("finish_reason")
 
 
 def clean(text: str, finish_reason: str | None, png: Path) -> str:
@@ -101,7 +101,14 @@ def main(years: list[int]) -> None:
             log.info("%d: %d pages to OCR", y, len(todo))
             for png in todo:
                 t = time.time()
-                text = ocr_page(png)
+                raw, reason = ocr_page(png)
+                try:
+                    text = clean(raw, reason, png)
+                except RuntimeError:
+                    # e.g. 2023 p5 invented options (E)..(W): never auto-repair, read this page from the image
+                    (out / f"{png.stem}.FAILED.md").write_text(raw)
+                    log.warning("%d %s truncated, not a clean loop: saved %s.FAILED.md for image check", y, png.stem, png.stem)
+                    continue
                 (out / f"{png.stem}.md").write_text(text)
                 log.info("%d %s %.0fs %d chars", y, png.stem, time.time() - t, len(text))
     finally:
