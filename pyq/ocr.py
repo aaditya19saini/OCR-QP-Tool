@@ -67,10 +67,21 @@ def ocr_page(png: Path) -> str:
 
 
 def clean(text: str, finish_reason: str | None, png: Path) -> str:
-    """Hitting max_tokens is only OK when the model was looping on whitespace after the real text."""
-    if finish_reason == "length" and len(text) - len(text.rstrip()) < 200:
-        raise RuntimeError(f"{png}: OCR output truncated at max_tokens")
-    return text.strip() + "\n"
+    """Hitting max_tokens is only OK when the model was looping after the real text:
+    a long whitespace run (footer) or one line repeated 5+ times (watermark, e.g. 2023)."""
+    if finish_reason != "length":
+        return text.strip() + "\n"
+    if len(text) - len(text.rstrip()) >= 200:
+        return text.strip() + "\n"
+    lines = [l.strip() for l in text.rstrip().splitlines()]
+    if len(lines) >= 2 and lines[-1] != lines[-2] and lines[-2].startswith(lines[-1]):
+        lines.pop()  # last copy of the loop was cut mid-line
+    ref, n = lines[-1] if lines else "", len(lines)
+    while n and lines[n - 1] == ref:
+        n -= 1
+    if ref and len(lines) - n >= 5:
+        return "\n".join(lines[:n]).strip() + "\n"
+    raise RuntimeError(f"{png}: OCR output truncated at max_tokens")
 
 
 def main(years: list[int]) -> None:

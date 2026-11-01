@@ -75,5 +75,41 @@ Method per year (dropped-display check added during 2025: a line announcing a fo
   - 2015 p008: section header "Q. 11 – Q. 30 carry two marks each." missing -> inserted before Q.11 (text layer + footer position).
   - 2015 p007: Q.6 `\Gamma(\alpha, \beta)` population -> `Gamma(\alpha, \beta)` (paper's own notation, text layer "Gamma").
 
+## 2018 (20 pages = 17 question pages + 3-page answer key; good text layer)
+- Automated: Q.1–Q.60 contiguous, all 5 marks headers present, options complete, no loops, word check clean. Number diffs = missing "x/17" footers / layer artefacts.
+- Answer key p018–p020: 60 rows, keys identical to the text layer.
+- cases check: p007, p013; layer-guided look at p003 (OK), p009.
+- Spot-check p005, p015: both match the image.
+- Fixes:
+  - p007: Q.17 sets V, W mangled into a nested `cases` block, column vectors lost x -> rewrote as `V = {(x,y,0) ∈ R^3 : M[x;y;0] = [0;0]}` and `W = {(x,y,z) ∈ R^3 : M[x;y;z] = [0;0]}` (image).
+  - p013: Q.38 pdf first row lost its support -> `c(θ) e^{-(x-θ)}, & x ≥ 2θ` (text layer).
+  - p009: Q.25 pmf `m+n` -> `\frac{m+n}{21}` (text layer). Q.26 option (A) `&` misplaced inside the density -> `\frac{\sqrt{1/2}}{\sqrt{\pi}} e^{-z/2} z^{-1/2}, & z>0`.
+
+## 2019 (15 pages; good text layer)
+- Automated: Q.1–Q.60 contiguous, all 5 marks headers present, options complete, no loops, cases/dropped clean. Number diffs = footers and χ² subscript artefacts (checked p006 Q.21: OCR right).
+- Word check: p006 "exist" -> OCR had "exists".
+- Spot-check p003, p013: p013 OK, p003 wrong (below).
+- Fixes:
+  - p003: Q.4 `T([-3;-2])` -> `T([3;-2])` (image; the same vector [3;-2] appears earlier in the stem). Digit-only checks cannot see a dropped minus.
+  - p006: Q.17 "If there exists a 3×2" -> "If there exist a 3×2" (wording as printed).
+
+## 2020 (15 pages; text layer has the words but no math glyphs, so number checks are weak)
+- Automated: Q.1–Q.60 contiguous, options complete, no loops, cases/dropped clean.
+- Marks headers: "Q. 31 – Q. 40" missing (p009). Word check: p007 (Q.21 sentence lost), p009 (that header).
+- Spot-check p014, p015: both match the image.
+- Fixes:
+  - p007: Q.21 "where ε_i' is a data set" (half a sentence dropped) -> "where ε_i's are i.i.d. random variables with mean 0 and variance σ² ∈ (0, ∞). Suppose that we have a data set" (image).
+  - p009: section B header "Q. 31 – Q. 40 carry two marks each." missing -> inserted under "MULTIPLE SELECT QUESTIONS (MSQ)" (text layer).
+
+## 2021 (21 pages; good text layer; heavy diagonal watermark)
+- Automated: Q.1–Q.60 contiguous, all 5 marks headers present, options complete, no loops. Number diffs: p001/p002 instructions, p011 (below).
+- cases check: p010 (set braces written as `cases`). Word check: p005 ("is equal to" dropped).
+- Spot-check p012, p016: p016 OK, p012 wrong (below).
+- Fixes:
+  - p011: Q.26 `a_{n+1} = \frac{1}{3^4}(a_n)^{3/4}` -> `3^{\frac{1}{4}} (a_n)^{\frac{3}{4}}` (image).
+  - p010: Q.(critical region) `R = \begin{cases} … \end{cases}` -> `R = \left\{ … \right\}` (a set, not a piecewise function).
+  - p005: Q.9 "is equal to" after P(Urn 1 is selected | …) missing -> added (text layer).
+  - p012: Q.30 option (B) `P(E_2 ∩ E_3) ≤ 2/5` -> `≤ 1/2` (text layer; the watermark crosses this fraction in the image).
+
 ## Running silent-error tally
 Random spot checks so far: 10 pages (2014, 2017, 2024, 2025, 2012), 3 had a meaning-changing math error (wrong subscript/variable/limits) that no automated check catches (2012 extra page p004 also wrong).
