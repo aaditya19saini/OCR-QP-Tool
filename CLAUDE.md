@@ -9,11 +9,44 @@ The stages are: 1 inventory → 2 extraction → 3 validation → 4 statistics �
 - Wait for the user's approval before starting the next stage.
 - Never jump ahead to reporting.
 
-Current state: stage 1 done (14 papers, 2012–2025). 2023 extracted and verified. OCR of all papers running/done in `data/ocr/`. Taxonomy waits on the official syllabus PDF in `docs/`.
+The user explicitly allowed (2026-11-01): commit and push every finished step to https://github.com/aaditya19saini/OCR-QP-Tool (public), and run extraction for the remaining years in parallel agents. Still stop for approval between stages.
+
+## Current state and resume plan (updated 2026-11-01, agents paused by user)
+Done and pushed (last commit "Checkpoint (agents paused by user)"):
+- Stage 1: 14 official papers 2012–2025 in `data/raw/` (2013, 2016 and 2019 added from jam2026.iitb.ac.in/oldQP.html).
+- OCR: all 416 pages in `data/ocr/`, audited against images (`data/reviews/ocr-audit.md`, about 70 fixes). Spot checks found about 1 meaning-changing error per 4–5 unchecked pages, so OCR is a draft, not ground truth.
+- Syllabus: `docs/syllabus/syllabus_MS_JAM2026.pdf` (fetched with user approval) → `config/taxonomy.yaml` v `jam-ms-2026-v1` (15 topics, 76 subtopics).
+- Extracted: all 14 years, 837 rows, validator 0 errors. Verified against images: 2023 and 2024 (PASS).
+- Classified: 2012, 2013, 2023, 2024, 2025.
+- Analysis code ready and tested: `pyq/master.py`, `pyq/stats.py` (25 tests pass).
+
+Resume in this order:
+1. **Classify 2014–2022** (9 years) per the `question-classification` skill. Parallel agents are OK. Reuse archetype labels from `data/classified/*.jsonl`.
+2. **Enter printed totals in `config/papers.yaml`** for 2014–2022 and 2025 (only from the paper: instructions page, section headers or printed answer key; cite `source`). Then re-run `pyq.validate` so the count and marks-sum checks actually run. Edit with a regex that tolerates the `# e.g.` comment on `source: null` lines.
+3. **Image-verify the scans 2014, 2017, 2025** with the `extraction-verifier` agent (full year). For text papers, verify 5 sampled pages each.
+4. **Taxonomy gap:** differential-equations questions (2012 Q17, 2013 Q20, 2014 Q35, maybe others) have no topic in the 2026 syllabus; they are parked under Integral Calculus with low confidence. Add a topic "Differential Equations (pre-2026 syllabus)", bump the version to `jam-ms-2026-v2`, update `taxonomy_version` in every classified file, re-classify those questions, revalidate.
+5. **Merge archetype synonyms** across years (agents named patterns independently), then run `classification-reviewer` on low/medium-confidence items and repeat claims.
+6. **Stage 3 summary, then stop for approval.** Then `python -m pyq.master` → stats (`statistical-analysis` skill) → report (`report-generation` skill).
+
+## Per-paper quirks (read before touching a year)
+- **2012:** old format, 25 Q, 300 marks (p1). Q1–15 MCQ at 6 marks; Q16–25 subjective at 21 marks with child rows (a)=9, (b)=12. No section labels. Era "old".
+- **2013:** 30 Q, 100 marks (p1). Sections "Objective" (Q1–10 MCQ, 2 marks), "Fill in the blank" (Q11–20, 3 marks, stored as NAT with flag `printed-format:fill-in-the-blank`), "Descriptive" (Q21–30 subjective, 5 marks). Era "old".
+- **2014:** image scan, 43 Q, older format. Era "old".
+- **2015:** questions printed per section ("C.Q20"); stored as Q1–60 with flag `printed-as-...`.
+- **2016, 2017, 2018, 2024:** the PDF prints an official answer key (type, marks, key). Cross-check format and marks against it. Keys are not used for anything else (scope decision).
+- **2017:** image scan, no printed page 1.
+- **2023:** no instructions page; totals come from the section headers. Heavy "JAM 2023" watermarks broke OCR (loops, invented options); 3 pages were rewritten from images.
+- **2024, 2025:** image scans. 2024 matched its answer key exactly.
+- Era rule (`pyq/master.py`): "current" = 60 Q / 100 marks in papers.yaml, else "old". Old-era papers are reported separately.
+
+## Lessons (don't relearn these)
+- Local OCR (PaddleOCR-VL) can **invent content** under watermarks, e.g. extra options (E)–(W). JAM objective questions have exactly 4 options; more is fabrication. `pNNN.FAILED.md` = never use, read the image.
+- Parallel workers must not edit `config/papers.yaml` or use git. They report totals; the main session applies them and commits.
+- Summaries describe the question, never its answer.
 
 ## Scope decisions (override guide.md; agreed with user 2026-11-01)
 - **No verbatim transcription.** Extraction records facts (number, format, marks, pages) plus a one-line `summary` of what each question asks. Page images are the reference for anything deeper.
-- **No difficulty field.** There are no answer keys or score data, so it would be a guess.
+- **No difficulty field.** There are no score data, and answer keys exist only inside 4 PDFs (2016–2018, 2024), so difficulty would be a guess. Keys are used only to cross-check format and marks.
 - **No significance or trend tests.** 14 papers is too few. Describe the year-by-topic pattern plainly.
 - **Deliverables: `outputs/master.csv` + one report PDF** (HTML printed via headless Brave), with methodology and limitations inside the report. No Excel workbook, no separate methodology doc.
 - **2012 (and any other old-format paper) is reported separately**, never pooled into the main weightage or trends.
@@ -30,7 +63,7 @@ Current state: stage 1 done (14 papers, 2012–2025). 2023 extracted and verifie
 8. No appearance probabilities or confidence percentages without a defensible model. Future-topic statements are labelled **hypotheses**.
 9. Keep objective facts (`data/extracted`) separate from subjective judgements (`data/classified`). Archetype and cognitive type are subjective.
 10. "Repeated" means the same question, or the same structure with changed numbers. Same topic alone is not a repeat.
-11. Only use the papers and the official syllabus. No external sources unless the user asks.
+11. Only use the papers and the official syllabus (JAM 2026 version, fetched with user approval). No other external sources unless the user asks. The syllabus is the 2026 version: topics with zero past questions may simply be new to it, so never call them "low priority" on that basis alone.
 
 ## Directory contract
 | Path | Rule |
@@ -58,6 +91,7 @@ Always use the project venv (Python 3.12):
 .venv/bin/python -m pyq.render 2023        # pages → data/pages/2023/*.png + text dump
 .venv/bin/python -m pyq.ocr [years]        # local PaddleOCR-VL → data/ocr/<year>/pNNN.md (GPU, resumable)
 .venv/bin/python -m pyq.validate [years]   # exit 1 on any error
+.venv/bin/python -m pyq.master             # join extracted + classified → outputs/master.csv (fails if any question unclassified)
 .venv/bin/python -m pytest -q              # run before every commit
 ```
 Recreate the env: `uv venv -p 3.12 .venv && uv pip install -p .venv -r requirements.txt`
