@@ -54,7 +54,7 @@ def check_extracted(recs: list[dict], year: int, paper: dict) -> tuple[list[str]
             errors.append(f"{u}: empty summary")
         if r["marks"] is None:
             warnings.append(f"{u}: marks not printed (null)")
-        if r["confidence"] == "low" or r["flags"]:
+        if r["confidence"] == "low" or set(r["flags"]) - {"checked-image"}:  # checked-image is a note, not a problem
             warnings.append(f"{u}: needs manual check ({r['confidence']}, flags={r['flags']})")
 
     # Subparts carry their own marks; totals count each top-level question once.

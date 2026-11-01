@@ -166,3 +166,7 @@ Random spot checks (2 per year, 13 years; 2023 compared in full instead): 26 pag
 
 ## OPEN
 - None illegible. Residual risk: unchecked pages in no-layer years (2014, 2017, 2024, 2025) and 2013 likely still hold ~1 subtle math error per 4–5 pages. Question numbers, option counts, marks headers and answer keys are verified for all years.
+
+## 2024 follow-up (main session, during extraction)
+- p016: Q.21 density g(y) mangled (fraction split across case rows) -> `e^{-y/2}/\sqrt{2\pi y}` if y>0, 0 if y<=0 (image).
+- p035: Q.46 `\frac{1}{n^4} - \sum` -> `\frac{1}{n^{3/4}} \sum` (image).
