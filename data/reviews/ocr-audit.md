@@ -58,5 +58,22 @@ Method per year (dropped-display check added during 2025: a line announcing a fo
 - Fixes:
   - p005: binomial coefficient `\begin{cases} n \\ x \end{cases}` -> `\binom{n}{x}` (row is labelled "Binomial coefficient, equal to n!/(x!(n-x)!)").
 
+## 2016 (18 pages; good text layer)
+- Automated: Q.1–Q.60, one gap (Q.50 -> Q.52, Q.52) on p015; options complete, no loops. Remaining number diffs (p004–p009, p014) are missing "x/18" footers or layer subscript artefacts, OCR right.
+- p018 is the official answer key (3 side-by-side tables); OCR kept only the first (Q.1–30).
+- Spot-check p013, p017: p017 OK, p013 wrong (below).
+- Fixes:
+  - p015: first NAT two-marker labelled "Q.52" (duplicate) -> "Q.51" (image and text layer).
+  - p018: answer key truncated after Q.30 -> appended Q.31–60 rows (type, key, marks) from the image, same format; matches the text layer exactly.
+  - p003: Q.8 `Y = \log_x X^{-2\alpha}` -> `\log_e` (text layer "log e").
+  - p013: Q.39 option (D) garbled (`2ΣX_i / 2ΣX_i`, χ² term in wrong place) -> `(2ΣX_i/χ²_{2n,α/2}, 2ΣX_i/χ²_{2n,1−α/2})` from the image; stray "(" before "Q.40" removed.
+
+## Cross-year follow-up checks (run after 2016 on all done years)
+- Text-layer word check (4+ letter words in the layer missing from the OCR page) on 2015, 2016; marks-header grep ("carry … marks") and a grep for underlined/italic words turned into `\frac{word}{word}` on all done years.
+- Fixes:
+  - 2013 p003: marks note read `\frac{two}{three}`, `\frac{three}{five}`, `\frac{five}{five}` (underlined words) -> "two", "three", "five" (image). This is the per-section marks statement, so it mattered.
+  - 2015 p008: section header "Q. 11 – Q. 30 carry two marks each." missing -> inserted before Q.11 (text layer + footer position).
+  - 2015 p007: Q.6 `\Gamma(\alpha, \beta)` population -> `Gamma(\alpha, \beta)` (paper's own notation, text layer "Gamma").
+
 ## Running silent-error tally
 Random spot checks so far: 10 pages (2014, 2017, 2024, 2025, 2012), 3 had a meaning-changing math error (wrong subscript/variable/limits) that no automated check catches (2012 extra page p004 also wrong).
