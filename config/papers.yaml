@@ -83,7 +83,7 @@ papers:
     source: "MS2024.pdf master answer key p42-43; section headers p2, p8, p26, p34, p37"
   2025:
     file: MS2025.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2025.pdf p1 instructions"
+    total_marks: 100   # printed p1 "a total of 60 questions carrying 100 marks"
+    expected_questions: 60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # printed p1 instructions 2-4
+    source: "MS2025.pdf p1 instructions"
