@@ -17,40 +17,40 @@ papers:
     source: "MS2013.pdf p1 and p3 instructions; headers p3, p7, p10"
   2014:
     file: MS2014.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2014.pdf p1 instructions"
+    total_marks: 100   # printed p1 "Maximum Marks: 100"
+    expected_questions: 43   # Part-I 35 objective + Part-II 8 descriptive (p1, p3)
+    sections: {"Part-I": "Q1-35 objective; Q1-10 1 mark, Q11-35 2 marks", "Part-II": "Q36-43 descriptive, 5 marks"}
+    source: "MS2014.pdf p1 instructions (repeated p3)"
   2015:
     file: MS2015.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2015.pdf p1 instructions"
+    total_marks: 100   # printed p3 "Maximum Marks: 100"
+    expected_questions: 60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # instructions p3; headers p6, p13, p16 (questions numbered per section)
+    source: "MS2015.pdf p3 instructions 3-6; headers p6, p13, p16"
   2016:
     file: MS2016.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null
+    total_marks: 100   # INFERRED: not printed; sum of printed section marks (p2, p4, p11, p14, p15), confirmed by answer key p18
+    expected_questions: 60   # printed answer key p18 lists 60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # answer key p18 type column
+    source: "MS2016.pdf section headers p2, p4, p11, p14, p15; answer key p18"
   2017:
     file: MS2017.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2017.pdf p1 instructions"
+    total_marks: 100   # INFERRED: not printed; sum of printed section headers p2, p4, p8, p11, p12
+    expected_questions: 60   # answer key p15 lists 60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # answer key p15 type column
+    source: "MS2017.pdf section headers p2, p4, p8, p11, p12; answer key p15 (no marks column)"
   2018:
     file: MS2018.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2018.pdf p1 instructions"
+    total_marks: 100   # printed p1 "60 questions carrying 100 marks"
+    expected_questions: 60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # p1 instructions; headers p3, p6, p11, p14, p16
+    source: "MS2018.pdf p1 instructions; headers p3, p6, p11, p14, p16"
   2019:
     file: MS2019.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null
+    total_marks: 100   # printed p1 "60 questions carrying 100 marks"
+    expected_questions: 60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # p1 instructions; headers p3, p5, p9, p12, p13
+    source: "MS2019.pdf p1 instructions; headers p3, p5, p9, p12, p13"
   2020:
     file: MS2020.pdf
     total_marks: null
