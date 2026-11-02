@@ -27,6 +27,7 @@ Resume in this order:
 4. **Taxonomy gap:** differential-equations questions (2012 Q17, 2013 Q20, 2014 Q35, maybe others) have no topic in the 2026 syllabus; they are parked under Integral Calculus with low confidence. Add a topic "Differential Equations (pre-2026 syllabus)", bump the version to `jam-ms-2026-v2`, update `taxonomy_version` in every classified file, re-classify those questions, revalidate.
 5. **Merge archetype synonyms** across years (agents named patterns independently), then run `classification-reviewer` on low/medium-confidence items and repeat claims.
 6. **Stage 3 summary, then stop for approval.** Then `python -m pyq.master` → stats (`statistical-analysis` skill) → report (`report-generation` skill).
+7. **After the first full run (user request, 2026-11-02):** package the proven pipeline as a generic, exam-agnostic skill ("PYQ analytics from any exam's papers + syllabus"): inventory/manifest → local OCR with loop/fabrication guards → OCR audit → extraction with printed-answer-key cross-check → versioned taxonomy from the syllabus → classification → validation → stats → report. Exam-specific facts (formats, eras, quirks) go in a per-exam config, not in the skill. Build it only from steps that actually ran.
 
 ## Per-paper quirks (read before touching a year)
 - **2012:** old format, 25 Q, 300 marks (p1). Q1–15 MCQ at 6 marks; Q16–25 subjective at 21 marks with child rows (a)=9, (b)=12. No section labels. Era "old".
