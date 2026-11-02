@@ -26,7 +26,18 @@ Resume in this order (progress 2026-11-02):
 3. **Image-verify the scans 2014, 2017, 2025**: verifier agent launched 2026-11-02; results go to `data/reviews/extraction-<year>.md`. Text papers: verify 5 sampled pages each (not yet done).
 4. ~~Taxonomy gap~~ DONE: taxonomy v2 adds "Differential Equations (pre-2026 syllabus)"; 11 ODE rows re-filed. ODEs appear only 2012–2016, which is a finding for the report.
 5. **Archetype merge + repeat tightening**: classification-reviewer launched 2026-11-02. It writes `data/reviews/classification.md` and machine-applicable `data/reviews/classification-fixes.json` ({archetype_map, repeats, topics}); apply mechanically, revalidate, commit. Workers flagged 30–38 of 60 questions per year as repeats (too generous).
-6. **Stage 3 summary, then stop for approval.** Then `python -m pyq.master` → stats (`statistical-analysis` skill) → report (`report-generation` skill).
+6. **Stage 3 summary, then stop for approval.** Then the analysis plan (agreed with user 2026-11-02):
+   - Scope: main analysis = the 11 current-format papers **2015–2025** (60 Q / 100 marks). 2012–2014 (300 marks / subjective / 43 Q) get a separate old-format note, never pooled.
+   - a. Apply the reviewer fixes (`data/reviews/classification-fixes.json`), revalidate, commit. This blocks the rest.
+   - b. `python -m pyq.master` → `outputs/master.csv`.
+   - c. Sanity asserts before using any number: topic marks per paper sum to 100; top-level counts = expected_questions; no subparts in totals.
+   - d. Tables from `pyq/stats.py`: topic table (frequency, marks share, appearance rate over 11 papers, recent = last 3, # archetypes), subtopic table (detail only, small n), year × topic marks matrix, format mix per year, top archetypes by # papers with example uids, tiers (rule in code).
+   - e. Five figures (Pareto of marks share, year × topic heatmap, appearance rate, format mix, top archetypes), each with a source + n footer.
+   - f. Interpretation: numbers only from the tables; each finding tagged strong / moderate / weak evidence; future areas = hypotheses, no probabilities.
+   - g. Report HTML → PDF (headless Brave) + `master.csv`; commit and push.
+   - Known findings to state: ODEs disappear after 2016 (don't prepare them). 2026-syllabus topics rarely or never tested before (descriptive statistics, nonparametric methods, stochastic processes) may be new, so flag them separately and don't rank them low. n = 11, so describe trends; don't test them.
+   - Skip: Excel, significance tests, difficulty, concept map, the guide's other 7 figures. New code: only a small `pyq/report.py`.
+   - Caveats for the limitations section: repeat/archetype results are moderate evidence at best. Some scan summaries were checked against OCR, not images; this affects archetypes, not counts/marks/topics.
 7. **After the first full run (user request, 2026-11-02):** package the proven pipeline as a generic, exam-agnostic skill ("PYQ analytics from any exam's papers + syllabus"): inventory/manifest → local OCR with loop/fabrication guards → OCR audit → extraction with printed-answer-key cross-check → versioned taxonomy from the syllabus → classification → validation → stats → report. Exam-specific facts (formats, eras, quirks) go in a per-exam config, not in the skill. Build it only from steps that actually ran.
 
 ## Per-paper quirks (read before touching a year)
