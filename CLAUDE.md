@@ -11,21 +11,21 @@ The stages are: 1 inventory → 2 extraction → 3 validation → 4 statistics �
 
 The user explicitly allowed (2026-11-01): commit and push every finished step to https://github.com/aaditya19saini/OCR-QP-Tool (public), and run extraction for the remaining years in parallel agents. Still stop for approval between stages.
 
-## Current state and resume plan (updated 2026-11-01, agents paused by user)
+## Current state and resume plan (updated 2026-11-02)
 Done and pushed (last commit "Checkpoint (agents paused by user)"):
 - Stage 1: 14 official papers 2012–2025 in `data/raw/` (2013, 2016 and 2019 added from jam2026.iitb.ac.in/oldQP.html).
 - OCR: all 416 pages in `data/ocr/`, audited against images (`data/reviews/ocr-audit.md`, about 70 fixes). Spot checks found about 1 meaning-changing error per 4–5 unchecked pages, so OCR is a draft, not ground truth.
 - Syllabus: `docs/syllabus/syllabus_MS_JAM2026.pdf` (fetched with user approval) → `config/taxonomy.yaml` v `jam-ms-2026-v1` (15 topics, 76 subtopics).
 - Extracted: all 14 years, 837 rows, validator 0 errors. Verified against images: 2023 and 2024 (PASS).
-- Classified: 2012, 2013, 2023, 2024, 2025.
+- Classified: all 14 years (taxonomy v2).
 - Analysis code ready and tested: `pyq/master.py`, `pyq/stats.py` (25 tests pass).
 
-Resume in this order:
-1. **Classify 2014–2022** (9 years) per the `question-classification` skill. Parallel agents are OK. Reuse archetype labels from `data/classified/*.jsonl`.
-2. **Enter printed totals in `config/papers.yaml`** for 2014–2022 and 2025 (only from the paper: instructions page, section headers or printed answer key; cite `source`). Then re-run `pyq.validate` so the count and marks-sum checks actually run. Edit with a regex that tolerates the `# e.g.` comment on `source: null` lines.
-3. **Image-verify the scans 2014, 2017, 2025** with the `extraction-verifier` agent (full year). For text papers, verify 5 sampled pages each.
-4. **Taxonomy gap:** differential-equations questions (2012 Q17, 2013 Q20, 2014 Q35, maybe others) have no topic in the 2026 syllabus; they are parked under Integral Calculus with low confidence. Add a topic "Differential Equations (pre-2026 syllabus)", bump the version to `jam-ms-2026-v2`, update `taxonomy_version` in every classified file, re-classify those questions, revalidate.
-5. **Merge archetype synonyms** across years (agents named patterns independently), then run `classification-reviewer` on low/medium-confidence items and repeat claims.
+Resume in this order (progress 2026-11-02):
+1. ~~Classify 2014–2022~~ DONE. All 14 years classified.
+2. ~~Printed totals in papers.yaml~~ DONE for all 14 (2016, 2017, 2022 inferred as sums of printed section marks, labelled INFERRED).
+3. **Image-verify the scans 2014, 2017, 2025**: verifier agent launched 2026-11-02; results go to `data/reviews/extraction-<year>.md`. Text papers: verify 5 sampled pages each (not yet done).
+4. ~~Taxonomy gap~~ DONE: taxonomy v2 adds "Differential Equations (pre-2026 syllabus)"; 11 ODE rows re-filed. ODEs appear only 2012–2016, which is a finding for the report.
+5. **Archetype merge + repeat tightening**: classification-reviewer launched 2026-11-02. It writes `data/reviews/classification.md` and machine-applicable `data/reviews/classification-fixes.json` ({archetype_map, repeats, topics}); apply mechanically, revalidate, commit. Workers flagged 30–38 of 60 questions per year as repeats (too generous).
 6. **Stage 3 summary, then stop for approval.** Then `python -m pyq.master` → stats (`statistical-analysis` skill) → report (`report-generation` skill).
 7. **After the first full run (user request, 2026-11-02):** package the proven pipeline as a generic, exam-agnostic skill ("PYQ analytics from any exam's papers + syllabus"): inventory/manifest → local OCR with loop/fabrication guards → OCR audit → extraction with printed-answer-key cross-check → versioned taxonomy from the syllabus → classification → validation → stats → report. Exam-specific facts (formats, eras, quirks) go in a per-exam config, not in the skill. Build it only from steps that actually ran.
 
