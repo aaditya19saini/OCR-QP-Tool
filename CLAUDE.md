@@ -20,10 +20,12 @@ Done and pushed (last commit "Checkpoint (agents paused by user)"):
 - Classified: all 14 years (taxonomy v2).
 - Analysis code ready and tested: `pyq/master.py`, `pyq/stats.py` (25 tests pass).
 
+**PAUSED 2026-11-02 (user near usage limit). Stage 3 is complete and summarised to the user. Resume point: get the user's go-ahead, then run step 6 (analysis plan) from 6a.** Optional open item: 5-page sample verification of the 10 text papers (counts/marks are already confirmed; only summaries are unchecked there).
+
 Resume in this order (progress 2026-11-02):
 1. ~~Classify 2014–2022~~ DONE. All 14 years classified.
 2. ~~Printed totals in papers.yaml~~ DONE for all 14 (2016, 2017, 2022 inferred as sums of printed section marks, labelled INFERRED).
-3. **Image-verify the scans 2014, 2017, 2025**: verifier agent launched 2026-11-02; results go to `data/reviews/extraction-<year>.md`. Text papers: verify 5 sampled pages each (not yet done).
+3. ~~Image-verify the scans 2014, 2017, 2025~~ DONE: all PASS, 0 critical (`data/reviews/extraction-<year>.md`). Caveat: many scan pages were compared against OCR, not images. Text-paper 5-page samples: NOT done (optional).
 4. ~~Taxonomy gap~~ DONE: taxonomy v2 adds "Differential Equations (pre-2026 syllabus)"; 11 ODE rows re-filed. ODEs appear only 2012–2016, which is a finding for the report.
 5. ~~Archetype merge + repeat tightening~~ DONE: 414→367 archetypes; repeats are structure-level (user decision 2026-11-02): near = same problem structure + set-up (297), concept = specific shared idea (20), 0 exact. Report them as "repeated problem structures". Was: It writes `data/reviews/classification.md` and machine-applicable `data/reviews/classification-fixes.json` ({archetype_map, repeats, topics}); apply mechanically, revalidate, commit. Workers flagged 30–38 of 60 questions per year as repeats (too generous).
 6. **Stage 3 summary, then stop for approval.** Then the analysis plan (agreed with user 2026-11-02):
