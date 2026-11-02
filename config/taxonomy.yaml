@@ -3,7 +3,7 @@
 # Topic = syllabus Section, subtopic = the syllabus's own sub-heading or topic group.
 # Caveat: this is the 2026 syllabus. Older papers (2012-2025) were set against earlier versions;
 # Sections 11-12 (and parts of 4) may be new, so zero past questions there can mean "newly added", not "low priority".
-version: jam-ms-2026-v1
+version: jam-ms-2026-v2  # v2: added pre-2026 Differential Equations (ODEs appear only 2012-2016)
 subjects:
   Mathematics:
     Sequences and Series:
@@ -40,6 +40,9 @@ subjects:
       - Systems of linear equations
       - Eigenvalues and eigenvectors (Cayley-Hamilton)
       - Quadratic forms and definiteness
+    Differential Equations (pre-2026 syllabus):   # not in the 2026 syllabus; ODEs tested 2012-2016 only
+      - First-order ODEs
+      - Higher-order linear ODEs
   Statistics:
     Descriptive Statistics:
       - Measures of central tendency and dispersion
