@@ -53,22 +53,22 @@ papers:
     source: "MS2019.pdf p1 instructions; headers p3, p5, p9, p12, p13"
   2020:
     file: MS2020.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2020.pdf p1 instructions"
+    total_marks: 100   # printed p1 "60 questions carrying 100 marks"
+    expected_questions: 60
+    sections: {A: MCQ, B: MSQ, C: NAT}
+    source: "MS2020.pdf p1 instructions"
   2021:
     file: MS2021.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2021.pdf p1 instructions"
+    total_marks: 100   # printed p1 "60 questions carrying 100 marks"
+    expected_questions: 60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # p1 misprints Section C as "Q.40 - Q.60"; same line gives Q41-50 1 mark, Q51-60 2 marks
+    source: "MS2021.pdf p1 instructions"
   2022:
     file: MS2022.pdf
-    total_marks: null
-    expected_questions: null
-    sections: null
-    source: null   # e.g. "MS2022.pdf p1 instructions"
+    total_marks: 100   # INFERRED: no instructions page; sum of printed section headers p2, p9, p29, p38, p41
+    expected_questions: 60
+    sections: {A: MCQ, B: MSQ, C: NAT}
+    source: "MS2022.pdf section headers p2, p9, p29, p38, p41"
   2023:
     file: MS2023.pdf
     total_marks: 100   # inferred: sum of printed section headers (10x1+20x2 | 10x2 | 10x1+10x2); no instructions page in this PDF
