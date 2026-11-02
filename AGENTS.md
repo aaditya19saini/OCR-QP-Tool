@@ -7,9 +7,9 @@ Instructions for any coding agent (Codex, Claude Code, others) working in this r
 ## What this is
 A verified question-level dataset and statistics report for IIT JAM Mathematical Statistics (MS) papers 2012–2025. Spec: `docs/guide.md`, narrowed by the "Scope decisions" in CLAUDE.md.
 
-## Status (2026-11-01)
+## Status (2026-11-02)
 - Done: all 14 papers OCR'd and audited, all 14 extracted and classified (778 rows, validator 0 errors), analysis code tested.
-- Next: classify 2014–2022, enter printed totals in `config/papers.yaml`, image-verify scans 2014/2017/2025, add a pre-2026 Differential Equations topic, merge archetypes, then stats and report. Full checklist in CLAUDE.md, "Current state and resume plan".
+- Next: Stage 3 summary and user approval, then the analysis plan (main scope 2015–2025) and the report. Full checklist in CLAUDE.md, "Current state and resume plan".
 
 ## Hard rules (summary)
 - Never fabricate or infer exam data. Unknown = `null` + flag.
