@@ -1,0 +1,1078 @@
+{
+ "archetype_map": {
+  "binomial-no-defectives": "binomial-of-binomial-probability",
+  "binomial-parameter-from-pmf-ratio": "parameter-from-pmf-relation",
+  "cayley-hamilton-identify-matrix-equation": "cayley-hamilton-matrix-equation",
+  "chi-square-pivot-ci-constant": "chi-square-pivot-confidence-interval",
+  "classify-critical-points-two-variables": "classify-critical-point-two-variables",
+  "combinatorial-probability-pairs": "classical-counting-probability",
+  "complete-sufficient-umvue-reciprocal": "umvue-identify-formula",
+  "conditional-probability-statements": "conditional-probability-inequalities",
+  "constant-for-unbiased-scale-estimator": "constant-for-unbiased-estimator",
+  "continuity-partials-at-origin": "two-variable-differentiability-at-origin",
+  "derived-series-convergence": "series-convergence-implications",
+  "error-probabilities-given-test-continuous": "error-probabilities-given-critical-region",
+  "error-probability-discrete-test": "error-probabilities-given-critical-region",
+  "f-reciprocal-probability": "f-reciprocal-quantile",
+  "finite-expectation-check": "moment-existence-check",
+  "identify-sampling-distribution": "normal-sample-derived-distributions",
+  "inclusion-exclusion-union-probability": "inclusion-exclusion-at-least-k-events",
+  "injectivity-surjectivity-of-function": "function-injective-surjective-check",
+  "joint-mgf-independent-binomials": "mgf-identify-distribution",
+  "joint-pdf-marginals-independence-covariance": "joint-pdf-covariance",
+  "leibniz-rule-derivative": "leibniz-rule-derivative-value",
+  "leibniz-rule-derivative-evaluation": "leibniz-rule-derivative-value",
+  "limit-as-derivative": "limit-as-derivative-definition",
+  "limit-as-riemann-sum": "riemann-sum-limit",
+  "linear-map-on-basis-coordinates": "linear-map-from-basis-images",
+  "linear-system-parameter-solutions": "parametric-linear-system-consistency",
+  "matrix-rank-computation": "rank-of-given-matrix",
+  "mle-uniform-location-non-unique": "mle-uniform-location-nonunique",
+  "moments-identify-distribution": "mgf-identify-distribution",
+  "mp-critical-region-form": "mp-test-rejection-region-form",
+  "mp-test-exponential-chisq-cutoff": "mp-test-cutoff-via-chi-square",
+  "negative-binomial-tail-probability": "sum-of-geometrics-negative-binomial",
+  "partial-derivative-existence-at-point": "two-variable-differentiability-at-origin",
+  "piecewise-pdf-probability": "piecewise-pdf-interval-probability",
+  "pmf-normalising-constant": "pmf-from-constraints",
+  "power-chi-square-variance-test": "error-probabilities-given-critical-region",
+  "power-normal-two-sample-test": "error-probabilities-given-critical-region",
+  "regression-coefficients-from-moments": "regression-estimates-from-sums",
+  "regression-prediction-from-sums": "regression-estimates-from-sums",
+  "series-convergence-statements": "series-convergence-implications",
+  "size-of-test-uniform-max": "error-probabilities-given-critical-region",
+  "size-power-given-critical-region": "error-probabilities-given-critical-region",
+  "trace-of-matrix-function-from-eigenvalues": "eigenvalues-of-matrix-function",
+  "transformation-to-exponential": "log-uniform-to-chi-square",
+  "type-i-ii-error-binomial-test": "error-probabilities-given-critical-region",
+  "umvue-of-parametric-function": "umvue-identify-formula"
+ },
+ "repeats": {
+  "2013-MS-Q19": {
+   "repeat_of": "2012-MS-Q16.a",
+   "repeat_kind": "near"
+  },
+  "2014-MS-Q3": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2015-MS-Q18": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2015-MS-Q3": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2015-MS-Q37": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2016-MS-Q13": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2016-MS-Q20": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2016-MS-Q32": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2016-MS-Q37": {
+   "repeat_of": "2013-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2016-MS-Q5": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2016-MS-Q51": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2016-MS-Q52": {
+   "repeat_of": "2013-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2016-MS-Q56": {
+   "repeat_of": "2013-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q14": {
+   "repeat_of": "2013-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q15": {
+   "repeat_of": "2015-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q16": {
+   "repeat_of": "2013-MS-Q7",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q17": {
+   "repeat_of": "2014-MS-Q28",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q20": {
+   "repeat_of": "2016-MS-Q39",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q21": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q24": {
+   "repeat_of": "2015-MS-Q28",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q26": {
+   "repeat_of": "2014-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q30": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2017-MS-Q34": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2017-MS-Q36": {
+   "repeat_of": "2013-MS-Q30",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q38": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2017-MS-Q39": {
+   "repeat_of": "2015-MS-Q36",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q41": {
+   "repeat_of": "2015-MS-Q22",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q43": {
+   "repeat_of": "2014-MS-Q19",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q45": {
+   "repeat_of": "2012-MS-Q22.b",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q46": {
+   "repeat_of": "2013-MS-Q7",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q52": {
+   "repeat_of": "2014-MS-Q1",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q53": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2017-MS-Q54": {
+   "repeat_of": "2014-MS-Q36",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q55": {
+   "repeat_of": "2015-MS-Q52",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q57": {
+   "repeat_of": "2013-MS-Q29",
+   "repeat_kind": "near"
+  },
+  "2017-MS-Q6": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q10": {
+   "repeat_of": "2015-MS-Q54",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q13": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2018-MS-Q20": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q24": {
+   "repeat_of": "2013-MS-Q29",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q29": {
+   "repeat_of": "2015-MS-Q6",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q32": {
+   "repeat_of": "2015-MS-Q31",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q34": {
+   "repeat_of": "2014-MS-Q25",
+   "repeat_kind": "concept"
+  },
+  "2018-MS-Q36": {
+   "repeat_of": "2013-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q39": {
+   "repeat_of": "2014-MS-Q29",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q47": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2018-MS-Q49": {
+   "repeat_of": "2014-MS-Q28",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q51": {
+   "repeat_of": "2012-MS-Q4",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q55": {
+   "repeat_of": "2015-MS-Q52",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q56": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q59": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2018-MS-Q9": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2019-MS-Q13": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2019-MS-Q17": {
+   "repeat_of": "2015-MS-Q29",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q19": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2019-MS-Q2": {
+   "repeat_of": "2012-MS-Q18.a",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q21": {
+   "repeat_of": "2015-MS-Q22",
+   "repeat_kind": "concept"
+  },
+  "2019-MS-Q23": {
+   "repeat_of": "2015-MS-Q20",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q25": {
+   "repeat_of": "2015-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q28": {
+   "repeat_of": "2015-MS-Q36",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q29": {
+   "repeat_of": "2015-MS-Q6",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q3": {
+   "repeat_of": "2015-MS-Q28",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q30": {
+   "repeat_of": "2012-MS-Q25.b",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q31": {
+   "repeat_of": "2015-MS-Q31",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q34": {
+   "repeat_of": "2018-MS-Q18",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q38": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2019-MS-Q40": {
+   "repeat_of": "2015-MS-Q6",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q47": {
+   "repeat_of": "2013-MS-Q16",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q48": {
+   "repeat_of": "2015-MS-Q51",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q49": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2019-MS-Q52": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2019-MS-Q53": {
+   "repeat_of": "2014-MS-Q36",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q55": {
+   "repeat_of": "2018-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q56": {
+   "repeat_of": "2012-MS-Q22.a",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q58": {
+   "repeat_of": "2013-MS-Q11",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q59": {
+   "repeat_of": "2013-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q6": {
+   "repeat_of": "2017-MS-Q7",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q7": {
+   "repeat_of": "2012-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2019-MS-Q8": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2020-MS-Q10": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2020-MS-Q13": {
+   "repeat_of": "2017-MS-Q27",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q14": {
+   "repeat_of": "2012-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q15": {
+   "repeat_of": "2014-MS-Q36",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q16": {
+   "repeat_of": "2016-MS-Q53",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q22": {
+   "repeat_of": "2016-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q24": {
+   "repeat_of": "2015-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q26": {
+   "repeat_of": "2013-MS-Q7",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q28": {
+   "repeat_of": "2016-MS-Q39",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q29": {
+   "repeat_of": "2014-MS-Q28",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q3": {
+   "repeat_of": "2014-MS-Q17",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q30": {
+   "repeat_of": "2013-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q32": {
+   "repeat_of": "2012-MS-Q18.a",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q33": {
+   "repeat_of": "2015-MS-Q57",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q34": {
+   "repeat_of": "2019-MS-Q44",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q36": {
+   "repeat_of": "2015-MS-Q19",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q38": {
+   "repeat_of": "2015-MS-Q39",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q4": {
+   "repeat_of": "2012-MS-Q16.a",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q40": {
+   "repeat_of": "2013-MS-Q13",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q41": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2020-MS-Q43": {
+   "repeat_of": "2016-MS-Q51",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q45": {
+   "repeat_of": "2013-MS-Q29",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q47": {
+   "repeat_of": "2014-MS-Q19",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q50": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q51": {
+   "repeat_of": "2017-MS-Q34",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q53": {
+   "repeat_of": "2013-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q55": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q58": {
+   "repeat_of": "2012-MS-Q24.b",
+   "repeat_kind": "concept"
+  },
+  "2020-MS-Q7": {
+   "repeat_of": "2016-MS-Q42",
+   "repeat_kind": "near"
+  },
+  "2020-MS-Q9": {
+   "repeat_of": "2013-MS-Q6",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q1": {
+   "repeat_of": "2019-MS-Q41",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q11": {
+   "repeat_of": "2012-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q12": {
+   "repeat_of": "2012-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q15": {
+   "repeat_of": "2020-MS-Q46",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q17": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q18": {
+   "repeat_of": "2016-MS-Q19",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q22": {
+   "repeat_of": "2013-MS-Q30",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q23": {
+   "repeat_of": "2013-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q25": {
+   "repeat_of": "2018-MS-Q48",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q26": {
+   "repeat_of": "2017-MS-Q4",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q28": {
+   "repeat_of": "2012-MS-Q16.a",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q31": {
+   "repeat_of": "2015-MS-Q29",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q42": {
+   "repeat_of": "2013-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q43": {
+   "repeat_of": "2016-MS-Q51",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q44": {
+   "repeat_of": "2012-MS-Q19.a",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q45": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q46": {
+   "repeat_of": "2015-MS-Q43",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q5": {
+   "repeat_of": "2012-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q50": {
+   "repeat_of": "2015-MS-Q57",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q52": {
+   "repeat_of": "2012-MS-Q22.b",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q54": {
+   "repeat_of": "2015-MS-Q20",
+   "repeat_kind": "concept"
+  },
+  "2021-MS-Q57": {
+   "repeat_of": "2014-MS-Q17",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q58": {
+   "repeat_of": "2014-MS-Q1",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q8": {
+   "repeat_of": "2015-MS-Q31",
+   "repeat_kind": "near"
+  },
+  "2021-MS-Q9": {
+   "repeat_of": "2018-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q11": {
+   "repeat_of": "2019-MS-Q41",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q12": {
+   "repeat_of": "2012-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q13": {
+   "repeat_of": "2015-MS-Q57",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q14": {
+   "repeat_of": "2015-MS-Q28",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q15": {
+   "repeat_of": "2012-MS-Q16.a",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q17": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2022-MS-Q18": {
+   "repeat_of": "2018-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q20": {
+   "repeat_of": "2016-MS-Q42",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q24": {
+   "repeat_of": "2014-MS-Q28",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q30": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q32": {
+   "repeat_of": "2012-MS-Q18.a",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q38": {
+   "repeat_of": "2020-MS-Q37",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q41": {
+   "repeat_of": "2020-MS-Q31",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q44": {
+   "repeat_of": "2015-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q46": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q47": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q48": {
+   "repeat_of": "2016-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q49": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2022-MS-Q51": {
+   "repeat_of": "2021-MS-Q34",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q52": {
+   "repeat_of": "2021-MS-Q51",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q53": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2022-MS-Q55": {
+   "repeat_of": "2012-MS-Q22.a",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q59": {
+   "repeat_of": "2015-MS-Q54",
+   "repeat_kind": "near"
+  },
+  "2022-MS-Q7": {
+   "repeat_of": "2015-MS-Q51",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q10": {
+   "repeat_of": "2013-MS-Q13",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q16": {
+   "repeat_of": "2014-MS-Q1",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q17": {
+   "repeat_of": "2015-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q22": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q24": {
+   "repeat_of": "2017-MS-Q4",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q26": {
+   "repeat_of": "2014-MS-Q36",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q27": {
+   "repeat_of": "2012-MS-Q16.a",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q28": {
+   "repeat_of": "2022-MS-Q60",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q29": {
+   "repeat_of": "2014-MS-Q40",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q3": {
+   "repeat_of": "2012-MS-Q11",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q32": {
+   "repeat_of": "2020-MS-Q37",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q33": {
+   "repeat_of": "2019-MS-Q50",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q34": {
+   "repeat_of": "2022-MS-Q56",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q35": {
+   "repeat_of": "2013-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q36": {
+   "repeat_of": "2012-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q37": {
+   "repeat_of": "2021-MS-Q14",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q42": {
+   "repeat_of": "2014-MS-Q28",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q45": {
+   "repeat_of": "2015-MS-Q22",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q46": {
+   "repeat_of": "2014-MS-Q19",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q49": {
+   "repeat_of": "2018-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q51": {
+   "repeat_of": "2012-MS-Q4",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q58": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q59": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q7": {
+   "repeat_of": "2012-MS-Q18.a",
+   "repeat_kind": "near"
+  },
+  "2023-MS-Q8": {
+   "repeat_of": "2018-MS-Q48",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q10": {
+   "repeat_of": "2022-MS-Q60",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q11": {
+   "repeat_of": "2016-MS-Q24",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q12": {
+   "repeat_of": "2014-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q13": {
+   "repeat_of": "2012-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q16": {
+   "repeat_of": "2015-MS-Q29",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q18": {
+   "repeat_of": "2018-MS-Q35",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q19": {
+   "repeat_of": "2021-MS-Q48",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q2": {
+   "repeat_of": "2012-MS-Q18.a",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q22": {
+   "repeat_of": "2015-MS-Q19",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q23": {
+   "repeat_of": "2012-MS-Q22.b",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q25": {
+   "repeat_of": "2016-MS-Q45",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q26": {
+   "repeat_of": "2013-MS-Q7",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q29": {
+   "repeat_of": "2013-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q30": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q32": {
+   "repeat_of": "2016-MS-Q26",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q33": {
+   "repeat_of": "2013-MS-Q5",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q37": {
+   "repeat_of": "2015-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q38": {
+   "repeat_of": "2015-MS-Q39",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q39": {
+   "repeat_of": "2020-MS-Q37",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q4": {
+   "repeat_of": "2020-MS-Q19",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q45": {
+   "repeat_of": "2013-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q47": {
+   "repeat_of": "2014-MS-Q28",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q49": {
+   "repeat_of": "2015-MS-Q41",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q50": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2024-MS-Q51": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2024-MS-Q52": {
+   "repeat_of": "2016-MS-Q53",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q53": {
+   "repeat_of": "2019-MS-Q44",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q54": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2024-MS-Q55": {
+   "repeat_of": "2017-MS-Q7",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q59": {
+   "repeat_of": "2019-MS-Q50",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q60": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q8": {
+   "repeat_of": "2022-MS-Q57",
+   "repeat_kind": "near"
+  },
+  "2024-MS-Q9": {
+   "repeat_of": "2016-MS-Q41",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q11": {
+   "repeat_of": "2014-MS-Q1",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q13": {
+   "repeat_of": "2015-MS-Q25",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q19": {
+   "repeat_of": "2014-MS-Q40",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q21": {
+   "repeat_of": "2023-MS-Q44",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q22": {
+   "repeat_of": "2013-MS-Q9",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q29": {
+   "repeat_of": "2015-MS-Q20",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q31": {
+   "repeat_of": "2017-MS-Q4",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q32": {
+   "repeat_of": "2012-MS-Q16.a",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q34": {
+   "repeat_of": "2022-MS-Q56",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q36": {
+   "repeat_of": "2020-MS-Q37",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q38": {
+   "repeat_of": "2015-MS-Q36",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q43": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2025-MS-Q45": {
+   "repeat_of": "2012-MS-Q15",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q47": {
+   "repeat_of": "2015-MS-Q41",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q48": {
+   "repeat_of": "2015-MS-Q12",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q5": {
+   "repeat_of": "2013-MS-Q13",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q52": {
+   "repeat_of": "2014-MS-Q17",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q53": {
+   "repeat_of": "2014-MS-Q36",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q55": {
+   "repeat_of": "2022-MS-Q19",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q57": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2025-MS-Q6": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2025-MS-Q8": {
+   "repeat_of": "2013-MS-Q13",
+   "repeat_kind": "near"
+  },
+  "2025-MS-Q9": {
+   "repeat_of": "2016-MS-Q15",
+   "repeat_kind": "near"
+  }
+ },
+ "topics": {
+  "2012-MS-Q5": {
+   "topic": "Differential Calculus of Two Variables",
+   "subtopic": "Partial and total differentiation"
+  },
+  "2014-MS-Q39": {
+   "topic": "Univariate Distributions",
+   "subtopic": "Standard continuous distributions"
+  },
+  "2015-MS-Q20": {
+   "topic": "Univariate Distributions",
+   "subtopic": "Standard discrete distributions"
+  },
+  "2017-MS-Q35": {
+   "topic": "Probability",
+   "subtopic": "Conditional probability and Bayes' theorem"
+  },
+  "2017-MS-Q54": {
+   "topic": "Integral Calculus",
+   "subtopic": "Areas, volumes and arc lengths"
+  },
+  "2017-MS-Q9": {
+   "topic": "Univariate Distributions",
+   "subtopic": "CDF, PMF and PDF"
+  },
+  "2018-MS-Q12": {
+   "topic": "Differential Calculus of One Variable",
+   "subtopic": "Rolle's and mean value theorems"
+  },
+  "2019-MS-Q17": {
+   "topic": "Matrices and Determinants",
+   "subtopic": "Systems of linear equations"
+  },
+  "2019-MS-Q23": {
+   "topic": "Univariate Distributions",
+   "subtopic": "Standard discrete distributions"
+  },
+  "2019-MS-Q25": {
+   "topic": "Multivariate Distributions",
+   "subtopic": "Joint, marginal and conditional distributions"
+  },
+  "2019-MS-Q53": {
+   "topic": "Integral Calculus",
+   "subtopic": "Areas, volumes and arc lengths"
+  },
+  "2020-MS-Q6": {
+   "topic": "Univariate Distributions",
+   "subtopic": "Expectation, moments and quantiles"
+  },
+  "2021-MS-Q14": {
+   "topic": "Multivariate Distributions",
+   "subtopic": "Functions of random vectors"
+  },
+  "2021-MS-Q54": {
+   "topic": "Univariate Distributions",
+   "subtopic": "Standard discrete distributions"
+  },
+  "2022-MS-Q6": {
+   "topic": "Univariate Distributions",
+   "subtopic": "Expectation, moments and quantiles"
+  },
+  "2023-MS-Q5": {
+   "topic": "Limit Theorems",
+   "subtopic": "Modes of convergence"
+  },
+  "2025-MS-Q29": {
+   "topic": "Univariate Distributions",
+   "subtopic": "Standard discrete distributions"
+  }
+ }
+}

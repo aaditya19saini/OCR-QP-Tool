@@ -16,7 +16,7 @@ Done and pushed (last commit "Checkpoint (agents paused by user)"):
 - Stage 1: 14 official papers 2012–2025 in `data/raw/` (2013, 2016 and 2019 added from jam2026.iitb.ac.in/oldQP.html).
 - OCR: all 416 pages in `data/ocr/`, audited against images (`data/reviews/ocr-audit.md`, about 70 fixes). Spot checks found about 1 meaning-changing error per 4–5 unchecked pages, so OCR is a draft, not ground truth.
 - Syllabus: `docs/syllabus/syllabus_MS_JAM2026.pdf` (fetched with user approval) → `config/taxonomy.yaml` v `jam-ms-2026-v1` (15 topics, 76 subtopics).
-- Extracted: all 14 years, 837 rows, validator 0 errors. Verified against images: 2023 and 2024 (PASS).
+- Extracted: all 14 years, 778 rows (45+30+43+11×60), validator 0 errors. Verified against images: 2023 and 2024 (PASS).
 - Classified: all 14 years (taxonomy v2).
 - Analysis code ready and tested: `pyq/master.py`, `pyq/stats.py` (25 tests pass).
 
@@ -25,7 +25,7 @@ Resume in this order (progress 2026-11-02):
 2. ~~Printed totals in papers.yaml~~ DONE for all 14 (2016, 2017, 2022 inferred as sums of printed section marks, labelled INFERRED).
 3. **Image-verify the scans 2014, 2017, 2025**: verifier agent launched 2026-11-02; results go to `data/reviews/extraction-<year>.md`. Text papers: verify 5 sampled pages each (not yet done).
 4. ~~Taxonomy gap~~ DONE: taxonomy v2 adds "Differential Equations (pre-2026 syllabus)"; 11 ODE rows re-filed. ODEs appear only 2012–2016, which is a finding for the report.
-5. **Archetype merge + repeat tightening**: classification-reviewer launched 2026-11-02. It writes `data/reviews/classification.md` and machine-applicable `data/reviews/classification-fixes.json` ({archetype_map, repeats, topics}); apply mechanically, revalidate, commit. Workers flagged 30–38 of 60 questions per year as repeats (too generous).
+5. ~~Archetype merge + repeat tightening~~ DONE: 414→367 archetypes; repeats are structure-level (user decision 2026-11-02): near = same problem structure + set-up (297), concept = specific shared idea (20), 0 exact. Report them as "repeated problem structures". Was: It writes `data/reviews/classification.md` and machine-applicable `data/reviews/classification-fixes.json` ({archetype_map, repeats, topics}); apply mechanically, revalidate, commit. Workers flagged 30–38 of 60 questions per year as repeats (too generous).
 6. **Stage 3 summary, then stop for approval.** Then the analysis plan (agreed with user 2026-11-02):
    - Scope: main analysis = the 11 current-format papers **2015–2025** (60 Q / 100 marks). 2012–2014 (300 marks / subjective / 43 Q) get a separate old-format note, never pooled.
    - a. Apply the reviewer fixes (`data/reviews/classification-fixes.json`), revalidate, commit. This blocks the rest.
