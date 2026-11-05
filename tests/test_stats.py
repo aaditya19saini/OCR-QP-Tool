@@ -58,8 +58,8 @@ def test_year_topic_missing_years_are_nan():
 
 
 def test_tiers_rule():
-    tt = pd.DataFrame({"appearance_rate": [0.8, 0.2, 0.5], "mean_marks_share": [0.01, 0.01, 0.05]})
-    assert list(stats.tiers(tt)) == [1, 3, 2]
+    tt = pd.DataFrame({"appearance_rate": [0.8, 0.2, 0.5, 0.1], "mean_marks_share": [0.005, 0.005, 0.015, 0.03]})
+    assert list(stats.tiers(tt)) == [1, 3, 2, 1]  # rare but heavy -> tier 1
 
 
 def test_unclassified_question_raises():

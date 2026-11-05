@@ -1,0 +1,336 @@
+topic,archetype,papers,questions,examples
+Testing of Hypotheses,error-probabilities-given-critical-region,11,15,"2015-MS-Q18, 2015-MS-Q3, 2016-MS-Q20, 2017-MS-Q21"
+Multivariate Distributions,joint-pdf-region-probability,9,10,"2015-MS-Q12, 2016-MS-Q43, 2017-MS-Q15, 2019-MS-Q25"
+Differential Calculus of One Variable,limit-via-series-expansion,8,9,"2016-MS-Q33, 2017-MS-Q27, 2019-MS-Q51, 2020-MS-Q13"
+Limit Theorems,wlln-limit-of-sample-mean,8,8,"2016-MS-Q9, 2017-MS-Q17, 2018-MS-Q49, 2019-MS-Q8"
+Univariate Distributions,mgf-identify-distribution,8,8,"2016-MS-Q5, 2017-MS-Q6, 2018-MS-Q20, 2020-MS-Q55"
+Sampling Distributions,normal-sample-derived-distributions,7,12,"2016-MS-Q18, 2016-MS-Q41, 2017-MS-Q16, 2017-MS-Q46"
+Integral Calculus,arc-length-of-curve,7,8,"2015-MS-Q57, 2016-MS-Q50, 2017-MS-Q30, 2017-MS-Q53"
+Differential Calculus of Two Variables,classify-critical-point-two-variables,7,7,"2016-MS-Q27, 2017-MS-Q25, 2019-MS-Q2, 2020-MS-Q32"
+Estimation,mle-numeric-estimate,7,7,"2017-MS-Q18, 2018-MS-Q8, 2019-MS-Q27, 2020-MS-Q49"
+Matrices and Determinants,parametric-linear-system-consistency,7,7,"2015-MS-Q58, 2016-MS-Q31, 2020-MS-Q4, 2021-MS-Q28"
+Probability,bayes-theorem-numeric,7,7,"2017-MS-Q58, 2018-MS-Q9, 2019-MS-Q55, 2021-MS-Q9"
+Differential Calculus of One Variable,count-real-roots-of-equation,6,7,"2015-MS-Q26, 2015-MS-Q49, 2018-MS-Q12, 2019-MS-Q13"
+Integral Calculus,area-between-curves,6,7,"2015-MS-Q60, 2017-MS-Q48, 2018-MS-Q42, 2018-MS-Q43"
+Sequences and Series,recursive-sequence-convergence,6,7,"2017-MS-Q4, 2018-MS-Q1, 2018-MS-Q33, 2020-MS-Q11"
+Integral Calculus,change-order-of-integration,6,6,"2016-MS-Q51, 2017-MS-Q23, 2018-MS-Q54, 2019-MS-Q43"
+Integral Calculus,volume-by-multiple-integral,6,6,"2016-MS-Q4, 2017-MS-Q54, 2019-MS-Q53, 2020-MS-Q15"
+Sequences and Series,series-sum-evaluation,6,6,"2016-MS-Q54, 2017-MS-Q50, 2018-MS-Q41, 2019-MS-Q11"
+Univariate Distributions,mixed-cdf-jumps,6,6,"2015-MS-Q55, 2016-MS-Q40, 2017-MS-Q36, 2018-MS-Q6"
+Estimation,consistency-of-estimators,5,6,"2015-MS-Q16, 2016-MS-Q21, 2018-MS-Q37, 2018-MS-Q40"
+Matrices and Determinants,eigenvalues-of-matrix-function,5,6,"2016-MS-Q52, 2020-MS-Q53, 2020-MS-Q54, 2021-MS-Q42"
+Testing of Hypotheses,mp-test-power-simple-vs-simple,5,6,"2017-MS-Q22, 2020-MS-Q40, 2021-MS-Q27, 2023-MS-Q10"
+Univariate Distributions,expectation-of-function-discrete,5,6,"2018-MS-Q22, 2018-MS-Q58, 2020-MS-Q6, 2022-MS-Q6"
+Differential Calculus of Two Variables,two-variable-differentiability-at-origin,5,5,"2020-MS-Q14, 2021-MS-Q11, 2022-MS-Q12, 2023-MS-Q36"
+Estimation,method-of-moments-numeric,5,5,"2017-MS-Q19, 2018-MS-Q28, 2019-MS-Q49, 2022-MS-Q49"
+Integral Calculus,leibniz-rule-derivative-value,5,5,"2015-MS-Q28, 2016-MS-Q29, 2017-MS-Q24, 2019-MS-Q3"
+Sequences and Series,limit-of-sequence-expression,5,5,"2016-MS-Q48, 2017-MS-Q3, 2018-MS-Q2, 2019-MS-Q12"
+Sequences and Series,series-convergence-pair,5,5,"2016-MS-Q24, 2020-MS-Q12, 2022-MS-Q31, 2023-MS-Q25"
+Testing of Hypotheses,mp-test-cutoff-via-chi-square,5,5,"2016-MS-Q37, 2020-MS-Q30, 2021-MS-Q23, 2024-MS-Q29"
+Univariate Distributions,chebyshev-inequality-bound,5,5,"2016-MS-Q42, 2017-MS-Q12, 2019-MS-Q46, 2020-MS-Q7"
+Estimation,umvue-numeric-estimate,4,5,"2020-MS-Q58, 2020-MS-Q59, 2023-MS-Q55, 2024-MS-Q50"
+Limit Theorems,clt-limit-of-probability,4,5,"2015-MS-Q53, 2016-MS-Q55, 2018-MS-Q21, 2021-MS-Q12"
+Testing of Hypotheses,mp-test-rejection-region-form,4,5,"2015-MS-Q6, 2016-MS-Q17, 2018-MS-Q29, 2019-MS-Q29"
+Differential Calculus of One Variable,mvt-consequences-from-values,4,4,"2016-MS-Q26, 2017-MS-Q34, 2020-MS-Q51, 2024-MS-Q32"
+Estimation,regression-estimates-from-sums,4,4,"2015-MS-Q54, 2018-MS-Q10, 2020-MS-Q21, 2022-MS-Q59"
+Estimation,sufficient-statistic-identification,4,4,"2015-MS-Q36, 2017-MS-Q39, 2019-MS-Q28, 2025-MS-Q38"
+Estimation,umvue-identify-formula,4,4,"2015-MS-Q1, 2016-MS-Q19, 2018-MS-Q39, 2021-MS-Q18"
+Matrices and Determinants,rank-and-consistency-of-system,4,4,"2015-MS-Q29, 2019-MS-Q17, 2021-MS-Q31, 2024-MS-Q16"
+Multivariate Distributions,joint-pdf-covariance,4,4,"2017-MS-Q45, 2018-MS-Q27, 2021-MS-Q52, 2024-MS-Q23"
+Multivariate Distributions,total-variance-hierarchical,4,4,"2015-MS-Q19, 2019-MS-Q57, 2020-MS-Q36, 2024-MS-Q22"
+Sampling Distributions,chi-square-two-df-probability,4,4,"2016-MS-Q15, 2020-MS-Q22, 2022-MS-Q48, 2025-MS-Q9"
+Sequences and Series,series-convergence-implications,4,4,"2015-MS-Q31, 2018-MS-Q32, 2019-MS-Q31, 2021-MS-Q8"
+Univariate Distributions,poisson-approximation-binomial,4,4,"2015-MS-Q20, 2019-MS-Q23, 2021-MS-Q54, 2025-MS-Q29"
+Univariate Distributions,piecewise-pdf-interval-probability,3,4,"2015-MS-Q52, 2017-MS-Q5, 2017-MS-Q55, 2018-MS-Q55"
+Estimation,chi-square-pivot-confidence-interval,3,3,"2016-MS-Q39, 2017-MS-Q20, 2020-MS-Q28"
+Estimation,constant-for-unbiased-estimator,3,3,"2019-MS-Q9, 2023-MS-Q44, 2025-MS-Q21"
+Estimation,mle-uniform-location-nonunique,3,3,"2016-MS-Q36, 2020-MS-Q27, 2021-MS-Q19"
+Estimation,t-confidence-interval,3,3,"2019-MS-Q50, 2023-MS-Q33, 2024-MS-Q59"
+Estimation,unbiased-consistent-check-of-estimator,3,3,"2015-MS-Q37, 2016-MS-Q13, 2020-MS-Q10"
+Integral Calculus,polar-coordinates-double-integral,3,3,"2016-MS-Q53, 2020-MS-Q16, 2024-MS-Q52"
+Integral Calculus,riemann-sum-limit,3,3,"2019-MS-Q41, 2021-MS-Q1, 2022-MS-Q11"
+Integral Calculus,volume-of-revolution,3,3,"2015-MS-Q47, 2016-MS-Q3, 2019-MS-Q16"
+Limit Theorems,limit-theorem-statements-sample-moments,3,3,"2015-MS-Q39, 2020-MS-Q38, 2024-MS-Q38"
+Matrices and Determinants,cayley-hamilton-matrix-equation,3,3,"2015-MS-Q24, 2016-MS-Q30, 2018-MS-Q4"
+Matrices and Determinants,orthogonal-matrix-entries,3,3,"2019-MS-Q44, 2020-MS-Q34, 2024-MS-Q53"
+Multivariate Distributions,iterated-expectation-hierarchical,3,3,"2015-MS-Q51, 2019-MS-Q48, 2022-MS-Q7"
+Multivariate Distributions,marginal-and-conditional-expectation,3,3,"2017-MS-Q57, 2018-MS-Q24, 2020-MS-Q45"
+Multivariate Distributions,multinomial-moments,3,3,"2022-MS-Q56, 2023-MS-Q34, 2025-MS-Q34"
+Probability,classical-counting-probability,3,3,"2017-MS-Q11, 2022-MS-Q17, 2025-MS-Q50"
+Probability,conditional-probability-inequalities,3,3,"2016-MS-Q35, 2017-MS-Q35, 2022-MS-Q4"
+Probability,conditional-probability-set-algebra,3,3,"2015-MS-Q5, 2018-MS-Q47, 2019-MS-Q19"
+Probability,inclusion-exclusion-at-least-k-events,3,3,"2018-MS-Q48, 2021-MS-Q25, 2023-MS-Q8"
+Sampling Distributions,min-order-statistic-expectation,3,3,"2015-MS-Q41, 2024-MS-Q49, 2025-MS-Q47"
+Testing of Hypotheses,t-test-normal-mean,3,3,"2022-MS-Q60, 2023-MS-Q28, 2024-MS-Q10"
+Univariate Distributions,normal-linear-combination-probability,3,3,"2017-MS-Q43, 2020-MS-Q47, 2023-MS-Q46"
+Univariate Distributions,pdf-constants-from-normalisation-and-mean,3,3,"2015-MS-Q17, 2019-MS-Q56, 2022-MS-Q55"
+Univariate Distributions,pmf-from-constraints,3,3,"2017-MS-Q7, 2019-MS-Q6, 2024-MS-Q55"
+Univariate Distributions,sum-of-geometrics-negative-binomial,3,3,"2017-MS-Q13, 2018-MS-Q57, 2020-MS-Q23"
+Univariate Distributions,symmetric-distribution-properties,3,3,"2015-MS-Q56, 2021-MS-Q10, 2024-MS-Q35"
+Differential Equations (pre-2026 syllabus),solve-ordinary-differential-equation,2,4,"2015-MS-Q32, 2015-MS-Q59, 2016-MS-Q23, 2016-MS-Q28"
+Matrices and Determinants,rank-of-given-matrix,2,3,"2016-MS-Q1, 2016-MS-Q47, 2020-MS-Q44"
+Differential Calculus of One Variable,continuity-oscillating-function,2,2,"2016-MS-Q25, 2024-MS-Q12"
+Differential Calculus of One Variable,function-injective-surjective-check,2,2,"2015-MS-Q9, 2021-MS-Q2"
+Differential Calculus of One Variable,limit-as-derivative-definition,2,2,"2018-MS-Q51, 2023-MS-Q51"
+Differential Calculus of Two Variables,lagrange-extrema-on-circle,2,2,"2021-MS-Q34, 2022-MS-Q51"
+Differential Calculus of Two Variables,nearest-point-on-surface,2,2,"2023-MS-Q30, 2025-MS-Q51"
+Estimation,ci-coverage-from-minimum,2,2,"2018-MS-Q36, 2019-MS-Q59"
+Estimation,crlb-for-function-of-parameter,2,2,"2015-MS-Q11, 2021-MS-Q40"
+Estimation,estimator-property-check,2,2,"2022-MS-Q9, 2025-MS-Q40"
+Estimation,mle-discrete-parameter-space,2,2,"2018-MS-Q50, 2024-MS-Q28"
+Estimation,mle-restricted-parameter-space,2,2,"2015-MS-Q43, 2021-MS-Q46"
+Estimation,mle-unbiasedness-umvue-check,2,2,"2021-MS-Q39, 2025-MS-Q27"
+Estimation,normal-mean-estimation-statements,2,2,"2015-MS-Q40, 2023-MS-Q18"
+Estimation,sufficiency-ancillarity-statements,2,2,"2021-MS-Q38, 2025-MS-Q26"
+Integral Calculus,double-integral-change-of-variables,2,2,"2021-MS-Q51, 2022-MS-Q52"
+Limit Theorems,normal-approximation-binomial-limit,2,2,"2016-MS-Q45, 2024-MS-Q25"
+Limit Theorems,scaled-min-uniform-limit,2,2,"2022-MS-Q57, 2024-MS-Q8"
+Matrices and Determinants,inverse-adjoint-computation,2,2,"2022-MS-Q43, 2024-MS-Q3"
+Matrices and Determinants,linear-map-from-basis-images,2,2,"2019-MS-Q4, 2020-MS-Q17"
+Matrices and Determinants,matrix-rank-statements,2,2,"2015-MS-Q25, 2025-MS-Q13"
+Matrices and Determinants,skew-symmetric-matrix-properties,2,2,"2018-MS-Q18, 2019-MS-Q34"
+Matrices and Determinants,subspace-dimension,2,2,"2018-MS-Q17, 2024-MS-Q43"
+Multivariate Distributions,cauchy-ratio-of-normals,2,2,"2018-MS-Q26, 2021-MS-Q14"
+Multivariate Distributions,hierarchical-mixture-marginal,2,2,"2023-MS-Q29, 2025-MS-Q19"
+Multivariate Distributions,joint-pdf-normalising-constant,2,2,"2016-MS-Q56, 2017-MS-Q14"
+Multivariate Distributions,joint-pmf-conditional-probability,2,2,"2017-MS-Q44, 2018-MS-Q25"
+Multivariate Distributions,linear-combination-normal-independence,2,2,"2022-MS-Q36, 2025-MS-Q17"
+Multivariate Distributions,linear-function-moment-combination,2,2,"2021-MS-Q56, 2023-MS-Q12"
+Multivariate Distributions,mgf-identify-distribution,2,2,"2018-MS-Q56, 2022-MS-Q47"
+Probability,bayes-mixture-of-lifetimes,2,2,"2016-MS-Q22, 2020-MS-Q57"
+Probability,conditional-probability-counting,2,2,"2018-MS-Q45, 2019-MS-Q45"
+Probability,pairwise-vs-mutual-independence,2,2,"2018-MS-Q35, 2024-MS-Q18"
+Probability,probability-bounds-intersection-union,2,2,"2020-MS-Q5, 2021-MS-Q30"
+Probability,sampling-without-replacement-count,2,2,"2020-MS-Q19, 2024-MS-Q4"
+Probability,total-probability-over-discrete-rv,2,2,"2020-MS-Q46, 2021-MS-Q15"
+Sampling Distributions,f-reciprocal-quantile,2,2,"2020-MS-Q48, 2023-MS-Q3"
+Sampling Distributions,log-uniform-to-chi-square,2,2,"2015-MS-Q22, 2016-MS-Q8"
+Sequences and Series,cauchy-sequence-check,2,2,"2022-MS-Q1, 2024-MS-Q1"
+Sequences and Series,limsup-liminf-of-sequence,2,2,"2020-MS-Q31, 2022-MS-Q41"
+Sequences and Series,radius-of-convergence,2,2,"2024-MS-Q41, 2025-MS-Q42"
+Univariate Distributions,binomial-at-least-k,2,2,"2016-MS-Q46, 2024-MS-Q44"
+Univariate Distributions,binomial-of-binomial-probability,2,2,"2015-MS-Q13, 2019-MS-Q47"
+Univariate Distributions,censored-variable-cdf,2,2,"2022-MS-Q35, 2025-MS-Q20"
+Univariate Distributions,gamma-parameters-from-moments,2,2,"2017-MS-Q60, 2018-MS-Q5"
+Univariate Distributions,integer-fractional-part-of-rv,2,2,"2020-MS-Q56, 2021-MS-Q16"
+Univariate Distributions,log-uniform-to-chi-square,2,2,"2017-MS-Q41, 2023-MS-Q45"
+Univariate Distributions,mixture-distribution-variance,2,2,"2021-MS-Q48, 2024-MS-Q19"
+Univariate Distributions,moment-existence-check,2,2,"2016-MS-Q7, 2021-MS-Q36"
+Univariate Distributions,pdf-summary-measures,2,2,"2019-MS-Q22, 2023-MS-Q39"
+Univariate Distributions,waiting-time-pattern-expectation,2,2,"2022-MS-Q19, 2025-MS-Q55"
+Estimation,mle-closed-form,1,2,"2015-MS-Q15, 2015-MS-Q21"
+Multivariate Distributions,bivariate-normal-expectation-of-function,1,2,"2025-MS-Q25, 2025-MS-Q60"
+Univariate Distributions,probability-of-transformed-variable,1,2,"2016-MS-Q58, 2016-MS-Q59"
+Differential Calculus of One Variable,continuity-at-point-greatest-integer,1,1,2016-MS-Q34
+Differential Calculus of One Variable,count-local-extrema,1,1,2024-MS-Q14
+Differential Calculus of One Variable,darboux-intermediate-value-property,1,1,2025-MS-Q15
+Differential Calculus of One Variable,derivative-behaviour-at-infinity,1,1,2025-MS-Q33
+Differential Calculus of One Variable,derivative-from-functional-inequality,1,1,2022-MS-Q42
+Differential Calculus of One Variable,derivative-of-oscillating-function,1,1,2022-MS-Q2
+Differential Calculus of One Variable,derivatives-from-sequence-values,1,1,2015-MS-Q50
+Differential Calculus of One Variable,even-odd-function-properties,1,1,2015-MS-Q34
+Differential Calculus of One Variable,exponential-inequality-check,1,1,2015-MS-Q10
+Differential Calculus of One Variable,exponential-limit-via-log,1,1,2018-MS-Q53
+Differential Calculus of One Variable,extremum-conditions-find-parameters,1,1,2017-MS-Q47
+Differential Calculus of One Variable,first-derivative-test-statements,1,1,2019-MS-Q32
+Differential Calculus of One Variable,floor-fractional-part-limit,1,1,2019-MS-Q52
+Differential Calculus of One Variable,greatest-integer-discontinuity-points,1,1,2018-MS-Q11
+Differential Calculus of One Variable,holder-condition-constant-function,1,1,2019-MS-Q42
+Differential Calculus of One Variable,ivt-zero-count,1,1,2015-MS-Q33
+Differential Calculus of One Variable,maclaurin-coefficient-identification,1,1,2020-MS-Q52
+Differential Calculus of One Variable,max-min-of-function-one-variable,1,1,2020-MS-Q42
+Differential Calculus of One Variable,min-of-monotone-function-on-interval,1,1,2016-MS-Q49
+Differential Calculus of One Variable,monotonicity-from-derivative-sign,1,1,2015-MS-Q23
+Differential Calculus of One Variable,oscillating-function-extremum-differentiability,1,1,2018-MS-Q34
+Differential Calculus of One Variable,piecewise-differentiability-constants,1,1,2020-MS-Q2
+Differential Calculus of One Variable,rational-irrational-piecewise-continuity,1,1,2017-MS-Q33
+Differential Calculus of One Variable,rolle-count-derivative-roots,1,1,2023-MS-Q41
+Differential Calculus of One Variable,taylor-coefficient-computation,1,1,2019-MS-Q14
+Differential Calculus of One Variable,twice-differentiable-function-statements,1,1,2021-MS-Q35
+Differential Calculus of Two Variables,extrema-on-closed-region,1,1,2018-MS-Q13
+Estimation,compare-estimators-regression-through-origin,1,1,2024-MS-Q27
+Estimation,compare-estimators-unbiased-consistent-efficient,1,1,2017-MS-Q10
+Estimation,conditional-expectation-sufficiency-check,1,1,2023-MS-Q6
+Estimation,consistency-and-completeness-normal-theta-theta,1,1,2025-MS-Q37
+Estimation,constant-for-consistent-estimator,1,1,2025-MS-Q44
+Estimation,crlb-attainable-variance-check,1,1,2017-MS-Q38
+Estimation,estimator-variance-vs-crlb,1,1,2020-MS-Q39
+Estimation,identify-unbiased-estimators,1,1,2017-MS-Q37
+Estimation,ls-estimator-variance-covariance,1,1,2025-MS-Q39
+Estimation,method-of-moments-two-parameter,1,1,2023-MS-Q20
+Estimation,mle-mme-numeric-estimate,1,1,2022-MS-Q25
+Estimation,mle-shifted-support-parameter,1,1,2018-MS-Q38
+Estimation,mle-sufficiency-statements-laplace,1,1,2022-MS-Q39
+Estimation,normal-mean-confidence-interval,1,1,2022-MS-Q28
+Estimation,pivot-confidence-interval-single-observation,1,1,2025-MS-Q10
+Estimation,regression-lines-from-equations,1,1,2023-MS-Q40
+Estimation,sufficiency-completeness-umvue-statements,1,1,2016-MS-Q38
+Estimation,test-ci-duality,1,1,2015-MS-Q14
+Estimation,unbiased-linear-estimator-regression-slope,1,1,2016-MS-Q10
+Integral Calculus,beta-function-evaluation,1,1,2018-MS-Q44
+Integral Calculus,count-real-roots-of-equation,1,1,2017-MS-Q52
+Integral Calculus,double-integral-max-min-split,1,1,2023-MS-Q38
+Integral Calculus,evaluate-multiple-integral,1,1,2021-MS-Q44
+Integral Calculus,ftc-differentiability-at-jumps,1,1,2018-MS-Q15
+Integral Calculus,gaussian-integral-evaluation,1,1,2023-MS-Q53
+Integral Calculus,improper-integral-convergence-pair,1,1,2024-MS-Q15
+Integral Calculus,integral-bounds-by-comparison,1,1,2017-MS-Q28
+Integral Calculus,integral-of-greatest-integer-function,1,1,2015-MS-Q48
+Integral Calculus,integral-of-odd-periodic-function,1,1,2025-MS-Q3
+Integral Calculus,leibniz-rule-extremum,1,1,2024-MS-Q42
+Integral Calculus,leibniz-rule-limit,1,1,2021-MS-Q60
+Integral Calculus,limit-of-integral-sequence,1,1,2015-MS-Q30
+Limit Theorems,asymptotic-normality-studentised,1,1,2025-MS-Q7
+Limit Theorems,binomial-convergence-to-zero-conditions,1,1,2025-MS-Q30
+Limit Theorems,binomial-sum-limit-via-clt,1,1,2021-MS-Q4
+Limit Theorems,clt-approximate-distribution-of-sum,1,1,2020-MS-Q9
+Limit Theorems,clt-normalising-constants-non-identical,1,1,2023-MS-Q14
+Limit Theorems,clt-scaling-constant,1,1,2016-MS-Q12
+Limit Theorems,clt-slutsky-ratio-limit,1,1,2025-MS-Q24
+Limit Theorems,clt-solve-for-parameter,1,1,2017-MS-Q59
+Limit Theorems,clt-which-normalisation-converges,1,1,2019-MS-Q38
+Limit Theorems,limit-distribution-then-variance,1,1,2023-MS-Q5
+Limit Theorems,max-exponential-gumbel-limit,1,1,2016-MS-Q14
+Limit Theorems,truncated-variable-limit-probability,1,1,2024-MS-Q46
+Limit Theorems,wlln-limit-of-probabilities,1,1,2023-MS-Q15
+Matrices and Determinants,annihilating-polynomial-singularity,1,1,2025-MS-Q16
+Matrices and Determinants,block-determinant,1,1,2019-MS-Q54
+Matrices and Determinants,block-triangular-eigenvalues,1,1,2017-MS-Q1
+Matrices and Determinants,cayley-transform-skew-symmetric,1,1,2020-MS-Q18
+Matrices and Determinants,circulant-matrix-eigenvalues,1,1,2025-MS-Q2
+Matrices and Determinants,determinant-function-extremum,1,1,2022-MS-Q3
+Matrices and Determinants,determinant-of-elementary-product,1,1,2017-MS-Q49
+Matrices and Determinants,determinant-zero-parameter,1,1,2015-MS-Q27
+Matrices and Determinants,dimension-of-image-subspace,1,1,2025-MS-Q14
+Matrices and Determinants,eigenvector-linear-independence,1,1,2021-MS-Q7
+Matrices and Determinants,householder-reflection-properties,1,1,2017-MS-Q31
+Matrices and Determinants,identify-eigenvector-of-given-matrix,1,1,2022-MS-Q53
+Matrices and Determinants,identify-linear-transformation,1,1,2015-MS-Q7
+Matrices and Determinants,inverse-via-cayley-hamilton,1,1,2019-MS-Q18
+Matrices and Determinants,involutory-matrix-conditions,1,1,2016-MS-Q2
+Matrices and Determinants,linear-combination-determined-by-system,1,1,2018-MS-Q16
+Matrices and Determinants,matrix-eigenvalues-from-known-eigenvalue,1,1,2021-MS-Q41
+Matrices and Determinants,matrix-power-computation,1,1,2022-MS-Q16
+Matrices and Determinants,matrix-power-fixed-vector-eigenspace,1,1,2023-MS-Q1
+Matrices and Determinants,null-space-vector-computation,1,1,2017-MS-Q51
+Matrices and Determinants,orthogonal-matrix-projection-properties,1,1,2018-MS-Q14
+Matrices and Determinants,orthogonal-skew-matrix-statements,1,1,2022-MS-Q33
+Matrices and Determinants,rank-of-sum-of-outer-products,1,1,2018-MS-Q52
+Matrices and Determinants,rank-one-characteristic-polynomial,1,1,2025-MS-Q41
+Matrices and Determinants,rank-one-system-solution-count,1,1,2017-MS-Q2
+Matrices and Determinants,row-column-space-of-matrix-product,1,1,2023-MS-Q2
+Matrices and Determinants,row-sum-eigenvector-properties,1,1,2021-MS-Q32
+Matrices and Determinants,scalar-matrix-every-vector-eigenvector,1,1,2019-MS-Q33
+Matrices and Determinants,similar-matrices-same-eigenvalues,1,1,2017-MS-Q29
+Matrices and Determinants,symmetric-skew-decomposition-properties,1,1,2023-MS-Q31
+Multivariate Distributions,beta-ratio-of-exponentials,1,1,2022-MS-Q22
+Multivariate Distributions,bivariate-normal-conditional-moment,1,1,2023-MS-Q52
+Multivariate Distributions,bivariate-normal-conditional-probability,1,1,2022-MS-Q23
+Multivariate Distributions,bivariate-normal-quadrant-probability,1,1,2016-MS-Q44
+Multivariate Distributions,bivariate-normal-sample-mean-variance,1,1,2024-MS-Q24
+Multivariate Distributions,censored-variable-cdf,1,1,2019-MS-Q36
+Multivariate Distributions,conditional-expectation-given-event,1,1,2019-MS-Q26
+Multivariate Distributions,conditional-probability-from-joint-pdf,1,1,2016-MS-Q11
+Multivariate Distributions,correlation-of-partial-sums,1,1,2015-MS-Q2
+Multivariate Distributions,correlation-of-sign-transformed-normals,1,1,2021-MS-Q53
+Multivariate Distributions,correlation-of-x-and-function-of-x,1,1,2021-MS-Q6
+Multivariate Distributions,correlation-trig-functions-uniform-angle,1,1,2024-MS-Q57
+Multivariate Distributions,discrete-random-vector-statements,1,1,2022-MS-Q37
+Multivariate Distributions,iid-ordering-symmetry-probability,1,1,2020-MS-Q20
+Multivariate Distributions,independent-poisson-joint-pmf-properties,1,1,2019-MS-Q37
+Multivariate Distributions,joint-mgf-moments,1,1,2021-MS-Q21
+Multivariate Distributions,joint-pdf-properties,1,1,2025-MS-Q35
+Multivariate Distributions,lognormal-correlation,1,1,2025-MS-Q23
+Multivariate Distributions,min-max-of-two-binomials,1,1,2024-MS-Q36
+Multivariate Distributions,min-of-geometrics-probability,1,1,2022-MS-Q8
+Multivariate Distributions,product-pmf-independence-expectation,1,1,2018-MS-Q46
+Multivariate Distributions,random-sum-expectation,1,1,2023-MS-Q56
+Multivariate Distributions,sum-of-uniforms-vs-discrete,1,1,2025-MS-Q49
+Multivariate Distributions,symmetry-expectation-of-ratio,1,1,2018-MS-Q7
+Multivariate Distributions,valid-covariance-matrix-check,1,1,2015-MS-Q35
+Multivariate Distributions,variance-identities-iid,1,1,2015-MS-Q38
+Multivariate Distributions,variance-of-product-sum,1,1,2025-MS-Q4
+Probability,algebra-of-sets-check,1,1,2024-MS-Q17
+Probability,at-least-one-occurrence-probability,1,1,2018-MS-Q60
+Probability,countable-sample-space-statements,1,1,2022-MS-Q34
+Probability,family-size-total-probability,1,1,2016-MS-Q60
+Probability,independent-events-at-most-k,1,1,2021-MS-Q55
+Probability,independent-events-from-conditional-equation,1,1,2016-MS-Q6
+Probability,independent-events-statements,1,1,2019-MS-Q20
+Probability,independent-trials-count-probability,1,1,2019-MS-Q5
+Probability,matching-problem-probability,1,1,2022-MS-Q54
+Probability,max-of-dice-probability,1,1,2025-MS-Q12
+Probability,non-transitive-dice-comparison,1,1,2024-MS-Q34
+Probability,parallel-system-reliability,1,1,2015-MS-Q45
+Probability,random-coefficients-geometric-probability,1,1,2023-MS-Q13
+Probability,random-points-on-segment-distance,1,1,2016-MS-Q57
+Sampling Distributions,cauchy-ratio-of-normals,1,1,2023-MS-Q37
+Sampling Distributions,chi-square-tail-comparison,1,1,2021-MS-Q20
+Sampling Distributions,f-distribution-cdf-evaluation,1,1,2023-MS-Q4
+Sampling Distributions,f-ratio-expectation,1,1,2020-MS-Q25
+Sampling Distributions,inverse-moment-of-gamma,1,1,2019-MS-Q58
+Sampling Distributions,max-of-uniforms-expectation,1,1,2024-MS-Q48
+Sampling Distributions,min-order-statistic-probability,1,1,2017-MS-Q56
+Sampling Distributions,order-statistic-moment-existence,1,1,2022-MS-Q58
+Sampling Distributions,order-statistic-vs-median-probability,1,1,2025-MS-Q59
+Sampling Distributions,order-statistics-exponential-properties,1,1,2023-MS-Q11
+Sampling Distributions,order-statistics-uniform-properties,1,1,2022-MS-Q27
+Sampling Distributions,t-distribution-from-joint-mgf,1,1,2022-MS-Q26
+Sampling Distributions,variance-of-sample-variance,1,1,2020-MS-Q8
+Sampling Distributions,variance-of-t-statistic,1,1,2025-MS-Q28
+Sequences and Series,floor-fractional-part-sequences,1,1,2025-MS-Q1
+Sequences and Series,harmonic-block-sum-sequence,1,1,2018-MS-Q31
+Sequences and Series,limit-of-sum-by-squeeze,1,1,2021-MS-Q47
+Sequences and Series,max-min-of-convergent-sequences,1,1,2018-MS-Q3
+Sequences and Series,monotone-sequence-subsequence-properties,1,1,2015-MS-Q8
+Sequences and Series,monotone-sequence-sum-convergence,1,1,2017-MS-Q32
+Sequences and Series,recursive-series-convergence,1,1,2024-MS-Q31
+Sequences and Series,sequence-and-its-series-convergence,1,1,2016-MS-Q32
+Sequences and Series,sequence-behaviour-from-limit-condition,1,1,2020-MS-Q1
+Sequences and Series,sequence-divergence-condition,1,1,2021-MS-Q29
+Sequences and Series,sequence-property-implications,1,1,2019-MS-Q1
+Sequences and Series,series-convergence-parameter-range,1,1,2017-MS-Q26
+Testing of Hypotheses,lrt-one-sided-normal-mean-properties,1,1,2021-MS-Q33
+Testing of Hypotheses,lrt-power-computation,1,1,2020-MS-Q60
+Testing of Hypotheses,lrt-rejection-region-form,1,1,2019-MS-Q10
+Testing of Hypotheses,mp-ump-test-properties,1,1,2024-MS-Q40
+Testing of Hypotheses,nonrandomized-test-size-existence,1,1,2022-MS-Q29
+Testing of Hypotheses,p-value-computation,1,1,2023-MS-Q50
+Testing of Hypotheses,power-function-behaviour,1,1,2022-MS-Q40
+Testing of Hypotheses,sample-size-from-alpha-beta,1,1,2019-MS-Q30
+Testing of Hypotheses,simple-vs-composite-hypothesis,1,1,2022-MS-Q10
+Testing of Hypotheses,type-ii-error-normal-mean-test,1,1,2022-MS-Q50
+Testing of Hypotheses,ump-one-sided-normal-mean-test,1,1,2017-MS-Q40
+Univariate Distributions,bernoulli-trials-waiting-expectations,1,1,2020-MS-Q35
+Univariate Distributions,beta-parameter-from-median-variance,1,1,2019-MS-Q24
+Univariate Distributions,expectation-from-piecewise-cdf,1,1,2016-MS-Q16
+Univariate Distributions,expectation-of-function-continuous,1,1,2015-MS-Q44
+Univariate Distributions,expected-area-random-angle,1,1,2025-MS-Q18
+Univariate Distributions,expected-gain-mixture,1,1,2024-MS-Q56
+Univariate Distributions,gamma-sum-moment,1,1,2023-MS-Q57
+Univariate Distributions,geometric-memoryless,1,1,2015-MS-Q42
+Univariate Distributions,hypergeometric-moment-limits,1,1,2021-MS-Q37
+Univariate Distributions,identify-distribution-then-moment,1,1,2024-MS-Q21
+Univariate Distributions,lognormal-probability-via-normal,1,1,2017-MS-Q42
+Univariate Distributions,markov-inequality-bound,1,1,2024-MS-Q5
+Univariate Distributions,mgf-mixture-point-probability,1,1,2018-MS-Q19
+Univariate Distributions,mgf-of-given-pmf,1,1,2015-MS-Q4
+Univariate Distributions,moment-as-tail-integral,1,1,2023-MS-Q9
+Univariate Distributions,moment-from-mgf,1,1,2021-MS-Q49
+Univariate Distributions,moment-inequality-equality-case,1,1,2025-MS-Q56
+Univariate Distributions,newsvendor-expected-profit,1,1,2022-MS-Q21
+Univariate Distributions,normal-interval-probability-maximisation,1,1,2015-MS-Q46
+Univariate Distributions,normal-probabilities-count,1,1,2023-MS-Q60
+Univariate Distributions,normal-probability-polynomial-event,1,1,2018-MS-Q23
+Univariate Distributions,parameter-from-pmf-relation,1,1,2019-MS-Q7
+Univariate Distributions,pmf-recursion-identify-distribution,1,1,2023-MS-Q23
+Univariate Distributions,point-probability-of-continuous-mean,1,1,2017-MS-Q9
+Univariate Distributions,run-length-expectation,1,1,2022-MS-Q45
+Univariate Distributions,successes-before-failures-probability,1,1,2021-MS-Q13
+Univariate Distributions,tail-conditional-probability-discrete,1,1,2023-MS-Q47
+Univariate Distributions,transformation-preserves-uniform,1,1,2024-MS-Q6
+Univariate Distributions,transformation-to-chi-square,1,1,2019-MS-Q21
+Univariate Distributions,truncated-conditional-expectation,1,1,2025-MS-Q58
+Univariate Distributions,uniform-trig-event-probability,1,1,2017-MS-Q8
+Univariate Distributions,valid-cdf-check,1,1,2024-MS-Q20
+Univariate Distributions,valid-mgf-check,1,1,2022-MS-Q5

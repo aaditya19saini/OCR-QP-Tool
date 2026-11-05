@@ -4,9 +4,10 @@ Main scope = top-level questions of current-format papers (60 Q / 100 marks). Ol
 """
 import pandas as pd
 
-# Tier rule (quoted in the report): Tier 1 if appearance_rate >= 0.7 or mean marks share >= 8%;
-# Tier 3 if appearance_rate < 0.3 and share < 3%; else Tier 2.
-TIER1_RATE, TIER1_SHARE, TIER3_RATE, TIER3_SHARE = 0.7, 0.08, 0.3, 0.03
+# Tier rule, applied at SUBTOPIC level (every topic appears in ~every paper, so topic-level tiers don't discriminate).
+# Thresholds sit near the subtopic quartiles for 2015-2025 (appearance 0.45/0.82, share 0.8%/2.0%) and are quoted in the report:
+# Tier 1 if appearance_rate >= 0.8 or mean marks share >= 2%; Tier 3 if appearance_rate < 0.4 and share < 1%; else Tier 2.
+TIER1_RATE, TIER1_SHARE, TIER3_RATE, TIER3_SHARE = 0.8, 0.02, 0.4, 0.01
 RECENT_PAPERS = 3
 
 

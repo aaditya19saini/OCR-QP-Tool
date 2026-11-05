@@ -37,7 +37,7 @@ Frequency, weightage and consistency stay separate columns; they answer differen
 - These come straight from classification (`repeat_kind`, `archetype`). Count archetypes per topic and rank them by number of papers they appear in, citing uids as examples.
 
 ## Priority tiers
-- Use one explicit rule, written in code and quoted in the report. Example: Tier 1 = appearance rate ≥ 0.7 **or** mean marks share ≥ 8%; Tier 3 = appearance rate < 0.3 **and** share < 3%; Tier 2 = everything else.
+- Tiers apply at **subtopic** level (topics all appear in ~every paper, so topic tiers don't discriminate; topics are just ranked by marks share). One explicit rule in `pyq/stats.py`, quoted in the report: Tier 1 = appearance ≥ 0.8 **or** mean marks share ≥ 2%; Tier 3 = appearance < 0.4 **and** share < 1%; Tier 2 = else (thresholds ≈ subtopic quartiles 2015–2025).
 - Any manual override needs a one-line reason.
 - No tier means "skip". Foundational topics get flagged even if they're rare.
 
