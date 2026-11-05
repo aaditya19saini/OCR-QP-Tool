@@ -99,6 +99,127 @@ def figures(t: dict, n_q: int, years: list[int]) -> None:
     footer(fig, n_q, years); fig.tight_layout(rect=(0, 0.03, 1, 1)); fig.savefig(FIGS / "05-top-archetypes.png", dpi=200); plt.close(fig)
 
 
+def pct(x: float) -> str:
+    return f"{x * 100:.1f}%"
+
+
+def html_table(df: pd.DataFrame) -> str:
+    return df.to_html(index=False, border=0, classes="t", escape=True, na_rep="—")
+
+
+def write_html(df: pd.DataFrame, t: dict) -> str:
+    """Report prose. Every number is computed here from the tables; interpretation is labelled as such."""
+    cur = stats.scope(df)
+    years = sorted(cur.year.unique())
+    n_q, n_p = len(cur), len(years)
+    tp = t["topics_2015_2025"].sort_values("mean_marks_share", ascending=False)
+    sub = t["subtopics_2015_2025"]
+    yt = t["year_topic_share"]
+    early, late = yt.loc[years[0]:years[0] + 3].mean(), yt.loc[years[-1] - 2:years[-1]].mean()
+    shift = (late - early).sort_values()
+    subj = cur.groupby("subject").marks.sum() / cur.marks.sum()
+    top3 = tp.head(3)
+    near = int((cur.repeat_kind == "near").sum())
+    cog = cur.cognitive_type.value_counts(normalize=True)
+    untested = sub[sub.tier == "untested"]
+    tier1 = sub[sub.tier == "1"].sort_values("mean_marks_share", ascending=False)
+    ar = t["archetypes_2015_2025"].head(10)
+    old = t["topics_old_2012_2014"].sort_values("mean_marks_share", ascending=False).head(6)
+    ode_years = sorted(df[df.topic.str.startswith("Differential Equations")].year.unique())
+    f = lambda x: f'<span class="n">{x}</span>'  # noqa: E731
+
+    topic_tbl = tp[["subject", "topic", "questions", "papers_appeared", "mean_marks_share", "recent_questions", "n_archetypes"]].copy()
+    topic_tbl["mean_marks_share"] = topic_tbl.mean_marks_share.map(pct)
+    topic_tbl.columns = ["Subject", "Topic", "Questions", f"Papers (of {n_p})", "Mean marks share", f"Questions {years[-3]}–{years[-1]}", "Problem structures"]
+    t1 = tier1[["topic", "subtopic", "questions", "papers_appeared", "mean_marks_share"]].copy()
+    t1["papers_appeared"] = t1.papers_appeared.astype(int); t1["mean_marks_share"] = t1.mean_marks_share.map(pct)
+    t1.columns = ["Topic", "Subtopic", "Questions", f"Papers (of {n_p})", "Mean marks share"]
+    alloc = tp[["topic", "mean_marks_share"]].copy()
+    alloc = alloc[~alloc.topic.str.startswith("Differential Equations")]
+    alloc["Suggested study time"] = (alloc.mean_marks_share / alloc.mean_marks_share.sum() * 0.9).map(pct)
+    alloc = alloc.drop(columns="mean_marks_share").rename(columns={"topic": "Topic"})
+    ar_tbl = ar[["topic", "archetype", "papers", "questions", "examples"]].rename(columns=str.title)
+    shift_rows = "".join(f"<li>{s}: {pct(early[s])} → {pct(late[s])}</li>" for s in list(shift.index[:3]) + list(shift.index[-3:]))
+
+    return f"""<!doctype html><html><head><meta charset="utf-8"><title>JAM MS PYQ Report</title><style>
+body{{font:11pt/1.5 system-ui,sans-serif;max-width:900px;margin:2em auto;padding:0 1em;color:#111}}
+h1{{font-size:1.6em}} h2{{border-bottom:1px solid #ccc;margin-top:1.6em}} img{{max-width:100%}}
+table.t{{border-collapse:collapse;font-size:9pt;margin:.6em 0}} .t td,.t th{{padding:3px 7px;border-bottom:1px solid #ddd;text-align:left}}
+.ev{{font-size:.85em;padding:1px 6px;border-radius:3px;background:#eef}} .hyp{{background:#fff4e0;padding:.5em 1em;border-left:3px solid #E69F00}}
+.n{{font-weight:600}} @media print{{h2{{break-before:auto}} img{{break-inside:avoid}}}}
+</style></head><body>
+<h1>IIT JAM Mathematical Statistics: Previous-Year Paper Analysis</h1>
+<p>Scope: {n_p} current-format papers ({years[0]}–{years[-1]}, 60 questions / 100 marks each), {n_q} questions. Old-format papers 2012–2014 are reported separately. Taxonomy: official JAM 2026 MS syllabus (plus a pre-2026 Differential Equations topic). Evidence tags: <span class="ev">strong</span> = seen in nearly every paper; <span class="ev">moderate</span> = consistent but small or recent; <span class="ev">weak</span> = few observations.</p>
+
+<h2>1. Summary</h2><ul>
+<li><b>Statistics carries {f(pct(subj['Statistics']))} of marks, Mathematics {f(pct(subj['Mathematics']))}.</b> <span class="ev">strong</span></li>
+<li><b>{top3.topic.iloc[0]}, {top3.topic.iloc[1]} and {top3.topic.iloc[2]}</b> are the heaviest topics ({pct(top3.mean_marks_share.iloc[0])}, {pct(top3.mean_marks_share.iloc[1])}, {pct(top3.mean_marks_share.iloc[2])} of a paper on average); together {f(pct(top3.mean_marks_share.sum()))}. <span class="ev">strong</span></li>
+<li>Every main syllabus topic (except the dropped Differential Equations) appears in at least {int(tp[~tp.topic.str.startswith('Differential Equations')].papers_appeared.min())} of {n_p} papers: <b>no topic is skippable</b>. <span class="ev">strong</span></li>
+<li><b>The paper is shifting</b> from calculus towards distribution theory: comparing {years[0]}–{years[0]+3} with {years[-1]-2}–{years[-1]}, {shift.index[0]} fell {pct(early[shift.index[0]])} → {pct(late[shift.index[0]])} while {shift.index[-1]} rose {pct(early[shift.index[-1]])} → {pct(late[shift.index[-1]])}. <span class="ev">moderate</span></li>
+<li><b>{f(pct(near / n_q))}</b> of questions ({near}/{n_q}) reuse the problem structure of an earlier question with new numbers or set-up; 0 are word-for-word repeats. Drilling past papers by structure pays off. <span class="ev">strong</span></li>
+<li>Differential Equations appear only in {ode_years[0]}–{ode_years[-1]} and not since; they are not in the 2026 syllabus. <span class="ev">strong</span></li>
+<li>{len(untested)} subtopics of the 2026 syllabus were <b>never tested</b> in {years[0]}–{years[-1]} (Descriptive Statistics, Nonparametric Methods, Stochastic Processes, among others). They are likely new; treat them as unknown, not low priority.</li></ul>
+
+<h2>2. Examination overview</h2>
+<p>Format since {years[0]}: 30 MCQ (Section A), 10 MSQ (B), 20 NAT (C); 10+20 one/two-mark MCQs, two-mark MSQs, 10+10 one/two-mark NATs. Question styles: numerical {pct(cog.get('numerical', 0))}, application {pct(cog.get('application', 0))}, conceptual {pct(cog.get('conceptual', 0))}, everything else {pct(1 - cog.get('numerical', 0) - cog.get('application', 0) - cog.get('conceptual', 0))} (subjective labels).</p>
+<img src="../figures/04-format-mix.png" alt="Question format mix per year">
+
+<h2>3. Topic frequency and weightage</h2>
+<p>Marks share is the average over papers of (topic marks ÷ 100), so every paper counts equally. Frequency, weightage and consistency are separate columns.</p>
+{html_table(topic_tbl)}
+<img src="../figures/01-pareto-marks-share.png" alt="Pareto of marks share by topic">
+
+<h2>4. Year-wise patterns</h2>
+<p>Average marks share, first four vs last three papers (descriptive only; with {n_p} papers no trend test is meaningful):</p><ul>{shift_rows}</ul>
+<img src="../figures/02-year-topic-heatmap.png" alt="Year by topic marks share heatmap">
+
+<h2>5. Recurring problem structures</h2>
+<p>An archetype is a problem structure (e.g. "find error probabilities for a given critical region"). The most recurrent, by number of papers they appear in:</p>
+{html_table(ar_tbl)}
+<img src="../figures/05-top-archetypes.png" alt="Top recurring archetypes">
+
+<h2>6. Priority tiers (subtopic level)</h2>
+<p>Rule, applied mechanically: <b>Tier 1</b> if the subtopic appears in ≥ {int(stats.TIER1_RATE*100)}% of papers or averages ≥ {int(stats.TIER1_SHARE*100)}% of marks; <b>Tier 3</b> if it appears in &lt; {int(stats.TIER3_RATE*100)}% of papers and averages &lt; {int(stats.TIER3_SHARE*100)}%; else Tier 2. Thresholds sit near the subtopic quartiles; they are a judgement, disclosed here. Counts: Tier 1 = {int((sub.tier=='1').sum())}, Tier 2 = {int((sub.tier=='2').sum())}, Tier 3 = {int((sub.tier=='3').sum())}, untested = {len(untested)}. Tier 3 is "lower historical priority", never "skip".</p>
+<h3>Tier 1 subtopics</h3>{html_table(t1)}
+<img src="../figures/03-subtopic-appearance.png" alt="Most consistently tested subtopics">
+<p>Full tier list for all {len(sub)} subtopics: <code>outputs/tables/subtopics_2015_2025.csv</code>.</p>
+
+<h2>7. Potential future areas (hypotheses, not predictions)</h2><div class="hyp"><ul>
+<li><b>Hypothesis</b> <span class="ev">strong</span>: {top3.topic.iloc[0]} and {top3.topic.iloc[1]} will stay the heaviest topics; they were heavy in every paper.</li>
+<li><b>Hypothesis</b> <span class="ev">moderate</span>: {shift.index[-1]} and {shift.index[-2]} keep the larger share they have had recently, and {shift.index[0]} stays lighter than in {years[0]}–{years[0]+3}.</li>
+<li><b>Hypothesis</b> <span class="ev">weak</span>: topics new to the 2026 syllabus (Descriptive Statistics, Nonparametric Methods, Stochastic Processes) may appear; there is no past data, so their likely weight is unknown.</li></ul>
+<p>Historical frequency is not a probability of appearance. No probabilities are given because {n_p} papers cannot support a defensible model.</p></div>
+
+<h2>8. Preparation recommendations</h2>
+<p>Suggested allocation (interpretation): 90% of study time in proportion to historical marks share, and a reserved 10% for the {len(untested)} untested 2026-syllabus subtopics. Don't drop any syllabus topic for low frequency.</p>
+{html_table(alloc)}
+<ul><li>Work through past papers <b>by problem structure</b> (Section 5): {pct(near / n_q)} of questions reuse one.</li>
+<li>The paper is mostly numerical/application work ({pct(cog.get('numerical', 0) + cog.get('application', 0))}): practise timed computation, not proofs (proof-type questions: {int((cur.cognitive_type == 'proof').sum())}).</li>
+<li>Skip ODE-only preparation: not tested since {ode_years[-1]} and not in the 2026 syllabus.</li></ul>
+
+<h2>9. Old-format papers (2012–2014)</h2>
+<p>2012 (25 questions, 300 marks, subjective parts), 2013 (30 questions: objective, fill-in-the-blank, descriptive) and 2014 (43 questions incl. 8 descriptive) differ in structure, so they are kept out of all shares above. Heaviest topics there:</p>
+{html_table(old[["topic", "questions", "mean_marks_share"]].assign(mean_marks_share=old.mean_marks_share.map(pct)).rename(columns={"topic": "Topic", "questions": "Questions", "mean_marks_share": "Mean marks share"}))}
+
+<h2>10. Methodology and limitations</h2><ul>
+<li>Source: official papers from jam2026.iitb.ac.in (SHA-256 manifest). 4 papers are image scans, read with local OCR (PaddleOCR-VL); every page was audited against its image and about 70 OCR errors were fixed. Spot checks still found about 1 meaning-changing OCR slip per 4–5 unchecked pages.</li>
+<li>Each question is recorded as number, format, marks and pages, plus a one-line summary (no verbatim text). Counts and marks match each paper's printed instructions, section headers or printed answer key (2016, 2017 and 2022 totals are sums of printed section marks). The validator reports 0 errors on all 778 rows.</li>
+<li>Image verification: 2023 and 2024 in full; scans 2014, 2017 and 2025 PASS, but some of their pages were compared against the OCR text rather than the image. Text-based papers 2015–2022 were not sample-verified against images.</li>
+<li>Topic, archetype, cognitive type and repeat labels are model judgements (subjective). An independent reviewer agreed with 96% of uncertain topic calls (79/82). Archetypes and repeats are <b>moderate evidence at best</b>; cognitive type was not reviewed.</li>
+<li>The taxonomy is the 2026 syllabus, while older papers followed earlier syllabi. "Never tested" can mean "newly added".</li>
+<li>n = {n_p} papers: everything is descriptive, with no significance tests and no difficulty ratings (no score data).</li>
+<li>Reproducible: <code>python -m pyq.master && python -m pyq.report</code> regenerates every table, figure and this report from the frozen data. Code and data: github.com/aaditya19saini/OCR-QP-Tool.</li></ul>
+</body></html>"""
+
+
+def to_pdf(html_path) -> None:
+    import subprocess
+    pdf = html_path.with_suffix(".pdf")
+    subprocess.run(["brave", "--headless", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={pdf}", html_path.as_uri()],
+                   check=True, capture_output=True, timeout=120)
+    assert pdf.exists() and pdf.stat().st_size > 10_000, "PDF not produced"
+
+
 def main() -> None:
     log = setup_logging("report")
     verify_manifest()
@@ -109,7 +230,11 @@ def main() -> None:
         v.to_csv(TABLES / f"{k}.csv", index=k in ("year_topic_share", "format_mix"), float_format="%.4f")
     cur = stats.scope(df)
     figures(t, len(cur), sorted(cur.year.unique()))
-    log.info("wrote %d tables, 5 figures", len(t))
+    out = OUTPUTS / "report" / "jam_ms_report.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(write_html(df, t))
+    to_pdf(out)
+    log.info("wrote %d tables, 5 figures, %s (+ .pdf)", len(t), out.relative_to(OUTPUTS.parent))
 
 
 if __name__ == "__main__":

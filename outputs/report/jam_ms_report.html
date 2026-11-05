@@ -1,0 +1,545 @@
+<!doctype html><html><head><meta charset="utf-8"><title>JAM MS PYQ Report</title><style>
+body{font:11pt/1.5 system-ui,sans-serif;max-width:900px;margin:2em auto;padding:0 1em;color:#111}
+h1{font-size:1.6em} h2{border-bottom:1px solid #ccc;margin-top:1.6em} img{max-width:100%}
+table.t{border-collapse:collapse;font-size:9pt;margin:.6em 0} .t td,.t th{padding:3px 7px;border-bottom:1px solid #ddd;text-align:left}
+.ev{font-size:.85em;padding:1px 6px;border-radius:3px;background:#eef} .hyp{background:#fff4e0;padding:.5em 1em;border-left:3px solid #E69F00}
+.n{font-weight:600} @media print{h2{break-before:auto} img{break-inside:avoid}}
+</style></head><body>
+<h1>IIT JAM Mathematical Statistics: Previous-Year Paper Analysis</h1>
+<p>Scope: 11 current-format papers (2015–2025, 60 questions / 100 marks each), 660 questions. Old-format papers 2012–2014 are reported separately. Taxonomy: official JAM 2026 MS syllabus (plus a pre-2026 Differential Equations topic). Evidence tags: <span class="ev">strong</span> = seen in nearly every paper; <span class="ev">moderate</span> = consistent but small or recent; <span class="ev">weak</span> = few observations.</p>
+
+<h2>1. Summary</h2><ul>
+<li><b>Statistics carries <span class="n">63.9%</span> of marks, Mathematics <span class="n">36.1%</span>.</b> <span class="ev">strong</span></li>
+<li><b>Univariate Distributions, Estimation and Multivariate Distributions</b> are the heaviest topics (14.9%, 13.9%, 11.2% of a paper on average); together <span class="n">40.0%</span>. <span class="ev">strong</span></li>
+<li>Every main syllabus topic (except the dropped Differential Equations) appears in at least 10 of 11 papers: <b>no topic is skippable</b>. <span class="ev">strong</span></li>
+<li><b>The paper is shifting</b> from calculus towards distribution theory: comparing 2015–2018 with 2023–2025, Integral Calculus fell 10.2% → 5.3% while Multivariate Distributions rose 9.2% → 14.3%. <span class="ev">moderate</span></li>
+<li><b><span class="n">43.6%</span></b> of questions (288/660) reuse the problem structure of an earlier question with new numbers or set-up; 0 are word-for-word repeats. Drilling past papers by structure pays off. <span class="ev">strong</span></li>
+<li>Differential Equations appear only in 2012–2016 and not since; they are not in the 2026 syllabus. <span class="ev">strong</span></li>
+<li>11 subtopics of the 2026 syllabus were <b>never tested</b> in 2015–2025 (Descriptive Statistics, Nonparametric Methods, Stochastic Processes, among others). They are likely new; treat them as unknown, not low priority.</li></ul>
+
+<h2>2. Examination overview</h2>
+<p>Format since 2015: 30 MCQ (Section A), 10 MSQ (B), 20 NAT (C); 10+20 one/two-mark MCQs, two-mark MSQs, 10+10 one/two-mark NATs. Question styles: numerical 47.1%, application 23.9%, conceptual 22.4%, everything else 6.5% (subjective labels).</p>
+<img src="../figures/04-format-mix.png" alt="Question format mix per year">
+
+<h2>3. Topic frequency and weightage</h2>
+<p>Marks share is the average over papers of (topic marks ÷ 100), so every paper counts equally. Frequency, weightage and consistency are separate columns.</p>
+<table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Subject</th>
+      <th>Topic</th>
+      <th>Questions</th>
+      <th>Papers (of 11)</th>
+      <th>Mean marks share</th>
+      <th>Questions 2023–2025</th>
+      <th>Problem structures</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Statistics</td>
+      <td>Univariate Distributions</td>
+      <td>103</td>
+      <td>11</td>
+      <td>14.9%</td>
+      <td>27</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td>Statistics</td>
+      <td>Estimation</td>
+      <td>87</td>
+      <td>11</td>
+      <td>13.9%</td>
+      <td>26</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>Statistics</td>
+      <td>Multivariate Distributions</td>
+      <td>70</td>
+      <td>11</td>
+      <td>11.2%</td>
+      <td>23</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td>Mathematics</td>
+      <td>Matrices and Determinants</td>
+      <td>66</td>
+      <td>11</td>
+      <td>9.9%</td>
+      <td>16</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td>Mathematics</td>
+      <td>Integral Calculus</td>
+      <td>56</td>
+      <td>11</td>
+      <td>8.4%</td>
+      <td>9</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>Mathematics</td>
+      <td>Differential Calculus of One Variable</td>
+      <td>52</td>
+      <td>11</td>
+      <td>8.0%</td>
+      <td>12</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>Statistics</td>
+      <td>Testing of Hypotheses</td>
+      <td>45</td>
+      <td>11</td>
+      <td>7.0%</td>
+      <td>14</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>Statistics</td>
+      <td>Probability</td>
+      <td>45</td>
+      <td>11</td>
+      <td>6.6%</td>
+      <td>10</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>Mathematics</td>
+      <td>Sequences and Series</td>
+      <td>45</td>
+      <td>11</td>
+      <td>6.3%</td>
+      <td>10</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>Statistics</td>
+      <td>Sampling Distributions</td>
+      <td>37</td>
+      <td>10</td>
+      <td>5.5%</td>
+      <td>15</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td>Statistics</td>
+      <td>Limit Theorems</td>
+      <td>33</td>
+      <td>11</td>
+      <td>4.8%</td>
+      <td>12</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>Mathematics</td>
+      <td>Differential Calculus of Two Variables</td>
+      <td>17</td>
+      <td>10</td>
+      <td>2.8%</td>
+      <td>6</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Mathematics</td>
+      <td>Differential Equations (pre-2026 syllabus)</td>
+      <td>4</td>
+      <td>2</td>
+      <td>0.7%</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<img src="../figures/01-pareto-marks-share.png" alt="Pareto of marks share by topic">
+
+<h2>4. Year-wise patterns</h2>
+<p>Average marks share, first four vs last three papers (descriptive only; with 11 papers no trend test is meaningful):</p><ul><li>Integral Calculus: 10.2% → 5.3%</li><li>Differential Calculus of One Variable: 9.5% → 7.0%</li><li>Differential Equations (pre-2026 syllabus): 2.0% → 0.0%</li><li>Differential Calculus of Two Variables: 1.5% → 3.3%</li><li>Sampling Distributions: 3.5% → 7.7%</li><li>Multivariate Distributions: 9.2% → 14.3%</li></ul>
+<img src="../figures/02-year-topic-heatmap.png" alt="Year by topic marks share heatmap">
+
+<h2>5. Recurring problem structures</h2>
+<p>An archetype is a problem structure (e.g. "find error probabilities for a given critical region"). The most recurrent, by number of papers they appear in:</p>
+<table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Topic</th>
+      <th>Archetype</th>
+      <th>Papers</th>
+      <th>Questions</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Testing of Hypotheses</td>
+      <td>error-probabilities-given-critical-region</td>
+      <td>11</td>
+      <td>15</td>
+      <td>2015-MS-Q18, 2015-MS-Q3, 2016-MS-Q20, 2017-MS-Q21</td>
+    </tr>
+    <tr>
+      <td>Multivariate Distributions</td>
+      <td>joint-pdf-region-probability</td>
+      <td>9</td>
+      <td>10</td>
+      <td>2015-MS-Q12, 2016-MS-Q43, 2017-MS-Q15, 2019-MS-Q25</td>
+    </tr>
+    <tr>
+      <td>Differential Calculus of One Variable</td>
+      <td>limit-via-series-expansion</td>
+      <td>8</td>
+      <td>9</td>
+      <td>2016-MS-Q33, 2017-MS-Q27, 2019-MS-Q51, 2020-MS-Q13</td>
+    </tr>
+    <tr>
+      <td>Limit Theorems</td>
+      <td>wlln-limit-of-sample-mean</td>
+      <td>8</td>
+      <td>8</td>
+      <td>2016-MS-Q9, 2017-MS-Q17, 2018-MS-Q49, 2019-MS-Q8</td>
+    </tr>
+    <tr>
+      <td>Univariate Distributions</td>
+      <td>mgf-identify-distribution</td>
+      <td>8</td>
+      <td>8</td>
+      <td>2016-MS-Q5, 2017-MS-Q6, 2018-MS-Q20, 2020-MS-Q55</td>
+    </tr>
+    <tr>
+      <td>Sampling Distributions</td>
+      <td>normal-sample-derived-distributions</td>
+      <td>7</td>
+      <td>12</td>
+      <td>2016-MS-Q18, 2016-MS-Q41, 2017-MS-Q16, 2017-MS-Q46</td>
+    </tr>
+    <tr>
+      <td>Integral Calculus</td>
+      <td>arc-length-of-curve</td>
+      <td>7</td>
+      <td>8</td>
+      <td>2015-MS-Q57, 2016-MS-Q50, 2017-MS-Q30, 2017-MS-Q53</td>
+    </tr>
+    <tr>
+      <td>Differential Calculus of Two Variables</td>
+      <td>classify-critical-point-two-variables</td>
+      <td>7</td>
+      <td>7</td>
+      <td>2016-MS-Q27, 2017-MS-Q25, 2019-MS-Q2, 2020-MS-Q32</td>
+    </tr>
+    <tr>
+      <td>Estimation</td>
+      <td>mle-numeric-estimate</td>
+      <td>7</td>
+      <td>7</td>
+      <td>2017-MS-Q18, 2018-MS-Q8, 2019-MS-Q27, 2020-MS-Q49</td>
+    </tr>
+    <tr>
+      <td>Matrices and Determinants</td>
+      <td>parametric-linear-system-consistency</td>
+      <td>7</td>
+      <td>7</td>
+      <td>2015-MS-Q58, 2016-MS-Q31, 2020-MS-Q4, 2021-MS-Q28</td>
+    </tr>
+  </tbody>
+</table>
+<img src="../figures/05-top-archetypes.png" alt="Top recurring archetypes">
+
+<h2>6. Priority tiers (subtopic level)</h2>
+<p>Rule, applied mechanically: <b>Tier 1</b> if the subtopic appears in ≥ 80% of papers or averages ≥ 2% of marks; <b>Tier 3</b> if it appears in &lt; 40% of papers and averages &lt; 1%; else Tier 2. Thresholds sit near the subtopic quartiles; they are a judgement, disclosed here. Counts: Tier 1 = 22, Tier 2 = 32, Tier 3 = 13, untested = 11. Tier 3 is "lower historical priority", never "skip".</p>
+<h3>Tier 1 subtopics</h3><table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Topic</th>
+      <th>Subtopic</th>
+      <th>Questions</th>
+      <th>Papers (of 11)</th>
+      <th>Mean marks share</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Integral Calculus</td>
+      <td>Areas, volumes and arc lengths</td>
+      <td>24</td>
+      <td>10</td>
+      <td>3.5%</td>
+    </tr>
+    <tr>
+      <td>Univariate Distributions</td>
+      <td>Expectation, moments and quantiles</td>
+      <td>23</td>
+      <td>9</td>
+      <td>3.4%</td>
+    </tr>
+    <tr>
+      <td>Testing of Hypotheses</td>
+      <td>Errors, size, power and p-value</td>
+      <td>22</td>
+      <td>11</td>
+      <td>3.4%</td>
+    </tr>
+    <tr>
+      <td>Matrices and Determinants</td>
+      <td>Eigenvalues and eigenvectors (Cayley-Hamilton)</td>
+      <td>22</td>
+      <td>11</td>
+      <td>3.3%</td>
+    </tr>
+    <tr>
+      <td>Univariate Distributions</td>
+      <td>CDF, PMF and PDF</td>
+      <td>20</td>
+      <td>10</td>
+      <td>3.1%</td>
+    </tr>
+    <tr>
+      <td>Probability</td>
+      <td>Conditional probability and Bayes' theorem</td>
+      <td>21</td>
+      <td>10</td>
+      <td>3.0%</td>
+    </tr>
+    <tr>
+      <td>Multivariate Distributions</td>
+      <td>Joint, marginal and conditional distributions</td>
+      <td>19</td>
+      <td>10</td>
+      <td>3.0%</td>
+    </tr>
+    <tr>
+      <td>Estimation</td>
+      <td>Maximum likelihood estimation</td>
+      <td>19</td>
+      <td>11</td>
+      <td>2.9%</td>
+    </tr>
+    <tr>
+      <td>Univariate Distributions</td>
+      <td>Standard discrete distributions</td>
+      <td>18</td>
+      <td>11</td>
+      <td>2.7%</td>
+    </tr>
+    <tr>
+      <td>Limit Theorems</td>
+      <td>Central limit theorem</td>
+      <td>17</td>
+      <td>10</td>
+      <td>2.6%</td>
+    </tr>
+    <tr>
+      <td>Estimation</td>
+      <td>Unbiasedness and consistency</td>
+      <td>17</td>
+      <td>9</td>
+      <td>2.6%</td>
+    </tr>
+    <tr>
+      <td>Integral Calculus</td>
+      <td>Fundamental theorems and Leibniz rule</td>
+      <td>16</td>
+      <td>9</td>
+      <td>2.4%</td>
+    </tr>
+    <tr>
+      <td>Sequences and Series</td>
+      <td>Convergence tests for series</td>
+      <td>14</td>
+      <td>9</td>
+      <td>2.4%</td>
+    </tr>
+    <tr>
+      <td>Matrices and Determinants</td>
+      <td>Systems of linear equations</td>
+      <td>14</td>
+      <td>11</td>
+      <td>2.4%</td>
+    </tr>
+    <tr>
+      <td>Multivariate Distributions</td>
+      <td>Covariance, correlation and joint moments</td>
+      <td>14</td>
+      <td>7</td>
+      <td>2.2%</td>
+    </tr>
+    <tr>
+      <td>Testing of Hypotheses</td>
+      <td>Neyman-Pearson lemma and MP tests</td>
+      <td>14</td>
+      <td>10</td>
+      <td>2.2%</td>
+    </tr>
+    <tr>
+      <td>Differential Calculus of One Variable</td>
+      <td>Rolle's and mean value theorems</td>
+      <td>12</td>
+      <td>9</td>
+      <td>2.0%</td>
+    </tr>
+    <tr>
+      <td>Estimation</td>
+      <td>UMVUE, Rao-Blackwell and Lehmann-Scheffe</td>
+      <td>12</td>
+      <td>9</td>
+      <td>1.9%</td>
+    </tr>
+    <tr>
+      <td>Estimation</td>
+      <td>Confidence intervals</td>
+      <td>11</td>
+      <td>10</td>
+      <td>1.8%</td>
+    </tr>
+    <tr>
+      <td>Univariate Distributions</td>
+      <td>Moment generating functions</td>
+      <td>13</td>
+      <td>9</td>
+      <td>1.7%</td>
+    </tr>
+    <tr>
+      <td>Differential Calculus of One Variable</td>
+      <td>Differentiability</td>
+      <td>12</td>
+      <td>9</td>
+      <td>1.6%</td>
+    </tr>
+    <tr>
+      <td>Limit Theorems</td>
+      <td>Laws of large numbers</td>
+      <td>11</td>
+      <td>9</td>
+      <td>1.5%</td>
+    </tr>
+  </tbody>
+</table>
+<img src="../figures/03-subtopic-appearance.png" alt="Most consistently tested subtopics">
+<p>Full tier list for all 78 subtopics: <code>outputs/tables/subtopics_2015_2025.csv</code>.</p>
+
+<h2>7. Potential future areas (hypotheses, not predictions)</h2><div class="hyp"><ul>
+<li><b>Hypothesis</b> <span class="ev">strong</span>: Univariate Distributions and Estimation will stay the heaviest topics; they were heavy in every paper.</li>
+<li><b>Hypothesis</b> <span class="ev">moderate</span>: Multivariate Distributions and Sampling Distributions keep the larger share they have had recently, and Integral Calculus stays lighter than in 2015–2018.</li>
+<li><b>Hypothesis</b> <span class="ev">weak</span>: topics new to the 2026 syllabus (Descriptive Statistics, Nonparametric Methods, Stochastic Processes) may appear; there is no past data, so their likely weight is unknown.</li></ul>
+<p>Historical frequency is not a probability of appearance. No probabilities are given because 11 papers cannot support a defensible model.</p></div>
+
+<h2>8. Preparation recommendations</h2>
+<p>Suggested allocation (interpretation): 90% of study time in proportion to historical marks share, and a reserved 10% for the 11 untested 2026-syllabus subtopics. Don't drop any syllabus topic for low frequency.</p>
+<table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Topic</th>
+      <th>Suggested study time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Univariate Distributions</td>
+      <td>13.5%</td>
+    </tr>
+    <tr>
+      <td>Estimation</td>
+      <td>12.6%</td>
+    </tr>
+    <tr>
+      <td>Multivariate Distributions</td>
+      <td>10.1%</td>
+    </tr>
+    <tr>
+      <td>Matrices and Determinants</td>
+      <td>9.0%</td>
+    </tr>
+    <tr>
+      <td>Integral Calculus</td>
+      <td>7.6%</td>
+    </tr>
+    <tr>
+      <td>Differential Calculus of One Variable</td>
+      <td>7.3%</td>
+    </tr>
+    <tr>
+      <td>Testing of Hypotheses</td>
+      <td>6.3%</td>
+    </tr>
+    <tr>
+      <td>Probability</td>
+      <td>6.0%</td>
+    </tr>
+    <tr>
+      <td>Sequences and Series</td>
+      <td>5.7%</td>
+    </tr>
+    <tr>
+      <td>Sampling Distributions</td>
+      <td>4.9%</td>
+    </tr>
+    <tr>
+      <td>Limit Theorems</td>
+      <td>4.4%</td>
+    </tr>
+    <tr>
+      <td>Differential Calculus of Two Variables</td>
+      <td>2.6%</td>
+    </tr>
+  </tbody>
+</table>
+<ul><li>Work through past papers <b>by problem structure</b> (Section 5): 43.6% of questions reuse one.</li>
+<li>The paper is mostly numerical/application work (71.1%): practise timed computation, not proofs (proof-type questions: 1).</li>
+<li>Skip ODE-only preparation: not tested since 2016 and not in the 2026 syllabus.</li></ul>
+
+<h2>9. Old-format papers (2012–2014)</h2>
+<p>2012 (25 questions, 300 marks, subjective parts), 2013 (30 questions: objective, fill-in-the-blank, descriptive) and 2014 (43 questions incl. 8 descriptive) differ in structure, so they are kept out of all shares above. Heaviest topics there:</p>
+<table class="dataframe t">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Topic</th>
+      <th>Questions</th>
+      <th>Mean marks share</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Estimation</td>
+      <td>13</td>
+      <td>16.0%</td>
+    </tr>
+    <tr>
+      <td>Univariate Distributions</td>
+      <td>15</td>
+      <td>14.7%</td>
+    </tr>
+    <tr>
+      <td>Multivariate Distributions</td>
+      <td>9</td>
+      <td>10.7%</td>
+    </tr>
+    <tr>
+      <td>Matrices and Determinants</td>
+      <td>10</td>
+      <td>8.7%</td>
+    </tr>
+    <tr>
+      <td>Probability</td>
+      <td>8</td>
+      <td>7.3%</td>
+    </tr>
+    <tr>
+      <td>Testing of Hypotheses</td>
+      <td>7</td>
+      <td>7.3%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>10. Methodology and limitations</h2><ul>
+<li>Source: official papers from jam2026.iitb.ac.in (SHA-256 manifest). 4 papers are image scans, read with local OCR (PaddleOCR-VL); every page was audited against its image and about 70 OCR errors were fixed. Spot checks still found about 1 meaning-changing OCR slip per 4–5 unchecked pages.</li>
+<li>Each question is recorded as number, format, marks and pages, plus a one-line summary (no verbatim text). Counts and marks match each paper's printed instructions, section headers or printed answer key (2016, 2017 and 2022 totals are sums of printed section marks). The validator reports 0 errors on all 778 rows.</li>
+<li>Image verification: 2023 and 2024 in full; scans 2014, 2017 and 2025 PASS, but some of their pages were compared against the OCR text rather than the image. Text-based papers 2015–2022 were not sample-verified against images.</li>
+<li>Topic, archetype, cognitive type and repeat labels are model judgements (subjective). An independent reviewer agreed with 96% of uncertain topic calls (79/82). Archetypes and repeats are <b>moderate evidence at best</b>; cognitive type was not reviewed.</li>
+<li>The taxonomy is the 2026 syllabus, while older papers followed earlier syllabi. "Never tested" can mean "newly added".</li>
+<li>n = 11 papers: everything is descriptive, with no significance tests and no difficulty ratings (no score data).</li>
+<li>Reproducible: <code>python -m pyq.master && python -m pyq.report</code> regenerates every table, figure and this report from the frozen data. Code and data: github.com/aaditya19saini/OCR-QP-Tool.</li></ul>
+</body></html>

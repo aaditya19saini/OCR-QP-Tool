@@ -20,7 +20,7 @@ Done and pushed (last commit "Checkpoint (agents paused by user)"):
 - Classified: all 14 years (taxonomy v2).
 - Analysis code ready and tested: `pyq/master.py`, `pyq/stats.py` (25 tests pass).
 
-**2026-11-05: Stage 4 (statistics) done: `outputs/master.csv`, `outputs/tables/*.csv`, `outputs/figures/01-05`. Tiers are at subtopic level (rule in `pyq/stats.py`); 11 syllabus subtopics are untested 2015–2025. Resume point: user approves the key tables, then 6f interpretation + 6g report (HTML → PDF via Brave) in `pyq/report.py`.** Optional open item: 5-page sample verification of the 10 text papers (counts/marks are already confirmed; only summaries are unchecked there).
+**2026-11-05: Stages 4–6 DONE. Report at `outputs/report/jam_ms_report.pdf` (+ .html), tables in `outputs/tables/`, figures in `outputs/figures/`; regenerate with `python -m pyq.master && python -m pyq.report`. Remaining: step 7 (generic exam-agnostic skill), optional text-paper sample verification.** Optional open item: 5-page sample verification of the 10 text papers (counts/marks are already confirmed; only summaries are unchecked there).
 
 Resume in this order (progress 2026-11-02):
 1. ~~Classify 2014–2022~~ DONE. All 14 years classified.

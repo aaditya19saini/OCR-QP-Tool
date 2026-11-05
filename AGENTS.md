@@ -7,9 +7,9 @@ Instructions for any coding agent (Codex, Claude Code, others) working in this r
 ## What this is
 A verified question-level dataset and statistics report for IIT JAM Mathematical Statistics (MS) papers 2012–2025. Spec: `docs/guide.md`, narrowed by the "Scope decisions" in CLAUDE.md.
 
-## Status (2026-11-02)
+## Status (2026-11-05)
 - Done: all 14 papers OCR'd and audited, all 14 extracted and classified (778 rows, validator 0 errors), analysis code tested.
-- Paused 2026-11-02 after Stage 3 (validation complete: 778 rows, 0 errors, classification reviewed). Next: user go-ahead, then the analysis plan (step 6 in CLAUDE.md, main scope 2015–2025) and the report.
+- 2026-11-05: analysis and report DONE (`outputs/report/jam_ms_report.pdf`). Next: package the method as a generic skill (CLAUDE.md step 7).
 
 ## Hard rules (summary)
 - Never fabricate or infer exam data. Unknown = `null` + flag.
