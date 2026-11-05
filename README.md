@@ -4,9 +4,19 @@
 
 This repository turns official previous-year papers into structured question records. The goal is to support careful topic and marks analysis while keeping every claim traceable to its paper and page.
 
-> **Project status · 2 November 2026**
+> **Project status · 5 November 2026**
 >
-> Paper inventory, OCR, extraction, classification, and Stage 3 validation are complete. The dataset contains 778 records and currently passes validation with zero errors. The project is paused before statistical analysis; the analysis tables and final report have not yet been produced.
+> Complete. All 14 papers have been inventoried, OCR'd, extracted, classified and validated: 778 records with zero validation errors. The statistics and the final report are done. **Report: [`outputs/report/jam_ms_report.pdf`](outputs/report/jam_ms_report.pdf)**. Next step: package the method as a generic, exam-agnostic skill.
+
+## Key findings (2015–2025, 11 papers, 660 questions)
+
+- **Statistics is 63.9% of marks, Mathematics 36.1%.** The three heaviest topics are Univariate Distributions (14.9%), Estimation (13.9%) and Multivariate Distributions (11.2%), together 40%.
+- **No main topic is skippable.** Each appears in at least 10 of 11 papers, so priorities are set at subtopic level (22 Tier-1 subtopics).
+- **The paper is shifting from calculus to distribution theory.** From 2015–2018 to 2023–2025, Integral Calculus fell from 10.2% to 5.3% of marks and Multivariate Distributions rose from 9.2% to 14.3%. This is descriptive only (n = 11).
+- **43.6% of questions reuse an earlier problem structure** with new numbers. None is a word-for-word repeat.
+- **Differential equations disappeared after 2016.** 11 subtopics of the 2026 syllabus were never tested in 2015–2025 and are flagged as likely new, not low priority.
+
+Methodology, evidence strength and limitations are in the report.
 
 ## What’s in the repository
 
@@ -16,7 +26,11 @@ This repository turns official previous-year papers into structured question rec
 - **Review notes** documenting OCR audits, image checks, classification decisions, and known limitations.
 - **Python pipeline and tests** for inventory, rendering, OCR, validation, master-data generation, and statistics.
 
-The planned deliverables are `outputs/master.csv` and a report PDF. They are not available yet because the statistical-analysis stage has not started.
+Deliverables:
+- `outputs/master.csv`: one row per question, with facts and labels.
+- `outputs/tables/`: 7 statistics tables.
+- `outputs/figures/`: 5 figures.
+- `outputs/report/jam_ms_report.pdf` (+ `.html`): the report.
 
 ## Analysis scope
 
@@ -42,6 +56,9 @@ uv pip install -p .venv -r requirements.txt
 
 # Run the project checks
 .venv/bin/python -m pytest -q
+
+# Rebuild every table, figure and the report from the committed data
+.venv/bin/python -m pyq.master && .venv/bin/python -m pyq.report
 ```
 
 The analysis pipeline uses the project virtual environment. Before committing, run both the test suite and validator as required by [`CLAUDE.md`](CLAUDE.md).
@@ -53,7 +70,7 @@ Official PDFs → rendered pages → local OCR → extracted records
               → classification → validation → master CSV → statistics → report
 ```
 
-The repository is currently paused after validation. The next approved work begins by applying the reviewed classification fixes, revalidating, and committing that step. Stage boundaries require user approval; do not skip ahead to analysis or reporting.
+Every stage is complete. The report PDF is printed with headless Brave (`brave` must be on `PATH`). Stage boundaries require user approval; see `CLAUDE.md`.
 
 Useful commands:
 
@@ -61,7 +78,8 @@ Useful commands:
 .venv/bin/python -m pyq.render 2023       # render one paper to data/pages/2023/
 .venv/bin/python -m pyq.ocr 2023          # OCR selected years (local model required)
 .venv/bin/python -m pyq.validate 2023     # validate one year
-.venv/bin/python -m pyq.master            # build outputs/master.csv (after approval)
+.venv/bin/python -m pyq.master            # build outputs/master.csv
+.venv/bin/python -m pyq.report            # tables, figures, report HTML + PDF
 ```
 
 Rendering and OCR are not needed to inspect the already committed dataset. Local OCR additionally requires the model files and llama.cpp binaries described in `CLAUDE.md` (about 2 GB under `~/.cache/pyq-ocr/`).
@@ -89,12 +107,13 @@ Rendering and OCR are not needed to inspect the already committed dataset. Local
 | `config/taxonomy.yaml` | Versioned syllabus taxonomy |
 | `pyq/` | Pipeline modules |
 | `tests/` | Hand-computed and integrity checks |
-| `outputs/` | Generated products; currently includes the paper inventory |
+| `outputs/` | `master.csv`, `tables/`, `figures/`, `report/`, paper inventory |
 | `docs/guide.md` | Full analysis specification and scope decisions |
 | `docs/repo-book.html` | Paginated guide to the repository and contribution workflow |
 
 ## Further reading
 
+- [Report (PDF)](outputs/report/jam_ms_report.pdf)
 - [Project instructions and resume plan](CLAUDE.md)
 - [Analysis specification](docs/guide.md)
 - [OCR audit](data/reviews/ocr-audit.md)
