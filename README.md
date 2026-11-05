@@ -109,7 +109,6 @@ Rendering and OCR are not needed to inspect the already committed dataset. Local
 | `tests/` | Hand-computed and integrity checks |
 | `outputs/` | `master.csv`, `tables/`, `figures/`, `report/`, paper inventory |
 | `docs/guide.md` | Full analysis specification and scope decisions |
-| `docs/repo-book.html` | Paginated guide to the repository and contribution workflow |
 
 ## Further reading
 
@@ -118,5 +117,4 @@ Rendering and OCR are not needed to inspect the already committed dataset. Local
 - [Analysis specification](docs/guide.md)
 - [OCR audit](data/reviews/ocr-audit.md)
 - [Classification review](data/reviews/classification.md)
-- [Repository field guide](docs/repo-book.html)
 - [Official JAM previous-year papers](https://jam2026.iitb.ac.in/oldQP.html)
