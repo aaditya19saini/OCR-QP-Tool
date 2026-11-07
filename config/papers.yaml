@@ -1,7 +1,7 @@
 # Human-verified paper metadata. total_marks / expected_questions come from each paper's own
 # instructions page, filled during extraction with the page cited in *_source. null = not yet read.
 # Never guess these: validate.py only checks totals once they are set.
-missing_years: []  # all 2012-2025 present (2013, 2016, 2019 added from jam2026.iitb.ac.in/oldQP.html on 2026-11-01)
+missing_years: []  # all 2012-2026 present (2013, 2016, 2019 added from jam2026.iitb.ac.in/oldQP.html on 2026-11-01; 2026 from jam2026.iitb.ac.in/qpnkey26.html on 2026-11-07)
 papers:
   2012:
     file: MS2012.pdf
@@ -87,3 +87,9 @@ papers:
     expected_questions: 60
     sections: {A: MCQ, B: MSQ, C: NAT}   # printed p1 instructions 2-4
     source: "MS2025.pdf p1 instructions"
+  2026:
+    file: MS2026.pdf
+    total_marks: 100   # INFERRED: not printed; sum of printed section headers (10x1+20x2 | 10x2 | 10x1+10x2), matches the separate official master answer key MS_AK.pdf
+    expected_questions: 60   # printed section ranges Q.1-Q.60; answer key lists 60
+    sections: {A: MCQ, B: MSQ, C: NAT}   # Question Type column of the official answer key (jam2026.iitb.ac.in/files/MS_AK.pdf, sha256 4755fe9f...eeea), not in data/raw
+    source: "MS2026.pdf section headers p2, p10, p30, p40, p44; official master answer key MS_AK.pdf"

@@ -170,3 +170,17 @@ Random spot checks (2 per year, 13 years; 2023 compared in full instead): 26 pag
 ## 2024 follow-up (main session, during extraction)
 - p016: Q.21 density g(y) mangled (fraction split across case rows) -> `e^{-y/2}/\sqrt{2\pi y}` if y>0, 0 if y<=0 (image).
 - p035: Q.46 `\frac{1}{n^4} - \sum` -> `\frac{1}{n^{3/4}} \sum` (image).
+
+## 2026 (added 2026-11-07, main session; full image comparison of all 47 pages)
+Source: MS2026.pdf (text layer present, JAM 2026 watermark on every page). Local OCR, 47 pages, no FAILED pages, no loops.
+Every page's OCR was compared against its rendered image (data/pages/2026/pNNN.png) by eye.
+- Meaning-changing errors (fixed from image):
+  - p004 Q.4: options (B), (D) came out as empty fractions `\frac{y^{3/4}}{}`, `\frac{y^{1/4}}{}` -> `y^{3/4}`, `y^{1/4}`.
+  - p023 Q.24: density exponent split, `e^{3x} - e^x/β` -> `e^{3x - e^x/β}`.
+  - p024 Q.25: `(log_e 2)^T` (power) -> `(log_e 2)T` (product).
+- Content dropped by OCR (added from image, marked in the file):
+  - p008 Q.9: Markov chain transition diagram (1→1 0.25, 1→2 0.75, 2→1 0.5, 2→2 0.5).
+  - p028 Q.29: 3x3 transition matrix [[1/2,1/4,1/4],[0,1/5,4/5],[0,1,0]].
+- Minor, not fixed (meaning recoverable): p001 ℕ/ℝ as N/R; p011 mismatched `\[ ... \)`; p018 "SI" for "S1"; p019 watermark text "IIT BOMBAY" in output; p025 subscript `0,0143` for 0.0143; p031 "Page.31"; p045 Q.55 "0, otherwise" row duplicated/jumbled (formula and support intact).
+- Clean: the other 39 pages match exactly.
+- Tally: 5/47 pages (11%) had a substantive error, lower than the ~23% seen on older papers (clean typeset source).
