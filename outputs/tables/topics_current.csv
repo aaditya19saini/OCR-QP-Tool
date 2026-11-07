@@ -1,0 +1,17 @@
+subject,topic,questions,pct_questions,papers_appeared,appearance_rate,marks,null_marks,mean_marks_share,avg_marks,max_marks,min_marks,recent_questions,n_archetypes,n_MCQ,n_MSQ,n_NAT
+Statistics,Univariate Distributions,109,0.1514,12,1.0000,174,0,0.1450,1.5963,2,1,24,58,55,10,44
+Statistics,Estimation,94,0.1306,12,1.0000,165,0,0.1375,1.7553,2,1,24,42,42,28,24
+Statistics,Multivariate Distributions,75,0.1042,12,1.0000,131,0,0.1092,1.7467,2,1,21,42,36,13,26
+Mathematics,Matrices and Determinants,71,0.0986,12,1.0000,117,0,0.0975,1.6479,2,1,16,43,38,13,20
+Mathematics,Integral Calculus,59,0.0819,12,1.0000,97,0,0.0808,1.6441,2,1,9,22,25,2,32
+Mathematics,Differential Calculus of One Variable,54,0.0750,12,1.0000,91,0,0.0758,1.6852,2,1,10,33,22,11,21
+Statistics,Testing of Hypotheses,50,0.0694,12,1.0000,86,0,0.0717,1.7200,2,1,14,17,29,8,13
+Statistics,Probability,51,0.0708,12,1.0000,83,0,0.0692,1.6275,2,1,13,27,26,6,19
+Mathematics,Sequences and Series,48,0.0667,12,1.0000,74,0,0.0617,1.5417,2,1,10,21,26,12,10
+Statistics,Sampling Distributions,42,0.0583,11,0.9167,68,0,0.0567,1.6190,2,1,15,22,21,7,14
+Statistics,Limit Theorems,36,0.0500,12,1.0000,58,0,0.0483,1.6111,2,1,11,19,21,4,11
+Mathematics,Differential Calculus of Two Variables,19,0.0264,11,0.9167,35,0,0.0292,1.8421,2,1,5,5,13,4,2
+Mathematics,Differential Equations (pre-2026 syllabus),4,0.0056,2,0.1667,8,0,0.0067,2.0000,2,2,0,1,2,1,1
+Statistics,Descriptive Statistics,3,0.0042,1,0.0833,5,0,0.0042,1.6667,2,1,3,3,1,1,1
+Statistics,Stochastic Processes,3,0.0042,1,0.0833,4,0,0.0033,1.3333,2,1,3,3,2,0,1
+Statistics,Nonparametric Methods,2,0.0028,1,0.0833,4,0,0.0033,2.0000,2,2,2,2,1,0,1

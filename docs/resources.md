@@ -1,32 +1,32 @@
 # JAM MS: what to study from, in what order
 
 Researched 2026-11-07 for **JAM 2027 (14 Feb 2027, afternoon session)**. The setup this guide assumes: about 14 weeks left, a weak base, and free resources plus cheap Indian-edition books.
-Topic weights come from this repo's report (`outputs/report/jam_ms_report.pdf`, 11 papers, 2015–2025). Tags: **FACT** = checked against the source. **INFERENCE** = my reasoning from facts. **UNCERTAIN** = thin or conflicting evidence.
+Topic weights come from this repo's report (`outputs/report/jam_ms_report.pdf`, 12 papers, 2015–2026). Tags: **FACT** = checked against the source. **INFERENCE** = my reasoning from facts. **UNCERTAIN** = thin or conflicting evidence.
 
 ## TL;DR
 
 1. **Past papers are the main resource.** Every topper interview I found says so. You already have 14 official papers in `data/raw/`, plus JAM 2026 (link below). Your report shows 43.6% of questions reuse an earlier problem structure.
 2. **One book per subject, not five.** Stats: Hogg, McKean & Craig for theory, plus Gupta & Kapoor (FMS) for drill. Maths: NCERT/JEE-level calculus first, then Strang for matrices.
 3. **Free video for a weak base:** NPTEL (Somesh Kumar, IIT KGP) for probability and inference, MIT 18.06 (Strang) for matrices, Harvard Stat 110 for probability intuition.
-4. **The "never tested" 2026-syllabus topics were tested in JAM 2026.** By my count, at least 7 questions and 11 of 100 marks: Markov chains ×2, Poisson process, runs test, sign test, definiteness of a matrix, descriptive statistics. Don't skip them. The report's reserved 10% looks about right (INFERENCE, from one paper).
+4. **The new 2026-syllabus topics were tested in JAM 2026: 9 questions, 14 of 100 marks** (FACT, classified and reviewed): Markov chains ×2, Poisson process, runs test, sign test, matrix definiteness, descriptive statistics ×3 (CV, mean/median/IQR, Spearman). Don't skip them. One paper only, so their future weight is unknown (UNCERTAIN).
 5. **Mocks:** the official mock is free and uses the real interface. Use it in the final weeks. Your own timed past papers are the real mock series.
 
 ## 1. Time split (from the report)
 
-Use 90% of your time in proportion to past marks and 10% on the new topics in section 4.
+Use 90% of your time in proportion to past marks (12 papers) and 10% on the new topics in section 4.
 
 | Topic | Study time | Tier-1 subtopics to master (in ≥80% of papers or ≥2% of marks) |
 |---|---|---|
-| Univariate Distributions | 13.5% | CDF/PMF/PDF; standard discrete distributions; expectation, moments, quantiles; MGFs |
-| Estimation | 12.6% | MLE; unbiasedness & consistency; UMVUE / Rao-Blackwell / Lehmann-Scheffé; confidence intervals |
-| Multivariate Distributions | 10.1% | Joint/marginal/conditional; covariance & correlation |
-| Matrices and Determinants | 9.0% | Eigenvalues & Cayley-Hamilton; systems of linear equations |
-| Integral Calculus | 7.6% | Areas/volumes/arc length; FTC & Leibniz rule |
-| Differential Calculus (1 var) | 7.3% | Differentiability; Rolle's / MVT |
-| Testing of Hypotheses | 6.3% | Errors, size, power, p-value; Neyman-Pearson / MP tests |
-| Probability | 6.0% | Conditional probability & Bayes |
-| Sequences and Series | 5.7% | Convergence tests |
-| Sampling Distributions | 4.9% | (χ², t, F, order statistics; no Tier-1 subtopic) |
+| Univariate Distributions | 13.1% | CDF/PMF/PDF; standard discrete distributions; expectation, moments, quantiles; MGFs |
+| Estimation | 12.5% | MLE; unbiasedness & consistency; UMVUE / Rao-Blackwell / Lehmann-Scheffé; confidence intervals |
+| Multivariate Distributions | 9.9% | Joint/marginal/conditional; covariance & correlation |
+| Matrices and Determinants | 8.8% | Eigenvalues & Cayley-Hamilton; systems of linear equations |
+| Integral Calculus | 7.3% | Areas/volumes/arc length; FTC & Leibniz rule |
+| Differential Calculus (1 var) | 6.9% | Differentiability; Rolle's / MVT |
+| Testing of Hypotheses | 6.5% | Errors, size, power, p-value; Neyman-Pearson / MP tests |
+| Probability | 6.3% | Conditional probability & Bayes |
+| Sequences and Series | 5.6% | Convergence tests |
+| Sampling Distributions | 5.1% | (χ², t, F, order statistics; no Tier-1 subtopic) |
 | Limit Theorems | 4.4% | CLT; laws of large numbers |
 | Differential Calculus (2 var) | 2.6% | (maxima/minima, partials) |
 | **2026-syllabus new topics** | **10%** | see section 4 |
@@ -37,7 +37,7 @@ Skip differential equations. They haven't appeared since 2016 and aren't in the 
 
 Cheap = Indian edition, roughly ₹600–1,000 at time of search (retailer snapshots, prices move).
 
-### Statistics (about 64% of marks, 2015–2025)
+### Statistics (about 65% of marks, 2015–2026)
 
 | Topic | Learn (free video) | Read (one book) | Practise |
 |---|---|---|---|
@@ -47,7 +47,7 @@ Cheap = Indian edition, roughly ₹600–1,000 at time of search (retailer snaps
 | Estimation | NPTEL **Statistical Inference** (Somesh Kumar, IIT KGP, or Niladri Chatterjee, IIT Delhi) [7] | Hogg; **Rohatgi & Saleh** for depth [3][8]; Mood, Graybill & Boes is a topper favourite for inference [6] | PYQs; Rohatgi exercises |
 | Testing of Hypotheses | NPTEL Statistical Inference [7] | Hogg (NP lemma, MP/UMP tests) | PYQs |
 
-### Mathematics (about 36% of marks)
+### Mathematics (about 35% of marks)
 
 | Topic | Learn (free video) | Read | Practise |
 |---|---|---|---|
@@ -71,21 +71,23 @@ Cheap = Indian edition, roughly ₹600–1,000 at time of search (retailer snaps
 
 **How to use PYQs** (from the toppers [6][16][20]): solve by topic while learning, keep the last 3–4 years for timed full mocks, and keep an error notebook you reread before each mock. Attempt in the order MCQ → NAT → MSQ, and drop a question after about 5 minutes. MSQs have no partial credit, so attempt only the ones you're sure of.
 
-## 4. The 2026-syllabus topics (the report's "untested 11")
+## 4. The 2026-syllabus topics (new in JAM 2026)
 
-**FACT (keyword scan of the official JAM 2026 MS paper, text layer):** at least 7 questions covered topics that never appeared in 2015–2025:
+**FACT (JAM 2026 paper: every page image-checked; questions classified and independently reviewed):** 9 questions covered subtopics that never appeared in 2015–2025:
 
 | Q | Marks | Topic |
 |---|---|---|
 | 3 | 1 | Definiteness of a symmetric matrix (quadratic forms) |
 | 9 | 1 | Markov chain, stationary distribution |
 | 28 | 2 | Runs test |
+| 17 | 2 | Descriptive statistics (coefficient of variation vs SD) |
 | 29 | 2 | Markov chain, irreducibility |
 | 33 | 2 | Descriptive statistics (sample mean vs median, MSQ) |
+| 43 | 1 | Spearman's rank correlation (correction) |
 | 49 | 1 | Poisson process |
 | 59 | 2 | Sign test |
 
-That's 11/100 marks. It's a keyword count, not a full classification, so the true number could be a bit higher. One paper doesn't make a trend (UNCERTAIN), but it rules out skipping these topics.
+That's 14/100 marks. Still untested anywhere: Kolmogorov–Smirnov / empirical CDF, Mann–Whitney, skewness/kurtosis, two-variable limits. One paper doesn't make a trend (UNCERTAIN), but it rules out skipping these topics.
 
 | Topic | Free | Book |
 |---|---|---|
@@ -119,7 +121,7 @@ That's 11/100 marks. It's a keyword count, not a full classification, so the tru
 - I didn't watch the courses or rate their quality. The picks rest on syllabus match and repeated recommendations.
 - The JAM 2027 syllabus isn't on the IIT KGP site yet [15]. I assumed it matches 2026 (UNCERTAIN).
 - Prices are retailer snapshots from search results [27].
-- The JAM 2026 counts come from a keyword search of the PDF text, not a full classification of all 60 questions.
+- The JAM 2026 counts rest on one paper. Topic labels are model judgements, reviewed by a second model pass (all 9 new-topic filings confirmed).
 - I didn't check whether NPTEL runs these courses live in Jan–Apr 2027. The archived videos are free either way.
 
 ## Sources

@@ -1,0 +1,79 @@
+subject,topic,subtopic,questions,pct_questions,papers_appeared,appearance_rate,marks,null_marks,mean_marks_share,avg_marks,max_marks,min_marks,recent_questions,n_archetypes,n_MCQ,n_MSQ,n_NAT,tier
+Mathematics,Integral Calculus,"Areas, volumes and arc lengths",26,0.0361,11.0000,0.9167,43.0000,0.0000,0.0358,1.6538,2.0000,1.0000,4.0000,4.0000,10.0000,1.0000,15.0000,1
+Statistics,Testing of Hypotheses,"Errors, size, power and p-value",25,0.0347,12.0000,1.0000,43.0000,0.0000,0.0358,1.7200,2.0000,1.0000,6.0000,8.0000,12.0000,1.0000,12.0000,1
+Statistics,Univariate Distributions,"Expectation, moments and quantiles",25,0.0347,10.0000,0.8333,41.0000,0.0000,0.0342,1.6400,2.0000,1.0000,11.0000,16.0000,15.0000,2.0000,8.0000,1
+Statistics,Probability,Conditional probability and Bayes' theorem,23,0.0319,11.0000,0.9167,36.0000,0.0000,0.0300,1.5652,2.0000,1.0000,3.0000,8.0000,11.0000,2.0000,10.0000,1
+Mathematics,Matrices and Determinants,Eigenvalues and eigenvectors (Cayley-Hamilton),22,0.0306,11.0000,0.9167,36.0000,0.0000,0.0300,1.6364,2.0000,1.0000,4.0000,15.0000,11.0000,4.0000,7.0000,1
+Statistics,Estimation,Maximum likelihood estimation,21,0.0292,12.0000,1.0000,36.0000,0.0000,0.0300,1.7143,2.0000,1.0000,5.0000,9.0000,11.0000,3.0000,7.0000,1
+Statistics,Multivariate Distributions,"Joint, marginal and conditional distributions",20,0.0278,11.0000,0.9167,35.0000,0.0000,0.0292,1.7500,2.0000,1.0000,5.0000,7.0000,12.0000,2.0000,6.0000,1
+Statistics,Univariate Distributions,"CDF, PMF and PDF",20,0.0278,10.0000,0.8333,34.0000,0.0000,0.0283,1.7000,2.0000,1.0000,3.0000,9.0000,8.0000,3.0000,9.0000,1
+Statistics,Limit Theorems,Central limit theorem,18,0.0250,11.0000,0.9167,31.0000,0.0000,0.0258,1.7222,2.0000,1.0000,5.0000,11.0000,10.0000,3.0000,5.0000,1
+Statistics,Univariate Distributions,Standard discrete distributions,18,0.0250,11.0000,0.9167,30.0000,0.0000,0.0250,1.6667,2.0000,1.0000,2.0000,11.0000,9.0000,2.0000,7.0000,1
+Statistics,Estimation,Unbiasedness and consistency,17,0.0236,9.0000,0.7500,29.0000,0.0000,0.0242,1.7059,2.0000,1.0000,4.0000,8.0000,9.0000,6.0000,2.0000,1
+Mathematics,Integral Calculus,Fundamental theorems and Leibniz rule,17,0.0236,10.0000,0.8333,27.0000,0.0000,0.0225,1.5882,2.0000,1.0000,3.0000,10.0000,12.0000,0.0000,5.0000,1
+Mathematics,Matrices and Determinants,Systems of linear equations,15,0.0208,12.0000,1.0000,27.0000,0.0000,0.0225,1.8000,2.0000,1.0000,3.0000,5.0000,9.0000,3.0000,3.0000,1
+Statistics,Testing of Hypotheses,Neyman-Pearson lemma and MP tests,15,0.0208,11.0000,0.9167,26.0000,0.0000,0.0217,1.7333,2.0000,1.0000,4.0000,4.0000,11.0000,4.0000,0.0000,1
+Statistics,Probability,Axioms and properties of probability,15,0.0208,9.0000,0.7500,25.0000,0.0000,0.0208,1.6667,2.0000,1.0000,6.0000,8.0000,9.0000,2.0000,4.0000,1
+Statistics,Multivariate Distributions,"Covariance, correlation and joint moments",15,0.0208,8.0000,0.6667,25.0000,0.0000,0.0208,1.6667,2.0000,1.0000,4.0000,11.0000,8.0000,2.0000,5.0000,1
+Mathematics,Sequences and Series,Convergence tests for series,14,0.0194,9.0000,0.7500,26.0000,0.0000,0.0217,1.8571,2.0000,1.0000,2.0000,5.0000,6.0000,5.0000,3.0000,1
+Statistics,Multivariate Distributions,Conditional expectation and variance,14,0.0194,9.0000,0.7500,25.0000,0.0000,0.0208,1.7857,2.0000,1.0000,3.0000,5.0000,5.0000,2.0000,7.0000,1
+Statistics,Univariate Distributions,Standard continuous distributions,14,0.0194,6.0000,0.5000,21.0000,0.0000,0.0175,1.5000,2.0000,1.0000,0.0000,11.0000,6.0000,0.0000,8.0000,2
+Statistics,Univariate Distributions,Moment generating functions,14,0.0194,10.0000,0.8333,21.0000,0.0000,0.0175,1.5000,2.0000,1.0000,3.0000,6.0000,9.0000,1.0000,4.0000,1
+Statistics,Estimation,"UMVUE, Rao-Blackwell and Lehmann-Scheffe",13,0.0181,10.0000,0.8333,23.0000,0.0000,0.0192,1.7692,2.0000,1.0000,4.0000,4.0000,5.0000,3.0000,5.0000,1
+Mathematics,Differential Calculus of One Variable,Differentiability,13,0.0181,10.0000,0.8333,20.0000,0.0000,0.0167,1.5385,2.0000,1.0000,2.0000,12.0000,7.0000,1.0000,5.0000,1
+Statistics,Estimation,Confidence intervals,12,0.0167,11.0000,0.9167,22.0000,0.0000,0.0183,1.8333,2.0000,1.0000,3.0000,7.0000,5.0000,3.0000,4.0000,1
+Mathematics,Differential Calculus of One Variable,Rolle's and mean value theorems,12,0.0167,9.0000,0.7500,22.0000,0.0000,0.0183,1.8333,2.0000,1.0000,2.0000,4.0000,5.0000,3.0000,4.0000,2
+Mathematics,Matrices and Determinants,Special matrices,12,0.0167,9.0000,0.7500,22.0000,0.0000,0.0183,1.8333,2.0000,1.0000,2.0000,8.0000,5.0000,5.0000,2.0000,2
+Mathematics,Sequences and Series,Cauchy and monotonic sequences,12,0.0167,9.0000,0.7500,19.0000,0.0000,0.0158,1.5833,2.0000,1.0000,3.0000,5.0000,7.0000,5.0000,0.0000,2
+Statistics,Sampling Distributions,Chi-square distribution,12,0.0167,9.0000,0.7500,18.0000,0.0000,0.0150,1.5000,2.0000,1.0000,3.0000,7.0000,8.0000,1.0000,3.0000,2
+Statistics,Limit Theorems,Laws of large numbers,12,0.0167,10.0000,0.8333,17.0000,0.0000,0.0142,1.4167,2.0000,1.0000,3.0000,4.0000,6.0000,1.0000,5.0000,1
+Mathematics,Sequences and Series,Sequences and limits,12,0.0167,7.0000,0.5833,15.0000,0.0000,0.0125,1.2500,2.0000,1.0000,1.0000,8.0000,9.0000,0.0000,3.0000,2
+Statistics,Univariate Distributions,Functions of a random variable,11,0.0153,9.0000,0.7500,18.0000,0.0000,0.0150,1.6364,2.0000,1.0000,3.0000,8.0000,4.0000,2.0000,5.0000,2
+Statistics,Sampling Distributions,Order statistics,11,0.0153,7.0000,0.5833,17.0000,0.0000,0.0142,1.5455,2.0000,1.0000,6.0000,9.0000,2.0000,0.0000,9.0000,2
+Mathematics,Differential Calculus of One Variable,Limits and continuity,10,0.0139,7.0000,0.5833,19.0000,0.0000,0.0158,1.9000,2.0000,1.0000,2.0000,10.0000,3.0000,6.0000,1.0000,2
+Statistics,Sampling Distributions,t distribution,10,0.0139,8.0000,0.6667,18.0000,0.0000,0.0150,1.8000,2.0000,1.0000,4.0000,3.0000,6.0000,3.0000,1.0000,2
+Mathematics,Matrices and Determinants,"Rank, inverse and adjoint",10,0.0139,9.0000,0.7500,14.0000,0.0000,0.0117,1.4000,2.0000,1.0000,3.0000,5.0000,5.0000,1.0000,4.0000,2
+Statistics,Estimation,Sufficiency and completeness,9,0.0125,8.0000,0.6667,16.0000,0.0000,0.0133,1.7778,2.0000,1.0000,3.0000,4.0000,4.0000,5.0000,0.0000,2
+Statistics,Multivariate Distributions,Functions of random vectors,9,0.0125,6.0000,0.5000,15.0000,0.0000,0.0125,1.6667,2.0000,1.0000,3.0000,8.0000,6.0000,2.0000,1.0000,2
+Mathematics,Differential Calculus of Two Variables,"Maxima, minima and saddle points",9,0.0125,9.0000,0.7500,15.0000,0.0000,0.0125,1.6667,2.0000,1.0000,2.0000,2.0000,7.0000,2.0000,0.0000,2
+Statistics,Probability,Independence of events,9,0.0125,6.0000,0.5000,15.0000,0.0000,0.0125,1.6667,2.0000,1.0000,2.0000,8.0000,4.0000,2.0000,3.0000,2
+Statistics,Sampling Distributions,F distribution,9,0.0125,6.0000,0.5000,15.0000,0.0000,0.0125,1.6667,2.0000,1.0000,2.0000,5.0000,5.0000,3.0000,1.0000,2
+Statistics,Multivariate Distributions,Bivariate normal distribution,8,0.0111,6.0000,0.5000,14.0000,0.0000,0.0117,1.7500,2.0000,1.0000,5.0000,6.0000,4.0000,0.0000,4.0000,2
+Statistics,Estimation,Least squares and simple linear regression,8,0.0111,8.0000,0.6667,14.0000,0.0000,0.0117,1.7500,2.0000,1.0000,2.0000,4.0000,3.0000,3.0000,2.0000,2
+Statistics,Estimation,Method of moments,8,0.0111,7.0000,0.5833,13.0000,0.0000,0.0108,1.6250,2.0000,1.0000,3.0000,3.0000,3.0000,1.0000,4.0000,2
+Mathematics,Integral Calculus,Double integrals and change of order,8,0.0111,7.0000,0.5833,12.0000,0.0000,0.0100,1.5000,2.0000,1.0000,0.0000,3.0000,1.0000,1.0000,6.0000,2
+Mathematics,Differential Calculus of One Variable,Indeterminate forms and L'Hospital's rule,7,0.0097,6.0000,0.5000,12.0000,0.0000,0.0100,1.7143,2.0000,1.0000,0.0000,2.0000,3.0000,0.0000,4.0000,2
+Statistics,Univariate Distributions,Markov and Chebyshev inequalities,7,0.0097,7.0000,0.5833,9.0000,0.0000,0.0075,1.2857,2.0000,1.0000,2.0000,2.0000,4.0000,0.0000,3.0000,2
+Mathematics,Differential Calculus of Two Variables,Partial and total differentiation,6,0.0083,6.0000,0.5000,12.0000,0.0000,0.0100,2.0000,2.0000,2.0000,2.0000,1.0000,5.0000,1.0000,0.0000,2
+Statistics,Estimation,Cramer-Rao inequality,6,0.0083,5.0000,0.4167,12.0000,0.0000,0.0100,2.0000,2.0000,2.0000,0.0000,4.0000,2.0000,4.0000,0.0000,2
+Statistics,Multivariate Distributions,Independence of random variables,6,0.0083,4.0000,0.3333,11.0000,0.0000,0.0092,1.8333,2.0000,1.0000,0.0000,6.0000,1.0000,3.0000,2.0000,3
+Statistics,Limit Theorems,Modes of convergence,6,0.0083,6.0000,0.5000,10.0000,0.0000,0.0083,1.6667,2.0000,1.0000,3.0000,5.0000,5.0000,0.0000,1.0000,2
+Mathematics,Differential Calculus of One Variable,Maxima and minima (one variable),6,0.0083,5.0000,0.4167,9.0000,0.0000,0.0075,1.5000,2.0000,1.0000,1.0000,6.0000,2.0000,1.0000,3.0000,2
+Mathematics,Differential Calculus of One Variable,Taylor and Maclaurin series,6,0.0083,6.0000,0.5000,9.0000,0.0000,0.0075,1.5000,2.0000,1.0000,3.0000,4.0000,2.0000,0.0000,4.0000,2
+Mathematics,Matrices and Determinants,"Vector spaces, span, basis and dimension",6,0.0083,6.0000,0.5000,9.0000,0.0000,0.0075,1.5000,2.0000,1.0000,2.0000,4.0000,5.0000,0.0000,1.0000,2
+Statistics,Testing of Hypotheses,Likelihood ratio tests,6,0.0083,6.0000,0.5000,9.0000,0.0000,0.0075,1.5000,2.0000,1.0000,2.0000,5.0000,4.0000,1.0000,1.0000,2
+Mathematics,Integral Calculus,Transformation of variables,5,0.0069,5.0000,0.4167,10.0000,0.0000,0.0083,2.0000,2.0000,2.0000,1.0000,2.0000,1.0000,0.0000,4.0000,2
+Mathematics,Matrices and Determinants,Determinants,5,0.0069,5.0000,0.4167,8.0000,0.0000,0.0067,1.6000,2.0000,1.0000,1.0000,5.0000,2.0000,0.0000,3.0000,2
+Mathematics,Sequences and Series,Power series and radius of convergence,5,0.0069,5.0000,0.4167,6.0000,0.0000,0.0050,1.2000,2.0000,1.0000,3.0000,2.0000,2.0000,0.0000,3.0000,2
+Mathematics,Differential Calculus of Two Variables,Constrained optimization (Lagrange multipliers),4,0.0056,4.0000,0.3333,8.0000,0.0000,0.0067,2.0000,2.0000,2.0000,1.0000,2.0000,1.0000,1.0000,2.0000,3
+Statistics,Testing of Hypotheses,UMP tests,4,0.0056,4.0000,0.3333,8.0000,0.0000,0.0067,2.0000,2.0000,2.0000,2.0000,3.0000,2.0000,2.0000,0.0000,3
+Statistics,Multivariate Distributions,Multinomial distribution,3,0.0042,3.0000,0.2500,6.0000,0.0000,0.0050,2.0000,2.0000,2.0000,1.0000,1.0000,0.0000,2.0000,1.0000,3
+Mathematics,Sequences and Series,Limit superior and inferior,3,0.0042,3.0000,0.2500,5.0000,0.0000,0.0042,1.6667,2.0000,1.0000,1.0000,2.0000,1.0000,1.0000,1.0000,3
+Statistics,Probability,Geometric probability,3,0.0042,3.0000,0.2500,5.0000,0.0000,0.0042,1.6667,2.0000,1.0000,1.0000,3.0000,1.0000,0.0000,2.0000,3
+Mathematics,Differential Equations (pre-2026 syllabus),First-order ODEs,2,0.0028,2.0000,0.1667,4.0000,0.0000,0.0033,2.0000,2.0000,2.0000,0.0000,1.0000,1.0000,1.0000,0.0000,3
+Mathematics,Differential Equations (pre-2026 syllabus),Higher-order linear ODEs,2,0.0028,2.0000,0.1667,4.0000,0.0000,0.0033,2.0000,2.0000,2.0000,0.0000,1.0000,1.0000,0.0000,1.0000,3
+Statistics,Descriptive Statistics,Measures of central tendency and dispersion,2,0.0028,1.0000,0.0833,4.0000,0.0000,0.0033,2.0000,2.0000,2.0000,2.0000,2.0000,1.0000,1.0000,0.0000,3
+Mathematics,Sequences and Series,Absolute and conditional convergence,2,0.0028,2.0000,0.1667,3.0000,0.0000,0.0025,1.5000,2.0000,1.0000,0.0000,2.0000,1.0000,1.0000,0.0000,3
+Mathematics,Integral Calculus,Beta and Gamma integrals,2,0.0028,2.0000,0.1667,3.0000,0.0000,0.0025,1.5000,2.0000,1.0000,0.0000,2.0000,0.0000,0.0000,2.0000,3
+Statistics,Stochastic Processes,Markov chains,2,0.0028,1.0000,0.0833,3.0000,0.0000,0.0025,1.5000,2.0000,1.0000,2.0000,2.0000,2.0000,0.0000,0.0000,3
+Mathematics,Integral Calculus,Improper integrals,1,0.0014,1.0000,0.0833,2.0000,0.0000,0.0017,2.0000,2.0000,2.0000,1.0000,1.0000,1.0000,0.0000,0.0000,3
+Statistics,Probability,Sample space and algebra of events,1,0.0014,1.0000,0.0833,2.0000,0.0000,0.0017,2.0000,2.0000,2.0000,1.0000,1.0000,1.0000,0.0000,0.0000,3
+Statistics,Nonparametric Methods,Runs test,1,0.0014,1.0000,0.0833,2.0000,0.0000,0.0017,2.0000,2.0000,2.0000,1.0000,1.0000,1.0000,0.0000,0.0000,3
+Statistics,Nonparametric Methods,Sign tests,1,0.0014,1.0000,0.0833,2.0000,0.0000,0.0017,2.0000,2.0000,2.0000,1.0000,1.0000,0.0000,0.0000,1.0000,3
+Mathematics,Matrices and Determinants,Quadratic forms and definiteness,1,0.0014,1.0000,0.0833,1.0000,0.0000,0.0008,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,0.0000,3
+Statistics,Descriptive Statistics,Correlation and bivariate data,1,0.0014,1.0000,0.0833,1.0000,0.0000,0.0008,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,0.0000,1.0000,3
+Statistics,Stochastic Processes,Poisson process,1,0.0014,1.0000,0.0833,1.0000,0.0000,0.0008,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,0.0000,1.0000,3
+Mathematics,Differential Calculus of Two Variables,Limits and continuity (two variables),0,,,,,,,,,,,,,,,untested
+Statistics,Descriptive Statistics,"Moments, skewness and kurtosis",0,,,,,,,,,,,,,,,untested
+Statistics,Nonparametric Methods,Empirical distribution function and Kolmogorov-Smirnov test,0,,,,,,,,,,,,,,,untested
+Statistics,Nonparametric Methods,Mann-Whitney test,0,,,,,,,,,,,,,,,untested

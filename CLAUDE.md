@@ -20,7 +20,7 @@ Done and pushed (last commit "Checkpoint (agents paused by user)"):
 - Classified: all 14 years (taxonomy v2).
 - Analysis code ready and tested: `pyq/master.py`, `pyq/stats.py` (25 tests pass).
 
-**2026-11-07: JAM 2026 added as year 15** (from jam2026.iitb.ac.in/qpnkey26.html): raw + manifest, OCR (all 47 pages image-checked, 5 fixed), extraction 60 Q / 100 marks (total INFERRED from section headers), matches official answer key, verifier PASS. **Next (needs user OK): classify 2026, then regenerate master + report with 12 current-format papers (2015–2026), then fix the new-topic count in `docs/resources.md`** (keyword scan said 11 marks; Q17 CV and Q43 Spearman are also descriptive stats). `pyq.master` fails until 2026 is classified.
+**2026-11-07: JAM 2026 added as year 15 and fully integrated.** Raw + manifest, OCR (all 47 pages image-checked, 5 fixed), extraction (verifier PASS), classification (reviewer: `data/reviews/classification-2026.md`, fixes applied except Q32). Main scope is now **12 current-format papers 2015–2026** (720 Q); report, README and `docs/resources.md` regenerated/updated. Tables renamed `*_current.csv`. New finding: 7 subtopics first tested in 2026 (9 Q, 14 marks); 4 still untested.
 
 **2026-11-05: Stages 4–6 DONE. Report at `outputs/report/jam_ms_report.pdf` (+ .html), tables in `outputs/tables/`, figures in `outputs/figures/`; regenerate with `python -m pyq.master && python -m pyq.report`. Remaining: step 7 (generic exam-agnostic skill), optional text-paper sample verification.** Optional open item: 5-page sample verification of the 10 text papers (counts/marks are already confirmed; only summaries are unchecked there).
 

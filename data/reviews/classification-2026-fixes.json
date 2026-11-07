@@ -1,0 +1,41 @@
+{
+ "archetype_map": {
+  "dice-sum-probability": "classical-counting-probability"
+ },
+ "repeats": {
+  "2026-MS-Q8": {
+   "repeat_of": "2021-MS-Q33",
+   "repeat_kind": "concept"
+  },
+  "2026-MS-Q12": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2026-MS-Q32": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2026-MS-Q50": {
+   "repeat_of": null,
+   "repeat_kind": null
+  },
+  "2026-MS-Q55": {
+   "repeat_of": "2013-MS-Q29",
+   "repeat_kind": "near"
+  }
+ },
+ "topics": {
+  "2026-MS-Q8": {
+   "topic": "Testing of Hypotheses",
+   "subtopic": "Likelihood ratio tests"
+  },
+  "2026-MS-Q18": {
+   "topic": "Probability",
+   "subtopic": "Axioms and properties of probability"
+  },
+  "2026-MS-Q53": {
+   "topic": "Probability",
+   "subtopic": "Axioms and properties of probability"
+  }
+ }
+}

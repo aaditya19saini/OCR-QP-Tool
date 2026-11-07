@@ -1,28 +1,29 @@
 # OCR-QP-Tool
 
-**A source-traceable question dataset for IIT JAM Mathematical Statistics (2012–2025).**
+**A source-traceable question dataset for IIT JAM Mathematical Statistics (2012–2026).**
 
 This repository turns official previous-year papers into structured question records. The goal is to support careful topic and marks analysis while keeping every claim traceable to its paper and page.
 
-> **Project status · 5 November 2026**
+> **Project status · 7 November 2026**
 >
-> Complete. All 14 papers have been inventoried, OCR'd, extracted, classified and validated: 778 records with zero validation errors. The statistics and the final report are done. **Report: [`outputs/report/jam_ms_report.pdf`](outputs/report/jam_ms_report.pdf)**. Next step: package the method as a generic, exam-agnostic skill.
+> Complete. All 15 papers (JAM 2026 added 7 Nov) have been inventoried, OCR'd, extracted, classified and validated: 838 records with zero validation errors. The statistics and the final report are done. **Report: [`outputs/report/jam_ms_report.pdf`](outputs/report/jam_ms_report.pdf)**. Next step: package the method as a generic, exam-agnostic skill.
 
-## Key findings (2015–2025, 11 papers, 660 questions)
+## Key findings (2015–2026, 12 papers, 720 questions)
 
-- **Statistics is 63.9% of marks, Mathematics 36.1%.** The three heaviest topics are Univariate Distributions (14.9%), Estimation (13.9%) and Multivariate Distributions (11.2%), together 40%.
-- **No main topic is skippable.** Each appears in at least 10 of 11 papers, so priorities are set at subtopic level (22 Tier-1 subtopics).
-- **The paper is shifting from calculus to distribution theory.** From 2015–2018 to 2023–2025, Integral Calculus fell from 10.2% to 5.3% of marks and Multivariate Distributions rose from 9.2% to 14.3%. This is descriptive only (n = 11).
-- **43.6% of questions reuse an earlier problem structure** with new numbers. None is a word-for-word repeat.
-- **Differential equations disappeared after 2016.** 11 subtopics of the 2026 syllabus were never tested in 2015–2025 and are flagged as likely new, not low priority.
+- **Statistics is 64.8% of marks, Mathematics 35.2%.** The three heaviest topics are Univariate Distributions (14.5%), Estimation (13.7%) and Multivariate Distributions (10.9%), together 39%.
+- **No main topic is skippable.** Each topic tested before 2026 appears in at least 11 of 12 papers, so priorities are set at subtopic level (23 Tier-1 subtopics).
+- **The paper is shifting from calculus to distribution theory.** From 2015–2018 to 2024–2026, Integral Calculus fell from 10.2% to 5.0% of marks and Sampling Distributions rose from 3.5% to 7.7%. This is descriptive only (n = 12).
+- **44.6% of questions reuse an earlier problem structure** with new numbers. None is a word-for-word repeat.
+- **Differential equations disappeared after 2016.**
+- **The 2026 syllabus changes showed up in JAM 2026.** 7 subtopics never tested in 2015–2025 (Markov chains, Poisson process, runs and sign tests, descriptive statistics, correlation, matrix definiteness) took 9 questions and 14 of 100 marks. 4 syllabus subtopics are still untested and are flagged as unknown, not low priority.
 
 Methodology, evidence strength and limitations are in the report.
 
 ## What’s in the repository
 
-- **14 official papers**, 2012–2025, with a SHA-256 manifest.
-- **OCR text** for all 416 pages. OCR is a reading aid; the paper image remains the source of truth.
-- **778 extracted and classified records** in JSONL, with page references, formats, marks, summaries, and taxonomy labels.
+- **15 official papers**, 2012–2026, with a SHA-256 manifest.
+- **OCR text** for all 463 pages. OCR is a reading aid; the paper image remains the source of truth.
+- **838 extracted and classified records** in JSONL, with page references, formats, marks, summaries, and taxonomy labels.
 - **Review notes** documenting OCR audits, image checks, classification decisions, and known limitations.
 - **Python pipeline and tests** for inventory, rendering, OCR, validation, master-data generation, and statistics.
 
@@ -34,7 +35,7 @@ Deliverables:
 
 ## Analysis scope
 
-- **Main analysis:** current-format papers from 2015–2025 (60 questions, 100 marks per paper).
+- **Main analysis:** current-format papers from 2015–2026 (60 questions, 100 marks per paper).
 - **Separate historical note:** 2012–2014, whose paper formats differ. These years are not pooled into current-format marks statistics.
 - **Taxonomy:** the official JAM 2026 Mathematical Statistics syllabus. Older questions outside that syllabus are retained and labeled; a topic with no historical appearances is not automatically low priority.
 
